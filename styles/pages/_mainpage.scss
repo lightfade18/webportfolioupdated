@@ -1,0 +1,7 @@
+.bg-page{
+    @apply bg-center bg-cover bg-fixed  bg-[url('../public/assests/images/profile-bg.jpg')];
+}
+
+.container {
+    @apply w-full h-full;
+}

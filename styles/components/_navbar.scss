@@ -1,0 +1,51 @@
+.navbar {
+    @apply text-white text-xl bg-transparent sticky top-0 z-10 border-b-[1px] border-gray-400 border-opacity-20;
+
+    &--scrolled {
+        @apply bg-white border-black;
+    }
+}
+
+.nav-container {
+    @apply mx-auto max-w-[95%];
+
+    @screen desktop{
+        @apply max-w-[83rem] px-[3rem];
+    }
+}
+
+.nav-links {
+    @apply uppercase;
+    
+    &:hover{
+        @apply text-gray-600 transition-all duration-300;
+    }
+}
+
+.desktop-nav {
+    @apply hidden;
+
+    @screen desktop {
+        @apply flex items-center justify-between h-[5rem] transition-all duration-300 ease-out;
+    }
+
+    &--scrolled {
+        @apply h-[4rem] text-black;
+    }
+}
+
+.mobile-nav {
+    @apply flex items-center justify-between h-[5rem] transition-all duration-300 ease-out;
+
+    @screen desktop {
+        @apply hidden;
+    }
+}
+
+.display-menu {
+    @apply bg-white transition-all duration-300 ease-out w-full absolute;
+
+    @screen desktop {
+        @apply hidden;
+    }
+}

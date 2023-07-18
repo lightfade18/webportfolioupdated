@@ -1,0 +1,107 @@
+.header-div {
+    @apply w-[95%] flex items-center pb-[7rem] mx-auto  bg-transparent min-h-screen;
+
+    @screen desktop{
+        @apply max-w-[83rem] px-[3rem];
+    }
+
+    &--medium-font {
+        @apply text-white text-[1.5rem] capitalize font-rubik;
+
+        @screen desktop {
+            @apply text-[2rem];
+        }
+    }
+}
+
+.wrapper {
+    @apply inline-flex text-white text-[2rem] py-0 my-0;
+
+    @screen desktop {
+        @apply text-[3rem];
+    }
+}
+
+.dynamic-text {
+    @apply font-rubikpaint h-[60px] leading-[60px] overflow-hidden;
+
+    @screen desktop {
+        @apply font-rubikpaint h-[75px] leading-[75px] overflow-hidden;
+    }
+}
+
+.lists-text{
+    @apply list-none relative top-0;
+    animation: slide 9s steps(var(--fields-length)) infinite;
+}
+
+@keyframes slide {
+    100%{
+        top: -181px;
+    }
+}
+
+@screen desktop {
+    @keyframes slide {
+        100% {
+            top: -226px;
+        }
+    }
+}
+
+.span-text {
+    @apply relative pr-[2px];
+    // position: relative;
+    // padding-right: 2px;
+
+    &::after{
+        content: '';
+        @apply absolute h-full w-full bg-[#080808] left-0 mt-[12px] border-l-[2px];
+        // position: absolute;
+        // height: 100%;
+        // width: 100%;
+        // background-color: #080808;
+        // left: 0;
+        // margin-top: 5px;
+        // border-left: 2px solid white;
+        animation: animate 3s linear infinite;
+    }
+
+    @screen desktop {
+        position: relative;
+
+        &::after{
+            content: '';
+            @apply absolute h-full w-full bg-[#080808] left-0 mt-[9px] border-l-[2px];
+            // position: absolute;
+            // height: 100%;
+            // width: 100%;
+            // background-color: #080808;
+            // left: 0;
+            // margin-top: 9px;
+            // border-left: 2px solid white;
+            animation: animate 3s linear infinite;
+        }
+    }
+}
+
+@keyframes animate {
+    40%, 60%{
+        left: 100%;
+    }
+    100%{
+        left: 0%;
+    }
+}
+
+.socials-div {
+    @apply z-10 text-[2rem] text-white p-0 m-0 flex gap-4;
+
+    &--socials-icon {
+        @apply w-[1.5rem] h-[1.5rem] fill-white;
+
+        &:hover {
+            @apply transition-colors duration-500 fill-gray-600;
+        }
+    }
+}

@@ -1,0 +1,73 @@
+.about-section {
+    @apply bg-white bg-gradient-to-br from-green-600 to-gray-800;
+}
+
+.about-content {
+    @apply bg-white/10 backdrop-filter backdrop-blur-xl shadow-xl p-6 rounded-3xl;
+}
+
+.about-div {
+    @apply w-[95%] mx-auto flex justify-center items-center min-h-screen;
+
+    @screen desktop{
+        @apply max-w-[83rem] px-[3rem];
+    }
+
+    &--main-font {
+        @apply text-[3rem] text-center;
+    }
+}
+
+.about-panel {
+    @apply min-h-[20rem] mx-auto mt-6 max-w-[60rem] gap-6 p-2;
+
+    @screen desktop {
+        @apply flex items-center;
+    }
+
+    &--sample-div {
+        @apply w-[300px] h-[450px] mx-auto relative cursor-pointer mb-8;
+
+        @screen tablet {
+            @apply w-[350px] h-[525px];
+        }
+
+        @screen desktop {
+            @apply min-w-[350px] min-h-[525px] mb-0;
+        }
+
+        &--shadow-div {
+            @apply rounded-md min-w-[350px] min-h-[525px] bg-gray-900;
+
+            &--mobile {
+                @apply min-w-[300px] min-h-[450px];
+            }
+        }
+
+        &--pic-div {
+            @apply min-w-[350px] min-h-[525px] absolute left-2;
+
+            &--mobile {
+                @apply min-w-[300px] min-h-[450px];
+            }
+        }
+
+        &--if-mobile {
+            @apply w-[300px] h-[450px];
+        }
+    }
+}
+
+.profile-image {
+    @apply rounded-md object-cover;
+}
+
+.frame-1{
+    @apply absolute bottom-4 right-2;
+}
+
+.frame-2{
+    @apply absolute left-2;
+}
+
+
