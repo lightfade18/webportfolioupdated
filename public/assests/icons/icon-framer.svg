@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+    <path fill="#59529d" style="fill: var(--color1, #59529d)" d="M32 0v16l-16 16-8-8 8-8z"></path>
+    <path fill="#5271b4" style="fill: var(--color2, #5271b4)" d="M32 16v16l-8-8z"></path>
+    <path fill="#bb4b96" style="fill: var(--color3, #bb4b96)" d="M16 16l-16 16v-32l8 8z"></path>
+</svg>

@@ -5,7 +5,11 @@ const Homepage = () => {
     return (
       <div>
         <Header/>
-        <Aboutpage/>
+        <div id="about-section">
+          <Aboutpage/>
+        </div>
+        
+        
       </div>
     )
   }

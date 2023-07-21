@@ -9,17 +9,103 @@ import Animator from '@components/Animator/page';
 import animatorVariants from '@utils/animatorVariants';
 import { motion } from 'framer-motion';
 import { useMedia } from 'react-use';
+import logo1 from '@public/assests/images/weblogo1.jpg';
+import logo2 from '@public/assests/images/weblogo2.jpg';
+import IconNext from '@public/assests/icons/icon-nextjs.svg';
+import IconReact from '@public/assests/icons/icon-reactjs.svg';
+import IconTailwind from '@public/assests/icons/icon-tailwind.svg';
+import IconBootstrap from '@public/assests/icons/icon-bootstrap.svg';
+import IconJavascript from '@public/assests/icons/icon-javascript.svg';
+import IconPython from '@public/assests/icons/icon-python.svg';
+import IconPHP from '@public/assests/icons/icon-php.svg';
+import IconJava from '@public/assests/icons/icon-java.svg';
+import IconHTML from '@public/assests/icons/icon-html.svg';
+import IconCSS from '@public/assests/icons/icon-css.svg';
+import IconVSCode from '@public/assests/icons/icon-vscode.svg';
+import IconGithub from '@public/assests/icons/icon-github.svg';
+import IconJira from '@public/assests/icons/icon-jira.svg';
+import IconNode from '@public/assests/icons/icon-nodejs.svg';
+import IconSASS from '@public/assests/icons/icon-sass.svg';
+import IconFramer from '@public/assests/icons/icon-framer.svg';
+import IconPrisma from '@public/assests/icons/icon-prisma.svg';
+import { animatorChildren, leftchild, rightchild, middlechild } from '@utils/animators';
+
+const name = 'Paul John Rodriguez';
+const details = 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis quod modi quia suscipit voluptatem similique ipsa porro quas saepe. Dolorem, repellat laborum eligendi animi eaque nam ab veniam eius repudiandae.';
+const frameworks = ['NextJS', 'ReactJS' , 'Tailwind', 'Bootstrap'];
+const proglang = ['JavaScript', 'Python', 'PHP', 'Java', 'SASS', 'HTML', 'CSS'];
+const devtools = ['VSCode', 'Github', 'Jira', 'NodeJS', 'Framer', 'Prisma'];
+
+const icons = Object.create({
+    NextJS: <IconNext className={cx['tech-div--icon']}/>,
+    ReactJS: <IconReact className={cx['tech-div--icon']}/>,
+    Tailwind: <IconTailwind className={cx['tech-div--icon']}/>,
+    Bootstrap: <IconBootstrap className={cx['tech-div--icon']}/>,
+    JavaScript: <IconJavascript className={cx['tech-div--icon']}/>,
+    Python: <IconPython className={cx['tech-div--icon']}/>,
+    PHP: <IconPHP className={cx['tech-div--icon']}/>,
+    Java: <IconJava className={cx['tech-div--icon']}/>,
+    HTML: <IconHTML className={cx['tech-div--icon']}/>,
+    CSS: <IconCSS className={cx['tech-div--icon']}/>,
+    VSCode: <IconVSCode className={cx['tech-div--icon']}/>,
+    Github: <IconGithub className={cx['tech-div--icon']}/>,
+    Jira: <IconJira className={cx['tech-div--icon']}/>,
+    NodeJS: <IconNode className={cx['tech-div--icon']}/>,
+    SASS: <IconSASS className={cx['tech-div--icon']}/>,
+    Framer: <IconFramer className={cx['tech-div--icon']}/>,
+    Prisma: <IconPrisma className={cx['tech-div--icon']}/>,
+});
 
 const Aboutpage = () => {
     const [isHovered, setIsHovered] = useState(false);
+    const [isIconHovered, setIsIconHovered] = useState(false);
+    const [iconHoverStates, setIconHoverStates] = useState<{ [key: string]: boolean }>({});
+
     const isMobile = useMedia('screen and (max-width: 640px)', false);
 
+    const handleIconHover = (key: string, isIconHovered: boolean) => {
+        setIconHoverStates((prevState) => ({
+          ...prevState,
+          [key]: isIconHovered,
+        }));
+    };
+
+    const handlePrint = () => {
+        window.open('assests/files/cv.pdf');
+    };
+
     return (
-        <section className={cx['about-section']}>
+        <section id='about' className={cx['about-section']}>
+            <div className={cx['logo-div']}>
+                <div className={cx['logo-div--logo-divider']}>
+                    <div className={cx['logo-div--logo-divider--logo']}>
+                        <Image
+                            width={isMobile ? 250 : 300}
+                            height={undefined}
+                            priority
+                            src={logo1}
+                            alt="logo 1"
+                        />
+                    </div>
+                    <div className={cx['logo-div--logo-divider--logo']}>
+                        <Image
+                            width={isMobile ? 250 : 300}
+                            height={undefined}
+                            priority
+                            src={logo2}
+                            alt="logo 2"
+                        />
+                    </div>
+                </div>
+            </div>
             <div className={cx['about-div']}>
-                <Animator variants={animatorVariants.motionZoomIn()}>
+                <Animator variants={animatorVariants.motionDownToUpwChil()}>
                     <div className={cx['about-content']}>
+                        <motion.div variants={animatorChildren}>
                         <h1 className={cx['about-div--main-font']}>About Me</h1>
+                        <hr className={cx['about-div--hr']}/>
+                        </motion.div>
+                        <motion.div variants={animatorChildren}>
                         <div className={cx['about-panel']}>
                             <div 
                                 onMouseEnter={() => setIsHovered(true)}
@@ -56,12 +142,101 @@ const Aboutpage = () => {
                                     </div>
                                 </motion.div>
                             </div>
-                            <div>
-                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis quod modi quia suscipit voluptatem similique ipsa porro quas saepe. Dolorem, repellat laborum eligendi animi eaque nam ab veniam eius repudiandae.</p>
+                            <div className={cx['about-panel--info-div']}>
+                                <h1 className={cx['about-panel--about-title']}>I am <span className={cx['about-panel--about-title--span']}>{name}</span></h1>
+                                <p className={cx['about-panel--about-details']}>{details}</p>
+                                <button 
+                                    onClick={handlePrint}
+                                    className={cx['about-panel--button']}
+                                >
+                                    Download my CV
+                                </button>
                             </div>
                         </div>
+                        </motion.div>
                     </div>
                 </Animator>
+            </div>
+            <div className={cx['skills-div']}>
+                <h1 className={cx['about-div--main-font']}>Tech Skills</h1>
+                <hr className={cx['about-div--hr']}/>
+                <div className={cx['tech-div']}>
+                    <Animator
+                        variants={animatorVariants.motionZoomInwChil()}
+                        className={cx['tech-div--tech-box']}
+                    >
+                        <h1 className={cx['tech-div--title']}>Frameworks</h1>
+                        <div className={cx['tech-div--tech-list']}>
+                        {frameworks.map((key) => (
+                            <motion.div 
+                                onMouseEnter={() => handleIconHover(key, true)}
+                                onMouseLeave={() => handleIconHover(key, false)}
+                                onClick={() => handleIconHover(key, !isIconHovered)}
+                                key={key}
+                                variants={leftchild}
+                                className={cx['tech-div--list-item']}
+                            >
+                                <div
+                                    className={cx['tech-div--container']}
+                                >
+                                    {icons[key]}
+                                    <p className={clsx(cx['tech-div--details'], {[cx['tech-div--hidden']] : !iconHoverStates[key]})}>{key}</p>
+                                </div>
+                            </motion.div>
+                        ))}
+                        </div>
+                    </Animator>
+                    <Animator
+                        variants={animatorVariants.motionZoomInwChil()}
+                        className={cx['tech-div--tech-box']}
+                    >
+                        <h1 className={cx['tech-div--title']}>Languages</h1>
+                        <div className={cx['tech-div--tech-list']}>
+                        {proglang.map((key) => (
+                            <motion.div 
+                                onMouseEnter={() => handleIconHover(key, true)}
+                                onMouseLeave={() => handleIconHover(key, false)}
+                                onClick={() => handleIconHover(key, !isIconHovered)}
+                                key={key}
+                                variants={middlechild}
+                                className={cx['tech-div--list-item']}
+                            >
+                                <div
+                                    className={cx['tech-div--container']}
+                                >
+                                    {icons[key]}
+                                    <p className={clsx(cx['tech-div--details'], {[cx['tech-div--hidden']] : !iconHoverStates[key]})}>{key}</p>
+                                </div>
+                            </motion.div>
+                        ))}
+                        </div>
+                    </Animator>
+                    <Animator
+                        variants={animatorVariants.motionZoomInwChil()}
+                        className={cx['tech-div--tech-box']}
+                    >
+                        <h1 className={cx['tech-div--title']}>Dev Tools</h1>
+                        <div className={cx['tech-div--tech-list']}>
+                        {devtools.map((key) => (
+                            <motion.div 
+                                onMouseEnter={() => handleIconHover(key, true)}
+                                onMouseLeave={() => handleIconHover(key, false)}
+                                onClick={() => handleIconHover(key, !isIconHovered)}
+                                key={key}
+                                variants={rightchild}
+                                className={cx['tech-div--list-item']}
+                            >
+                                <div
+                                    className={cx['tech-div--container']}
+                                >
+                                    {icons[key]}
+                                    <p className={clsx(cx['tech-div--details'], {[cx['tech-div--hidden']] : !iconHoverStates[key]})}>{key}</p>
+                                </div>
+                            </motion.div>
+                        ))}
+                        </div>
+                    </Animator>
+                </div>
             </div>
         </section>
     )

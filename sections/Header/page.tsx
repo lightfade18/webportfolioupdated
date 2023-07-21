@@ -58,9 +58,7 @@ const Header = () => {
             >
               {socialIcons[key]}
             </a>
-          ))
-
-          }
+          ))}
         </div>
       </div>
     </section>

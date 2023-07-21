@@ -9,10 +9,17 @@ import logo from '@public/assests/images/logo-pj.png';
 import IconBurger from '@public/assests/icons/icon-burger.svg';
 import IconClose from '@public/assests/icons/icon-close.svg';
 
-const sections = ['Home', 'About', 'Service', 'Project', 'Contact'];
+const sections = ['Home', 'About', 'Project', 'Certificates', 'Contact'];
+
+const pathLinks = Object.create({
+  Home: '#',
+  About: '#about-section',
+  Project: '#project-section',
+  Certificates: '#certificate-section',
+  Contact: '#contact-section',
+});
 
 const Navbar = () => {
-
   const [scrollPosition, setScrollPosition] = useState(0);
   const [displayMenu, setDisplayMenu] = useState(false);
 
@@ -47,7 +54,7 @@ const Navbar = () => {
                   key={index} 
                   className='ml-[1rem]'
                 >
-                  <Link href='#' className={cx['nav-links']}>
+                  <Link href={pathLinks[item]} className={cx['nav-links']}>
                     {item}
                   </Link>
                 </li>
@@ -89,9 +96,9 @@ const Navbar = () => {
                   key={index} 
                   className='ml-[1rem]'
                 >
-                  <Link href='#' className={cx['nav-links']}>
+                  <a href='#' className={cx['nav-links']}>
                     {item}
-                  </Link>
+                  </a>
                 </li>
             ))}
           </ul>
