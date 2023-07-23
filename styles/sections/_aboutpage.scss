@@ -107,10 +107,10 @@
 }
 
 .skills-div {
-    @apply w-[95%] mx-auto bg-lightGray-500 my-8 rounded-3xl shadow-2xl py-8;
+    @apply w-[95%] mx-auto bg-lightGray-500 mt-8 rounded-3xl shadow-2xl py-8;
 
     @screen desktop {
-        @apply max-w-[78rem] px-[3rem];
+        @apply max-w-[83rem] px-[3rem];
     }
 }
 
@@ -125,12 +125,12 @@
         @apply w-[5rem] h-[5rem];
     }
 
-    &--title {
-        @apply text-center text-2xl font-rubik;
-    }
-
     &--tech-box {
         @apply mx-auto bg-white rounded-lg shadow-xl;
+    }
+
+    &--title {
+        @apply text-center text-2xl font-rubik rounded-t-lg bg-darkGray-500 text-white py-4;
     }
 
     &--tech-list {

@@ -51,37 +51,21 @@
 
 .span-text {
     @apply relative pr-[2px];
-    // position: relative;
-    // padding-right: 2px;
 
-    &::after{
-        content: '';
-        @apply absolute h-full w-full bg-[#080808] left-0 mt-[12px] border-l-[2px];
-        // position: absolute;
-        // height: 100%;
-        // width: 100%;
-        // background-color: #080808;
-        // left: 0;
-        // margin-top: 5px;
-        // border-left: 2px solid white;
-        animation: animate 3s linear infinite;
-    }
+    // &::after{
+    //     content: '';
+    //     @apply absolute h-full w-full bg-[#080808] left-0 mt-[12px] border-l-[2px];
+    //     animation: animate 3s linear infinite;
+    // }
 
     @screen desktop {
         position: relative;
 
-        &::after{
-            content: '';
-            @apply absolute h-full w-full bg-[#080808] left-0 mt-[9px] border-l-[2px];
-            // position: absolute;
-            // height: 100%;
-            // width: 100%;
-            // background-color: #080808;
-            // left: 0;
-            // margin-top: 9px;
-            // border-left: 2px solid white;
-            animation: animate 3s linear infinite;
-        }
+        // &::after{
+        //     content: '';
+        //     @apply absolute h-full w-full bg-[#080808] left-0 mt-[9px] border-l-[2px];
+        //     animation: animate 3s linear infinite;
+        // }
     }
 }
 

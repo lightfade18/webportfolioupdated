@@ -158,7 +158,7 @@ const Aboutpage = () => {
                 </Animator>
             </div>
             <div className={cx['skills-div']}>
-                <h1 className={cx['about-div--main-font']}>Tech Skills</h1>
+                <h1 className={cx['about-div--main-font']}>Technical Skills</h1>
                 <hr className={cx['about-div--hr']}/>
                 <div className={cx['tech-div']}>
                     <Animator
@@ -190,7 +190,7 @@ const Aboutpage = () => {
                         variants={animatorVariants.motionZoomInwChil()}
                         className={cx['tech-div--tech-box']}
                     >
-                        <h1 className={cx['tech-div--title']}>Languages</h1>
+                        <h1 className={cx['tech-div--title']}>Porgramming Languages</h1>
                         <div className={cx['tech-div--tech-list']}>
                         {proglang.map((key) => (
                             <motion.div 

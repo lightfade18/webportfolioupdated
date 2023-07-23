@@ -1,0 +1,69 @@
+.cert-section {
+    @apply w-full h-auto bg-white py-14;
+
+    &--container {
+        @apply w-[95%] mx-auto bg-darkGray-600 rounded-3xl;
+
+        @screen desktop {
+            @apply max-w-[83rem] px-[3rem];
+        }
+    }
+
+    &--cert-slide {
+        @apply min-w-[300px] max-w-[300px] min-h-[200px] max-h-[200px] rounded-sm m-6 bg-white mx-auto;
+
+        @screen tablet {
+            @apply min-w-[500px] max-w-[500px] min-h-[350px] max-h-[350px];
+        }
+
+        @screen desktop {
+            @apply min-w-[700px] max-w-[700px] min-h-[500px] max-h-[500px];
+        }
+    }
+
+    &--cert-content {
+        @apply flex justify-center items-center min-h-[150px] relative;
+
+        @screen desktop {
+            @apply min-h-[31.25rem];
+        }
+    }
+
+    &--slide-arrow {
+        @apply h-8 w-8;
+    }
+
+    &--rev-slide-arrow {
+        @apply h-8 w-8 rotate-180;
+    }
+
+    &--nav-buttons {
+        @apply flex gap-6 items-center justify-center py-4;
+  
+        @screen xl {
+          @apply self-start;
+        }
+  
+        svg {
+          @apply fill-darkGray-400 transition-all duration-300 ease-out;
+        }
+
+        button:not(:disabled) {
+            svg {
+                @apply fill-black;
+            }
+
+            svg:hover {
+              @apply fill-[#007AFF];
+            }
+        }
+    }
+
+    &--pagination-div {
+        @apply w-auto;
+    }
+}
+
+.swiper-div{
+
+}

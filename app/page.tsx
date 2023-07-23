@@ -1,4 +1,5 @@
 import Aboutpage from "@sections/Aboutpage/page";
+import Certificates from "@sections/Certificates/page";
 import Header from "@sections/Header/page";
 
 const Homepage = () => {
@@ -8,7 +9,9 @@ const Homepage = () => {
         <div id="about-section">
           <Aboutpage/>
         </div>
-        
+        <div id="about-section">
+          <Certificates/>
+        </div>
         
       </div>
     )
