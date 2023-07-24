@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import cx from '@styles/MainStyle.module.scss';
 import Image from 'next/image';
-import '@styles/globals.css';
 
 // Icons
 import IconArrow from '@public/assests/icons/icon-arrow.svg';
@@ -34,6 +33,8 @@ const Certificates = () => {
 
   return (
     <section className={cx['cert-section']}>
+      <h1 className={cx['cert-section--main-font']}>My Certificates</h1>
+      <hr className={cx['cert-section--hr']}/>
       <div className={cx['cert-section--container']}>
         <Swiper
           className={cx['swiper-div']}

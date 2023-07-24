@@ -1,8 +1,16 @@
 .cert-section {
     @apply w-full h-auto bg-white py-14;
 
+    &--main-font {
+        @apply text-[2.5rem] text-center uppercase font-rubik;
+    }
+
+    &--hr {
+        @apply w-[6.25rem] border-black border-2 rounded-full mx-auto;
+    }
+
     &--container {
-        @apply w-[95%] mx-auto bg-darkGray-600 rounded-3xl;
+        @apply w-[95%] mx-auto bg-darkGray-600 rounded-3xl mt-4;
 
         @screen desktop {
             @apply max-w-[83rem] px-[3rem];

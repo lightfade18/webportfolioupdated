@@ -9,13 +9,13 @@ import logo from '@public/assests/images/logo-pj.png';
 import IconBurger from '@public/assests/icons/icon-burger.svg';
 import IconClose from '@public/assests/icons/icon-close.svg';
 
-const sections = ['Home', 'About', 'Project', 'Certificates', 'Contact'];
+const sections = ['Home', 'About', 'Certificates', 'Project', 'Contact'];
 
 const pathLinks = Object.create({
   Home: '#',
   About: '#about-section',
-  Project: '#project-section',
-  Certificates: '#certificate-section',
+  Certificates: '#cert-section',
+  Project: '#proj-section',
   Contact: '#contact-section',
 });
 

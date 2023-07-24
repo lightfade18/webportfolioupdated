@@ -1,0 +1,55 @@
+.proj-section {
+    @apply w-full h-auto bg-white py-14 relative;
+
+    &--main-font {
+        @apply text-[40px] text-center uppercase font-rubik;
+    }
+
+    &--hr {
+        @apply w-[6.25rem] border-black border-2 rounded-full mx-auto;
+    }
+
+    &--sub-font {
+        @apply text-[30px] text-center font-rubik mt-4;
+    }
+
+    &--proj-div {
+        @apply w-[95%] grid grid-cols-1 gap-2 mx-auto rounded-3xl mt-4 shadow-lg py-4;
+
+        @screen tablet {
+            @apply grid-cols-2 gap-4;
+        }
+        
+        @screen desktop {
+            @apply max-w-[83rem] px-[3rem] grid-cols-3 gap-4;
+        }
+    }
+
+    &--image {
+        @apply object-cover opacity-70;
+    }
+
+    &--card {
+        @apply min-h-[300px] overflow-hidden bg-[#80EC6E] relative rounded-md z-10 shadow-md;
+    }
+
+    &--card-div {
+        @apply absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2;
+    }
+
+    &--hidden {
+        @apply hidden;
+    }
+
+    &--cardhover {
+        @apply absolute bg-[#80EC6E] w-full h-full flex items-center justify-center;
+    }
+
+    &--card-button {
+        @apply w-[150px] h-[50px] bg-white rounded-md border border-darkGray-600;
+
+        &:hover {
+            @apply bg-darkGray-600 text-white;
+        }
+    }
+}
