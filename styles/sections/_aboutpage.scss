@@ -1,9 +1,9 @@
 .about-section {
-    @apply bg-white relative w-full;
+    @apply bg-white relative w-full pt-14;
 }
 
 .about-div {
-    @apply w-[95%] mx-auto flex justify-center items-center min-h-screen py-10;
+    @apply w-[95%] mx-auto flex justify-center items-center py-10;
 
     @screen desktop{
         @apply max-w-[83rem] px-[3rem] py-0;
@@ -30,10 +30,10 @@
     }
 
     &--sample-div {
-        @apply w-[18.75rem] h-[28.125rem] mx-auto relative cursor-pointer mb-8;
+        @apply w-[250px] h-[375px] mx-auto relative cursor-pointer mb-8;
 
         @screen tablet {
-            @apply w-[350px] h-[525px];
+            @apply min-w-[350px] min-h-[525px];
         }
 
         @screen desktop {
@@ -44,7 +44,7 @@
             @apply rounded-md min-w-[350px] min-h-[525px] bg-gray-900;
 
             &--mobile {
-                @apply min-w-[300px] min-h-[450px];
+                @apply min-w-[250px] min-h-[375px];
             }
         }
 
@@ -52,12 +52,12 @@
             @apply min-w-[350px] min-h-[525px] absolute left-2;
 
             &--mobile {
-                @apply min-w-[300px] min-h-[450px];
+                @apply min-w-[250px] min-h-[375px];
             }
         }
 
         &--if-mobile {
-            @apply w-[300px] h-[450px];
+            @apply w-[250px] h-[375px];
         }
     }
 
@@ -78,7 +78,7 @@
     }
 
     &--button {
-        @apply bg-darkGray-500 font-rubik text-2xl p-4 rounded-full text-white mt-4 border border-darkGray-500;
+        @apply bg-[#070606] font-rubik text-2xl p-4 rounded-full text-white mt-4 border border-[#070606];
 
         &:hover{
             @apply text-black bg-white transition-all ease-in-out duration-700;
@@ -107,10 +107,10 @@
 }
 
 .skills-div {
-    @apply w-[95%] mx-auto bg-lightGray-500 mt-8 rounded-3xl shadow-2xl py-8;
+    @apply w-[95%] mx-auto mt-14;
 
     @screen desktop {
-        @apply max-w-[83rem] px-[3rem];
+        @apply max-w-[80rem] px-[3rem];
     }
 }
 
@@ -130,7 +130,7 @@
     }
 
     &--title {
-        @apply text-center text-2xl font-rubik rounded-t-lg bg-darkGray-500 text-white py-4;
+        @apply text-center text-2xl font-rubik rounded-t-lg bg-[#070606] text-white py-4;
     }
 
     &--tech-list {

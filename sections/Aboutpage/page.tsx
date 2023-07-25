@@ -134,7 +134,7 @@ const Aboutpage = () => {
                                         <Image
                                             src={profilepic}
                                             alt='Page logo'
-                                            width={isMobile ? 300 : 350}
+                                            width={isMobile ? 250 : 350}
                                             height={undefined}
                                             priority
                                             className={cx['profile-image']}

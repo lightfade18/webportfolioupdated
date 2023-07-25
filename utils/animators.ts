@@ -14,7 +14,7 @@ export const leftchild = {
         opacity: 1,
         transition: { type: 'linear', duration: 1 },
     },
-    hidden: { x: -210, y: -210, opacity: 0 },
+    hidden: { x: -160, y: -210, opacity: 0 },
 };
 
 export const middlechild = {
@@ -33,5 +33,5 @@ export const rightchild = {
         opacity: 1,
         transition: { type: 'linear', duration: 1 },
     },
-    hidden: { x: 210, y: -210, opacity: 0 },
+    hidden: { x: 160, y: -210, opacity: 0 },
 };

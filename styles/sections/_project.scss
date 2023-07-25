@@ -13,15 +13,23 @@
         @apply text-[30px] text-center font-rubik mt-4;
     }
 
+    &--main-div {
+        @apply w-[95%] mx-auto;
+        
+        @screen desktop {
+            @apply max-w-[83rem] px-[3rem];
+        }
+    }
+
     &--proj-div {
-        @apply w-[95%] grid grid-cols-1 gap-2 mx-auto rounded-3xl mt-4 shadow-lg py-4;
+        @apply w-full grid grid-cols-1 gap-2 mx-auto rounded-3xl mt-4 shadow-lg;
 
         @screen tablet {
             @apply grid-cols-2 gap-4;
         }
         
         @screen desktop {
-            @apply max-w-[83rem] px-[3rem] grid-cols-3 gap-4;
+            @apply grid-cols-3 gap-4;
         }
     }
 
@@ -46,7 +54,7 @@
     }
 
     &--card-button {
-        @apply w-[150px] h-[50px] bg-white rounded-md border border-darkGray-600;
+        @apply w-[150px] h-[50px] bg-white rounded-md border border-darkGray-600 flex justify-center items-center;
 
         &:hover {
             @apply bg-darkGray-600 text-white;

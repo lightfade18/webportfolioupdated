@@ -25,7 +25,6 @@ const socialIcons = Object.create({
 });
 
 const Header = () => {
-
   return (
     <section className={cx['header-div']}>
       <div>
@@ -53,7 +52,7 @@ const Header = () => {
             <a 
               key={key} 
               target="_blank" 
-              href={createSocialLink(key, link)} 
+              href={createSocialLink(key, link)}
               rel="noopener noreferrer"
             >
               {socialIcons[key]}

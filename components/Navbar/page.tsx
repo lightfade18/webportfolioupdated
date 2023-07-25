@@ -1,5 +1,6 @@
 'use client';
 
+import { FC } from "react";
 import { useState, useEffect } from 'react';
 import clsx from 'clsx';
 import cx from '@styles/MainStyle.module.scss';
@@ -8,18 +9,15 @@ import Link from 'next/link';
 import logo from '@public/assests/images/logo-pj.png';
 import IconBurger from '@public/assests/icons/icon-burger.svg';
 import IconClose from '@public/assests/icons/icon-close.svg';
+import { Link as ScrollLink } from 'react-scroll';
 
-const sections = ['Home', 'About', 'Certificates', 'Project', 'Contact'];
+const sections = ['Home', 'About', 'Certificates', 'Projects', 'Contact'];
 
-const pathLinks = Object.create({
-  Home: '#',
-  About: '#about-section',
-  Certificates: '#cert-section',
-  Project: '#proj-section',
-  Contact: '#contact-section',
-});
+interface navbarProps {
+  decider: boolean,
+};
 
-const Navbar = () => {
+const Navbar: FC<navbarProps> = ({decider}) => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [displayMenu, setDisplayMenu] = useState(false);
 
@@ -32,8 +30,10 @@ const Navbar = () => {
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
+      
     };
   }, []);
+  
 
   return (
     <section className={clsx(cx['navbar'], {[cx['navbar--scrolled']]: (scrollPosition > 0) || displayMenu})}>
@@ -54,15 +54,29 @@ const Navbar = () => {
                   key={index} 
                   className='ml-[1rem]'
                 >
-                  <Link href={pathLinks[item]} className={cx['nav-links']}>
+                  {decider ? (
+                  <ScrollLink
+                    to={item.toLowerCase()}
+                    smooth={true}
+                    duration={500}
+                    className={cx['nav-links']}
+                  >
+                    {item}
+                  </ScrollLink>
+                  ) : (
+                  <Link 
+                    href={`../#${item.toLowerCase()}`} 
+                    className={cx['nav-links']}
+                  >
                     {item}
                   </Link>
+                  )}
                 </li>
             ))}
           </ul>
         </div>
         {/* Mobile Nav */}
-        <div className={clsx(cx['mobile-nav'], {'h-[4.5rem] text-black': (scrollPosition > 0) || displayMenu})}>
+        <div className={clsx(cx['mobile-nav'], {[cx['mobile-nav--scrolled']]: (scrollPosition > 0) || displayMenu})}>
           <Image
             src={logo}
             alt='Page logo'

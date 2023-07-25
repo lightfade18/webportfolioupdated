@@ -1,5 +1,5 @@
 .cert-section {
-    @apply w-full h-auto bg-white py-14;
+    @apply w-full h-auto bg-white pt-14;
 
     &--main-font {
         @apply text-[2.5rem] text-center uppercase font-rubik;
@@ -10,11 +10,7 @@
     }
 
     &--container {
-        @apply w-[95%] mx-auto bg-darkGray-600 rounded-3xl mt-4;
-
-        @screen desktop {
-            @apply max-w-[83rem] px-[3rem];
-        }
+        @apply w-full mx-auto bg-[#070606] mt-4;
     }
 
     &--cert-slide {

@@ -15,7 +15,7 @@
 }
 
 .nav-links {
-    @apply font-rubik uppercase;
+    @apply font-rubik capitalize cursor-pointer;
     
     &:hover{
         @apply text-gray-600 transition-all duration-300;
@@ -34,11 +34,16 @@
     }
 }
 
+
 .mobile-nav {
     @apply flex items-center justify-between h-[5rem] transition-all duration-300 ease-out;
 
     @screen desktop {
         @apply hidden;
+    }
+
+    &--scrolled {
+        @apply h-[4rem] text-black;
     }
 }
 

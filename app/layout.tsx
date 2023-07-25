@@ -1,4 +1,3 @@
-import Navbar from '@components/Navbar/page';
 import '@styles/globals.css';
 import cx from '@styles/MainStyle.module.scss';
 
@@ -12,14 +11,7 @@ const RootLayout = ({children,}: {children: React.ReactNode}) => {
         <html lang="en">
             <body>
                 <div className={cx['bg-page']}>
-                    <Navbar />
-                    <div className={cx['container']}>
-                        <div className="mx-auto">
-                            <main>
-                                {children}
-                            </main>
-                        </div>
-                    </div>
+                    {children}
                 </div>
             </body>
         </html>
