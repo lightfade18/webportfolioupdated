@@ -3,22 +3,23 @@
 import cx from '@styles/MainStyle.module.scss';
 import clsx from 'clsx';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import type { StaticImageData } from 'next/image';
 import Link from 'next/link';
+import { motion, useInView } from 'framer-motion';
 
 // Images
 import webbuilder from '@public/assests/images/website-builder.png';
 import listbuilder from '@public/assests/images/listing-presentation-builders.png';
-import brgylogo from '@public/assests/images/brgy-logo.jpg';
-import reallogo from '@public/assests/images/real-logo.png';
+import bmis from '@public/assests/images/bmis-1.png';
+
 
 
 // project data [id, title, indicator, path, logo]
-export const projects: [string, string, string, StaticImageData, StaticImageData][] = [
-  ['clkh2w8y70000bcvjctn8eyk4', 'Real Listing Presentation Builder', 'listing', webbuilder, reallogo],
-  ['clkh2whog0002bcvje4yu0ax1', 'Real Website Builder', 'builder', listbuilder, reallogo],
-  ['clkh2wlg50004bcvjgl8qe0ge', 'Barangay Information Management System', 'bmis', listbuilder, brgylogo],
+export const projects: [string, string, string, StaticImageData][] = [
+  ['clkh2w8y70000bcvjctn8eyk4', 'Real Listing Presentation Builder', 'listing', webbuilder],
+  ['clkh2whog0002bcvje4yu0ax1', 'Real Website Builder', 'builder', listbuilder],
+  ['clkh2wlg50004bcvjgl8qe0ge', 'Barangay Information Management System', 'bmis', bmis],
 ];
 
 const Project = () => {
@@ -30,6 +31,15 @@ const Project = () => {
     setCardHover(newCardHover);
   };
 
+  // Instead of one ref, create an array of refs, one for each card
+  const refs = Array.from({ length: projects.length }).map(() => useRef(null));
+  const isInView = refs.map((ref) => useInView(ref));
+
+  useEffect(() => {
+    // Print isInView to see which cards are in view
+    console.log(isInView);
+  }, [isInView]);
+
   return (
     <section className={cx['proj-section']}>
       <div className={cx['proj-section--main-div']}>
@@ -37,36 +47,38 @@ const Project = () => {
         <hr className={cx['proj-section--hr']}/>
         <h2 className={cx['proj-section--sub-font']}>Here are projects that I take a part of as a Sofware Engineer.</h2>
         <div className={cx['proj-section--proj-div']}>
-          {projects.map(([url, title, indicator, path, logo], index) => (
-            <div 
-              key={title}
-              onMouseEnter={() => handleCardHover(index, true)}
-              onMouseLeave={() => handleCardHover(index, false)}
-              onClick={() => handleCardHover(index, !cardHover[index])}
-              className={cx['proj-section--card']}
-            >
-              <Image
-                fill
-                key={index}
-                src={path}
-                alt="logo 1"
-                className={cx['proj-section--image']}
-              />
-              {typeof title === 'string' && (
-                <div className={cx['proj-section--card-div']}>
-                  <Image
-                    width={150}
-                    height={undefined}
-                    key={index}
-                    src={logo}
-                    alt="logo 2"
-                    className='object-cover mx-auto'
-                  />
-                  <p>{title}</p>
-                </div>
-              )}
-              <div key={`${index}-hover`} className={clsx(cx['proj-section--hidden'], {[cx['proj-section--cardhover']] : cardHover[index]})}>
-                <Link href={`projects/${url}`} className={cx['proj-section--card-button']}>View more</Link>
+          
+          {projects.map(([url, title, indicator, path], index) => (
+            <div  key={url}>
+              <div className={cx['proj-section--title-div']}>
+                <h2 className={cx['proj-section--title']}>{title}</h2>
+                <motion.div
+                    ref={refs[index]}
+                    initial={{ width: 0 }} // Set initial width to 0 to animate from left
+                    animate={isInView[index] ? { width: "100%" } : { width: 0 }} // Set animate width to 100% to animate to right
+                    transition={isInView[index] ? { duration: 5 } : { duration: 0.5 } } // Animation duration in seconds
+                >
+                    <hr className={cx['proj-section--title-hr']}/>
+                </motion.div>
+              </div>
+              <div 
+                key={title}
+                onMouseEnter={() => handleCardHover(index, true)}
+                onMouseLeave={() => handleCardHover(index, false)}
+                onClick={() => handleCardHover(index, !cardHover[index])}
+                className={clsx(
+                  cx['proj-section--card'],
+                  { [cx['proj-section--card-hovered']]: cardHover[index] }
+                )}
+              >
+                <Image
+                  fill
+                  key={index}
+                  src={path}
+                  alt="logo 1"
+                  className={cx['proj-section--image']}
+                />
+                <Link href={`projects/${url}`} className={clsx(cx['proj-section--card-button-hidden'], {[cx['proj-section--card-button']]: cardHover[index]})}>View more</Link>
               </div>
             </div>
           ))}

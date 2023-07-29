@@ -106,14 +106,29 @@ const Navbar: FC<navbarProps> = ({decider}) => {
         <div className={cx['display-menu']}>
           <ul className='list-none text-black'>
             {sections.map((item, index) => (
-                <li 
-                  key={index} 
-                  className='ml-[1rem]'
-                >
-                  <a href='#' className={cx['nav-links']}>
-                    {item}
-                  </a>
-                </li>
+            <li 
+              key={index} 
+              className='ml-[1rem]'
+            >
+              {decider ? (
+              <ScrollLink
+                to={item.toLowerCase()}
+                smooth={true}
+                duration={500}
+                className={cx['nav-links']}
+                onClick={() => setDisplayMenu(!displayMenu)}
+              >
+                {item}
+              </ScrollLink>
+              ) : (
+              <Link 
+                href={`../#${item.toLowerCase()}`} 
+                className={cx['nav-links']}
+              >
+                {item}
+              </Link>
+              )}
+            </li>
             ))}
           </ul>
         </div>

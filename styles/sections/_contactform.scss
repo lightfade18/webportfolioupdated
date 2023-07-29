@@ -1,0 +1,64 @@
+.contact-section {
+    @apply w-full h-auto bg-white py-14;
+}
+
+.contact-div {
+    @apply w-[95%] mx-auto py-10;
+
+    @screen desktop{
+        @apply max-w-[83rem] px-[3rem] py-0;
+    }
+
+    &--button {
+        @apply py-4 px-6 rounded-full mx-auto bg-black text-white;
+
+        &--span {
+            @apply font-rubik text-lg;
+        }
+    }
+
+    &--email-message {
+         @apply hidden;
+    }
+
+    &--email-message-shown {
+        @apply block mx-auto font-rubik text-lg;
+   }
+
+    &--disabled-button {
+        @apply py-4 px-6 rounded-full mx-auto bg-darkGray-500 text-white;
+
+        &--span {
+            @apply font-rubik text-lg;
+        }
+    }
+
+    &--first-layer {
+        @apply w-full grid grid-cols-1 gap-2 mt-4;
+
+        @screen tablet {
+            @apply grid-cols-2;
+        }
+    }
+
+    &--first-layer {
+        @apply w-full grid grid-cols-1 gap-2 mx-auto mt-4;
+
+        @screen tablet {
+            @apply grid-cols-2 gap-4;
+        }
+    }
+
+
+    &--button-div {
+        @apply flex justify-center mt-4;
+    }
+
+    &--textarea-div {
+        @apply col-span-1;
+
+        @screen tablet {
+            @apply col-span-2;
+        }
+    }
+}

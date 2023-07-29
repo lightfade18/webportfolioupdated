@@ -40,19 +40,19 @@
     }
 
     &--details-div {
-        @apply w-[95%] mx-auto min-h-screen py-8;
+        @apply w-[95%] mx-auto h-auto py-8;
 
         @screen desktop{
             @apply max-w-[83rem] px-[3rem];
         }
 
         &--title {
-            @apply font-rubik text-[2rem];
+            @apply font-rubik text-[2rem] mb-4 font-bold;
         }
     }
 
     &--button-div {
-        @apply flex gap-4;
+        @apply flex gap-4 mb-4;
     }
 
     &--link-button {
@@ -65,5 +65,43 @@
 
     &--icon {
         @apply w-[12px] h-[12px] fill-black;
+    }
+
+    &--tech-div {
+        @apply flex items-center gap-2 flex-wrap mb-4;
+
+        &--title {
+            @apply font-rubik text-lg;
+        }
+
+        &--span {
+            @apply rounded-full bg-darkGray-600 px-4 py-1.5 text-white cursor-pointer;
+        }
+    }
+
+    &--hr {
+        @apply w-full border-black border-2 rounded-full mx-auto;
+    }
+
+    &--desc-div {
+        @apply mt-4 grid grid-cols-1 gap-6;   
+        
+        @screen desktop {
+            @apply grid-cols-3 gap-20;
+        }
+
+        &--desc {
+            @apply font-rubik text-lg;
+        }
+
+        &--rolerep {
+            &--title {
+                @apply font-rubik text-lg underline mb-2;
+            }
+
+            &--desc {
+                @apply font-rubik text-lg;
+            }
+        }
     }
 }

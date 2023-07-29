@@ -1,16 +1,28 @@
 .proj-section {
-    @apply w-full h-auto bg-white py-14 relative;
+    @apply w-full h-auto bg-[#070606] py-14 relative;
 
     &--main-font {
-        @apply text-[40px] text-center uppercase font-rubik;
+        @apply text-[40px] text-center uppercase font-rubik text-white;
+    }
+
+    &--title-div {
+        @apply flex justify-center items-center gap-1 mb-2;
+    }
+
+    &--title {
+        @apply z-20 font-rubik text-base min-w-fit text-white;
     }
 
     &--hr {
-        @apply w-[6.25rem] border-black border-2 rounded-full mx-auto;
+        @apply w-[6.25rem] border-white border-2 rounded-full mx-auto;
+    }
+
+    &--title-hr {
+        @apply w-full text-white;
     }
 
     &--sub-font {
-        @apply text-[30px] text-center font-rubik mt-4;
+        @apply text-[30px] text-center font-rubik mt-4 text-white;
     }
 
     &--main-div {
@@ -25,39 +37,35 @@
         @apply w-full grid grid-cols-1 gap-2 mx-auto rounded-3xl mt-4 shadow-lg;
 
         @screen tablet {
-            @apply grid-cols-2 gap-4;
+            @apply grid-cols-2 gap-8;
         }
         
         @screen desktop {
-            @apply grid-cols-3 gap-4;
+            @apply grid-cols-3 gap-12;
         }
     }
 
     &--image {
-        @apply object-cover opacity-70;
+        @apply object-cover;
     }
 
     &--card {
-        @apply min-h-[300px] overflow-hidden bg-[#80EC6E] relative rounded-md z-10 shadow-md;
+        @apply min-h-[15.625rem] relative rounded-lg z-10 shadow-xl overflow-hidden bg-white cursor-pointer;
     }
 
-    &--card-div {
-        @apply absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2;
+    &--card-hovered .proj-section--image {
+        @apply scale-125 transition-all ease-in-out duration-300;
     }
 
-    &--hidden {
+    &--card-button-hidden {
         @apply hidden;
     }
 
-    &--cardhover {
-        @apply absolute bg-[#80EC6E] w-full h-full flex items-center justify-center;
-    }
-
     &--card-button {
-        @apply w-[150px] h-[50px] bg-white rounded-md border border-darkGray-600 flex justify-center items-center;
+        @apply absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 w-[9.375rem] h-[3.125rem] bg-[#070606] rounded-md border border-[#070606] flex justify-center items-center text-white;
 
         &:hover {
-            @apply bg-darkGray-600 text-white;
+            @apply bg-white text-black;
         }
     }
 }

@@ -7,10 +7,15 @@ import Image from 'next/image';
 import profilepic from '@public/assests/images/profile-pic.jpg';
 import Animator from '@components/Animator/page';
 import animatorVariants from '@utils/animatorVariants';
+import { animatorChildren, leftchild, rightchild, middlechild } from '@utils/animators';
 import { motion } from 'framer-motion';
 import { useMedia } from 'react-use';
+
+// Images
 import logo1 from '@public/assests/images/weblogo1.jpg';
 import logo2 from '@public/assests/images/weblogo2.jpg';
+
+// Icons
 import IconNext from '@public/assests/icons/icon-nextjs.svg';
 import IconReact from '@public/assests/icons/icon-reactjs.svg';
 import IconTailwind from '@public/assests/icons/icon-tailwind.svg';
@@ -28,13 +33,14 @@ import IconNode from '@public/assests/icons/icon-nodejs.svg';
 import IconSASS from '@public/assests/icons/icon-sass.svg';
 import IconFramer from '@public/assests/icons/icon-framer.svg';
 import IconPrisma from '@public/assests/icons/icon-prisma.svg';
-import { animatorChildren, leftchild, rightchild, middlechild } from '@utils/animators';
+import IconTypescript from '@public/assests/icons/icon-typescript.svg';
+
 
 const name = 'Paul John Rodriguez';
 const details = 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis quod modi quia suscipit voluptatem similique ipsa porro quas saepe. Dolorem, repellat laborum eligendi animi eaque nam ab veniam eius repudiandae.';
-const frameworks = ['NextJS', 'ReactJS' , 'Tailwind', 'Bootstrap'];
-const proglang = ['JavaScript', 'Python', 'PHP', 'Java', 'SASS', 'HTML', 'CSS'];
-const devtools = ['VSCode', 'Github', 'Jira', 'NodeJS', 'Framer', 'Prisma'];
+const frameworks = ['NextJS', 'ReactJS', 'Tailwind', 'Bootstrap', 'HTML', 'CSS', 'SASS', 'Framer', 'TypeScript'];
+const proglang = ['JavaScript', 'Python', 'PHP', 'Java', 'NodeJS'];
+const devtools = ['VSCode', 'Github', 'Jira', 'Prisma'];
 
 const icons = Object.create({
     NextJS: <IconNext className={cx['tech-div--icon']}/>,
@@ -54,6 +60,7 @@ const icons = Object.create({
     SASS: <IconSASS className={cx['tech-div--icon']}/>,
     Framer: <IconFramer className={cx['tech-div--icon']}/>,
     Prisma: <IconPrisma className={cx['tech-div--icon']}/>,
+    TypeScript: <IconTypescript className={cx['tech-div--icon']}/>,
 });
 
 const Aboutpage = () => {
@@ -165,7 +172,7 @@ const Aboutpage = () => {
                         variants={animatorVariants.motionZoomInwChil()}
                         className={cx['tech-div--tech-box']}
                     >
-                        <h1 className={cx['tech-div--title']}>Frameworks</h1>
+                        <h1 className={cx['tech-div--title']}>Frontend</h1>
                         <div className={cx['tech-div--tech-list']}>
                         {frameworks.map((key) => (
                             <motion.div 
@@ -190,7 +197,7 @@ const Aboutpage = () => {
                         variants={animatorVariants.motionZoomInwChil()}
                         className={cx['tech-div--tech-box']}
                     >
-                        <h1 className={cx['tech-div--title']}>Porgramming Languages</h1>
+                        <h1 className={cx['tech-div--title']}>Backend</h1>
                         <div className={cx['tech-div--tech-list']}>
                         {proglang.map((key) => (
                             <motion.div 

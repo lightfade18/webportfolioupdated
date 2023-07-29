@@ -1,0 +1,31 @@
+.input-wrapper {
+    @apply w-full mx-auto;
+
+    &--label {
+        @apply font-rubik text-[30px];
+    }
+
+    &--textarea {
+        @apply w-full font-rubik text-[24px] p-2 border border-darkGray-500 rounded-md;
+    }
+
+    &--input {
+        @apply w-full font-rubik text-[24px] p-2 border border-darkGray-500 rounded-md;
+    }
+
+    &--asterisk {
+        @apply text-red-600;
+    }
+
+    &--error-div {
+        @apply w-full transition-all duration-200 flex items-center gap-2;
+    }
+
+    &--error-message {
+        @apply font-rubik text-red-600 text-lg;
+    }
+
+    &--error-icon {
+        @apply w-[16px] h-[16px];
+    }
+}

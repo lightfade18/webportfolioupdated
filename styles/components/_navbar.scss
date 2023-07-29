@@ -1,5 +1,5 @@
 .navbar {
-    @apply text-white text-lg bg-transparent sticky top-0 z-10 border-b-[1px] border-gray-400 border-opacity-20;
+    @apply text-white text-lg bg-transparent sticky top-0 z-30 border-b-[1px] border-gray-400 border-opacity-20;
 
     &--scrolled {
         @apply bg-white border-black;

@@ -16,6 +16,10 @@
     &--hr {
         @apply w-[6.25rem] border-black border-2 rounded-full mx-auto;
     }
+
+    &--sub-font {
+        @apply text-[30px] text-center font-rubik mt-4;
+    }
 }
 
 .about-content {
