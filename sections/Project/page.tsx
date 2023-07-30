@@ -3,7 +3,7 @@
 import cx from '@styles/MainStyle.module.scss';
 import clsx from 'clsx';
 import Image from 'next/image';
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
 import type { StaticImageData } from 'next/image';
 import Link from 'next/link';
 import { motion, useInView } from 'framer-motion';
@@ -34,11 +34,6 @@ const Project = () => {
   // Instead of one ref, create an array of refs, one for each card
   const refs = Array.from({ length: projects.length }).map(() => useRef(null));
   const isInView = refs.map((ref) => useInView(ref));
-
-  useEffect(() => {
-    // Print isInView to see which cards are in view
-    console.log(isInView);
-  }, [isInView]);
 
   return (
     <section className={cx['proj-section']}>
