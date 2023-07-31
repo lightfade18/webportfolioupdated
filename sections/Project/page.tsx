@@ -12,6 +12,8 @@ import { motion, useInView } from 'framer-motion';
 import webbuilder from '@public/assests/images/website-builder.png';
 import listbuilder from '@public/assests/images/listing-presentation-builders.png';
 import bmis from '@public/assests/images/bmis-1.png';
+import photoblog from '@public/assests/images/photoblog-1.png';
+import tmay from '@public/assests/images/tmay-1.png';
 
 // Icons
 import IconExternalLink from '@public/assests/icons/icon-external-link.svg';
@@ -21,6 +23,8 @@ export const projects: [string, string, string, StaticImageData][] = [
   ['clkh2w8y70000bcvjctn8eyk4', 'Real Listing Presentation Builder', 'listing', webbuilder],
   ['clkh2whog0002bcvje4yu0ax1', 'Real Website Builder', 'builder', listbuilder],
   ['clkh2wlg50004bcvjgl8qe0ge', 'Barangay Information Management System', 'bmis', bmis],
+  ['clkqd95h600007gvjfqmo30u5', 'Photography Blog', 'photoblog', photoblog],
+  ['clkqexq9900027gvjd5pl78ip', 'Tell Me About Myself', 'tmay', tmay],
 ];
 
 const Project = () => {

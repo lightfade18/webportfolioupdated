@@ -22,10 +22,6 @@
 
     &--sub-font {
         @apply text-[24px] text-center font-rubik mt-4;
-
-        @screen tablet {
-            @apply py-14;
-        }
     }
 }
 

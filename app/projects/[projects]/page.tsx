@@ -43,6 +43,19 @@ import bmis7 from '@public/assests/images/bmis-7.png';
 import bmis8 from '@public/assests/images/bmis-8.png';
 import bmis9 from '@public/assests/images/bmis-9.png';
 import bmis10 from '@public/assests/images/bmis-10.png';
+import photoblog1 from '@public/assests/images/photoblog-1.png';
+import photoblog2 from '@public/assests/images/photoblog-2.png';
+import photoblog3 from '@public/assests/images/photoblog-3.png';
+import photoblog4 from '@public/assests/images/photoblog-4.png';
+import photoblog5 from '@public/assests/images/photoblog-5.png';
+import photoblog6 from '@public/assests/images/photoblog-6.png';
+import photoblog7 from '@public/assests/images/photoblog-7.png';
+import photoblog8 from '@public/assests/images/photoblog-8.png';
+import tmay1 from '@public/assests/images/tmay-1.png';
+import tmay2 from '@public/assests/images/tmay-2.png';
+import tmay3 from '@public/assests/images/tmay-3.png';
+import tmay4 from '@public/assests/images/tmay-4.png';
+import tmay5 from '@public/assests/images/tmay-5.png';
 
 // Icons
 import IconOpentab from '@public/assests/icons/icon-opentab.svg';
@@ -55,17 +68,21 @@ interface pageProps {
 const data = Object.create({
     clkh2w8y70000bcvjctn8eyk4: ['https://suite.real.ph/', '', 'Dedicated for real estate agents, a powerful Listing Presentation Builder allows you to create stunning presentations that will help you secure more listings. \n\nInstead of presenting dull, printed presentations, you can create professional digital presentations that will bring your brand to life and propel you ahead of the competition.', 'Software Engineer Intern', 'Frontend Development, Backend Development, Data Handling'],
     clkh2whog0002bcvje4yu0ax1: ['https://builder.real.ph/', '', 'For distinguished real estate agents, it’s high time that you have your own agent website. With this Website Builder, agenst can create a professional-looking website to showcase their properties and establish their brand online. \nChoose from a gallery of beautifully-designed templates to create your website in minutes. No coding or design skills required.', 'Software Engineer Intern', 'Frontend Development, Backend Development, Data Handling'],
-    clkh2wlg50004bcvjgl8qe0ge: ['https://barangayconcepciondos.com/', '', 'A Barangay Management and Information System that organized records of data of Barangay Concepcion Dos, Marikina City. The system provided a feasible and efficient medium to cater to and provide the needs of the residents and officials as well.', 'Lead Developer', 'Frontend Development, Backend Development, SQL, Prototype, Deployment, Testing'],
+    clkh2wlg50004bcvjgl8qe0ge: ['https://barangayconcepciondos.com/', 'https://github.com/lightfade18/bmis-repo.git', 'A Barangay Management and Information System that organized records of data of Barangay Concepcion Dos, Marikina City. The system provided a feasible and efficient medium to cater to and provide the needs of the residents and officials as well.', 'Lead Developer', 'Frontend Development, SQL, Prototype, Deployment, Testing'],
+    clkqd95h600007gvjfqmo30u5: ['https://lightfade18.github.io/photography-blog-repo/', 'https://github.com/lightfade18/photography-blog-repo.git', 'A simple full-frontend static blog website developed as a school project, it highlights the different aspects of photography. With a simple and dark-themed design, it emphasizes the uniqueness of the world of photography.', 'Lead Developer', 'Frontend Development, Deployment, Testing'],
+    clkqexq9900027gvjd5pl78ip: ['https://lightfade18.github.io/tell-me-about-yourself-blog/', 'https://github.com/lightfade18/tell-me-about-yourself-blog.git', 'A full-frontend school project static website that that shows the personality of the person. It showcase the different interests of the subject like music and films. It also has a description of the subject and a full frontend resume design.', 'Sole Developer', 'Frontend Development, Deployment, Testing'],
 });
 
 // Tech used in every project [per id]
 const techstack = Object.create({
     clkh2w8y70000bcvjctn8eyk4: ['Next.js', 'Typescript', 'Prisma', 'Redux', 'Tailwind', 'GraphQL', 'PostgreSQL'],
     clkh2whog0002bcvje4yu0ax1: ['Next.js', 'Typescript', 'Prisma', 'Redux', 'Tailwind', 'GraphQL', 'PostgreSQL'],
-    clkh2wlg50004bcvjgl8qe0ge: ['PHP', 'HTML&CSS', 'Bootstrap', 'JavaScript', 'MySQL'],
+    clkh2wlg50004bcvjgl8qe0ge: ['PHP', 'HTML', 'CSS', 'Bootstrap', 'JavaScript', 'MySQL'],
+    clkqd95h600007gvjfqmo30u5: ['HTML', 'CSS', 'Bootstrap'],
+    clkqexq9900027gvjd5pl78ip: ['HTML', 'CSS'],
 });
 
-const images = [builder1, builder2, builder3, builder4, builder5, builder6, builder7, builder8, bmis1, bmis2, bmis3, bmis4, bmis5, bmis6, bmis7, bmis8, bmis9, bmis10, listing1, listing2, listing3, listing4, listing5, listing6, listing7, listing8];
+const images = [tmay1, tmay2, tmay3, tmay4, tmay5, builder1, builder2, builder3, builder4, builder5, builder6, builder7, builder8, bmis1, bmis2, bmis3, bmis4, bmis5, bmis6, bmis7, bmis8, bmis9, bmis10, listing1, listing2, listing3, listing4, listing5, listing6, listing7, listing8, photoblog1, photoblog2, photoblog3, photoblog4, photoblog5, photoblog6, photoblog7, photoblog8];
 
 const page: FC<pageProps> = ({params}) => {
     const newTitlesArray = projects.map(([url]) => {
@@ -156,6 +173,7 @@ const page: FC<pageProps> = ({params}) => {
                                 </a>
                                 {data[params.projects][1] && (
                                     <a 
+                                        href={data[params.projects][1]}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className={cx['projects-section--link-button']}
