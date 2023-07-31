@@ -2,11 +2,19 @@
 
 import cx from '@styles/MainStyle.module.scss';
 import clsx from 'clsx';
+import Image from 'next/image';
+import { createSocialLink } from '@utils/createSocialLink';
+import { useMedia } from 'react-use';
+
+// Images
+import profileimage from '@public/assests/images/profile-art.jpg';
+
+// Icons
 import IconFB from '@public/assests/icons/icon-fb.svg';
 import IconTwitter from '@public/assests/icons/icon-twitter.svg';
 import IconIG from '@public/assests/icons/icon-ig.svg';
 import IconLinkedIn from '@public/assests/icons/icon-linked-in.svg';
-import { createSocialLink } from '@utils/createSocialLink';
+import Typewriter from '@components/Typewriter/page';
 
 const fields = [`I'm PJ Rodriguez`, `I'm a Fullstack Developer`, `I'm a Web Developer`]
 
@@ -25,29 +33,12 @@ const socialIcons = Object.create({
 });
 
 const Header = () => {
+  const isMobile = useMedia('screen and (max-width: 640px)', false);
+
   return (
     <section className={cx['header-div']}>
-      <div>
-        <h1 className={clsx(cx['header-div--medium-font'])}>welcome!</h1>
-        <div className={cx['wrapper']}>
-          <ul className={cx['dynamic-text']}>
-            {fields.map((item, index) => (
-            <li 
-              key={index}
-              className={cx['lists-text']} 
-              style={{ '--fields-length': fields.length } as React.CSSProperties}
-            >
-              <span 
-                className={cx['span-text']} 
-                style={{ '--item-length': item.length } as React.CSSProperties}
-              >
-                {item}
-              </span>
-            </li>
-            ))}
-          </ul>
-        </div>
-        <div className={cx['socials-div']}>
+      <div className={clsx(cx['socials-div'], {[cx['socials-div-mobile']] : isMobile})}>
+        <div className={clsx(cx['socials-div--grid'], {[cx['socials-div-mobile--grid']] : isMobile})}>
           {socialLinks.map(([key, link]) => (
             <a 
               key={key} 
@@ -58,6 +49,28 @@ const Header = () => {
               {socialIcons[key]}
             </a>
           ))}
+        </div>
+      </div>
+      <div className={cx['header-div--style-box']}></div>
+      <div className={cx['header-div--content']}>
+        <div className={cx['header-div--image-div']}>
+          <Image
+            src={profileimage}
+            alt='Profile art image'
+            width={500}
+            height={undefined}
+            priority
+            className={cx['header-div--image-div--image']}
+          />
+        </div>
+        <div className={cx['header-div--info-div']}>
+          <div>
+            <h1 className={clsx(cx['header-div--medium-font'])}>welcome!</h1>
+            <div className={cx['wrapper']}>
+              <h1 className={cx['dynamic-text']}><Typewriter sentences={fields}/></h1>
+            </div>
+            
+          </div>
         </div>
       </div>
     </section>

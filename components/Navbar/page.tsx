@@ -108,7 +108,7 @@ const Navbar: FC<navbarProps> = ({decider}) => {
             {sections.map((item, index) => (
             <li 
               key={index} 
-              className='ml-[1rem]'
+              className='ml-[1rem] my-2'
             >
               {decider ? (
               <ScrollLink

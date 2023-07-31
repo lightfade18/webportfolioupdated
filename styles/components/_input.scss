@@ -17,6 +17,11 @@
         @apply text-red-600;
     }
 
+    &--asterisk-valid {
+        @apply text-green-600;
+    }
+
+
     &--error-div {
         @apply w-full transition-all duration-200 flex items-center gap-2;
     }

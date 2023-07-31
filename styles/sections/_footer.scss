@@ -1,0 +1,21 @@
+.footer-section {
+    @apply w-full h-auto bg-[#070606] relative py-8;
+
+    &--footer-div {
+        @apply w-[95%] mx-auto text-white;
+            
+        @screen desktop {
+            @apply max-w-[83rem] px-[3rem] flex items-center justify-center gap-4;
+        }
+    }
+
+    &--text {
+        @apply font-rubik text-center;
+    }
+
+    &--span{
+        &:hover {
+            @apply text-[#007AFF];
+        }
+    }
+}

@@ -14,15 +14,19 @@
     }
 
     &--hr {
-        @apply w-[6.25rem] border-white border-2 rounded-full mx-auto;
+        @apply w-[6.25rem] border-[#007AFF] border-2 rounded-full mx-auto;
     }
 
     &--title-hr {
-        @apply w-full text-white;
+        @apply w-full border-[#007AFF];
     }
 
     &--sub-font {
-        @apply text-[30px] text-center font-rubik mt-4 text-white;
+        @apply text-[24px] text-center font-rubik mt-4 text-white;
+
+        @screen tablet {
+            @apply text-[30px];
+        }
     }
 
     &--main-div {
@@ -67,5 +71,13 @@
         &:hover {
             @apply bg-white text-black;
         }
+    }
+
+    &--icon {
+        @apply w-[30px] h-[30px] absolute top-2 right-2;
+    }
+
+    &--icon-hover {
+        @apply w-[30px] h-[30px] absolute top-2 right-2 fill-[#007AFF];
     }
 }

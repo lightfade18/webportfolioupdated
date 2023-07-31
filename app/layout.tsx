@@ -1,3 +1,4 @@
+import Footer from '@sections/Footer/page';
 import '@styles/globals.css';
 import cx from '@styles/MainStyle.module.scss';
 
@@ -13,6 +14,7 @@ const RootLayout = ({children,}: {children: React.ReactNode}) => {
                 <div className={cx['bg-page']}>
                     {children}
                 </div>
+                <Footer/>
             </body>
         </html>
     )

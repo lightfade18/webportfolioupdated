@@ -76,6 +76,10 @@
 
         &--span {
             @apply rounded-full bg-darkGray-600 px-4 py-1.5 text-white cursor-pointer;
+
+            &:hover {
+                @apply bg-[#007AFF];
+            }
         }
     }
 
@@ -96,7 +100,7 @@
 
         &--rolerep {
             &--title {
-                @apply font-rubik text-lg underline mb-2;
+                @apply font-rubik text-lg underline mb-2 text-[#007AFF];
             }
 
             &--desc {

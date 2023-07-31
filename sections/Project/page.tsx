@@ -13,9 +13,10 @@ import webbuilder from '@public/assests/images/website-builder.png';
 import listbuilder from '@public/assests/images/listing-presentation-builders.png';
 import bmis from '@public/assests/images/bmis-1.png';
 
+// Icons
+import IconExternalLink from '@public/assests/icons/icon-external-link.svg';
 
-
-// project data [id, title, indicator, path, logo]
+// project data [id, title, indicator, path]
 export const projects: [string, string, string, StaticImageData][] = [
   ['clkh2w8y70000bcvjctn8eyk4', 'Real Listing Presentation Builder', 'listing', webbuilder],
   ['clkh2whog0002bcvje4yu0ax1', 'Real Website Builder', 'builder', listbuilder],
@@ -42,7 +43,6 @@ const Project = () => {
         <hr className={cx['proj-section--hr']}/>
         <h2 className={cx['proj-section--sub-font']}>Here are projects that I take a part of as a Sofware Engineer.</h2>
         <div className={cx['proj-section--proj-div']}>
-          
           {projects.map(([url, title, indicator, path], index) => (
             <div  key={url}>
               <div className={cx['proj-section--title-div']}>
@@ -66,6 +66,7 @@ const Project = () => {
                   { [cx['proj-section--card-hovered']]: cardHover[index] }
                 )}
               >
+                <Link href={`projects/${url}`}>
                 <Image
                   fill
                   key={index}
@@ -73,7 +74,8 @@ const Project = () => {
                   alt="logo 1"
                   className={cx['proj-section--image']}
                 />
-                <Link href={`projects/${url}`} className={clsx(cx['proj-section--card-button-hidden'], {[cx['proj-section--card-button']]: cardHover[index]})}>View more</Link>
+                </Link>
+                <IconExternalLink className={clsx(cx['proj-section--icon'], {[cx['proj-section--icon-hover']] : cardHover[index]})}/>,
               </div>
             </div>
           ))}

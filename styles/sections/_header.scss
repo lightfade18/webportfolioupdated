@@ -1,5 +1,9 @@
 .header-div {
-    @apply w-[95%] flex items-center pb-[7rem] mx-auto  bg-transparent min-h-screen;
+    @apply w-[95%] pb-[5rem] mx-auto  bg-transparent min-h-screen relative pt-24;
+
+    @screen tablet {
+        @apply flex items-center pt-6;
+    }
 
     @screen desktop{
         @apply max-w-[83rem] px-[3rem];
@@ -12,10 +16,46 @@
             @apply text-[2rem];
         }
     }
+
+    &--content {
+        @apply w-full grid grid-cols-1 gap-4;
+
+        @screen tablet {
+            @apply grid-cols-2 gap-0;
+        }
+    }
+
+    &--image-div {
+        @apply flex justify-center items-center;
+
+        @screen tablet {
+            @apply justify-end order-2;
+        }
+
+        &--image {
+            @apply object-cover rounded-full;
+        }
+    }
+
+    &--info-div {
+        @apply flex justify-start items-center;
+
+        @screen tablet {
+            @apply order-1;
+        }
+    }
+
+    &--style-box {
+        @apply absolute top-0 right-0 w-[10px] h-[150px] border-r-2 border-[#007AFF];
+
+        @screen desktop {
+            @apply mr-[3rem];
+        }
+    }
 }
 
 .wrapper {
-    @apply inline-flex text-white text-[2rem] py-0 my-0;
+    @apply relative text-white text-[2rem] py-0 my-0;
 
     @screen desktop {
         @apply text-[3rem];
@@ -23,69 +63,54 @@
 }
 
 .dynamic-text {
-    @apply font-rubikpaint h-[60px] leading-[60px] overflow-hidden;
+    @apply font-rubikpaint leading-[60px];
 
     @screen desktop {
-        @apply font-rubikpaint h-[75px] leading-[75px] overflow-hidden;
+        @apply font-rubikpaint leading-[75px];
     }
 }
 
 .lists-text{
     @apply list-none relative top-0;
-    animation: slide 9s steps(var(--fields-length)) infinite;
 }
 
-@keyframes slide {
-    100%{
-        top: -181px;
+.span-text {
+    @apply mr-4;
+}
+
+
+.socials-div {
+    @apply absolute bottom-28 left-0;
+
+    &--socials-icon {
+        @apply w-[1.5rem] h-[1.5rem] fill-[#007AFF];
+
+        &:hover {
+            @apply transition-colors duration-500 fill-[#007AFF];
+        }
     }
-}
 
-@screen desktop {
-    @keyframes slide {
-        100% {
-            top: -226px;
+    &--grid {
+        @apply grid grid-cols-1 gap-4;
+
+        @screen desktop {
+            @apply ml-[3rem];
         }
     }
 }
 
-.span-text {
-    @apply relative pr-[2px];
-
-    // &::after{
-    //     content: '';
-    //     @apply absolute h-full w-full bg-[#080808] left-0 mt-[12px] border-l-[2px];
-    //     animation: animate 3s linear infinite;
-    // }
-
-    @screen desktop {
-        position: relative;
-
-        // &::after{
-        //     content: '';
-        //     @apply absolute h-full w-full bg-[#080808] left-0 mt-[9px] border-l-[2px];
-        //     animation: animate 3s linear infinite;
-        // }
-    }
-}
-
-@keyframes animate {
-    40%, 60%{
-        left: 100%;
-    }
-    100%{
-        left: 0%;
-    }
-}
-
-.socials-div {
-    @apply z-10 text-[2rem] text-white p-0 m-0 flex gap-4;
+.socials-div-mobile {
+    @apply absolute top-4 left-0;
 
     &--socials-icon {
         @apply w-[1.5rem] h-[1.5rem] fill-white;
 
         &:hover {
-            @apply transition-colors duration-500 fill-gray-600;
+            @apply transition-colors duration-500 fill-[#007AFF];
         }
+    }
+
+    &--grid {
+        @apply grid grid-cols-4 gap-2;
     }
 }

@@ -3,6 +3,7 @@
 import React, { useState, forwardRef, useId } from 'react';
 import type { FieldError } from 'react-hook-form';
 import cx from '@styles/MainStyle.module.scss';
+import clsx from 'clsx';
 
 // Icons
 import IconDangerInfo from '@public/assests/icons/icon-danger-info.svg';
@@ -85,10 +86,10 @@ const Input = forwardRef<HTMLInputElement & HTMLTextAreaElement, Props>(
 
     return (
       <div className={cx['input-wrapper']}>
-        <label className={cx['input-wrapper--label']} htmlFor={inputId}>
+        <label className={clsx(cx['input-wrapper--label'])} htmlFor={inputId}>
           {label || ''}
           {type !== 'textArea' && (
-            <span className={cx['input-wrapper--asterisk']}>{` *`}</span>
+            <span className={clsx(cx['input-wrapper--asterisk'], {[cx['input-wrapper--asterisk-valid']] : !error})}>{` *`}</span>
           )}
         </label>
         <div>

@@ -1,5 +1,8 @@
 .about-section {
-    @apply bg-white relative w-full pt-14;
+    @apply bg-white relative w-full;
+    @screen tablet {
+        @apply  pt-14;
+    }
 }
 
 .about-div {
@@ -14,11 +17,15 @@
     }
 
     &--hr {
-        @apply w-[6.25rem] border-black border-2 rounded-full mx-auto;
+        @apply w-[6.25rem] border-[#007AFF] border-2 rounded-full mx-auto;
     }
 
     &--sub-font {
-        @apply text-[30px] text-center font-rubik mt-4;
+        @apply text-[24px] text-center font-rubik mt-4;
+
+        @screen tablet {
+            @apply py-14;
+        }
     }
 }
 
@@ -66,7 +73,11 @@
     }
 
     &--about-title {
-        @apply font-rubik text-2xl font-bold;
+        @apply font-rubik text-lg font-bold;
+
+        @screen tablet {
+            @apply text-2xl;
+        }
 
         &--span {
             @apply text-yellow-400;
@@ -74,15 +85,27 @@
     }
 
     &--about-details {
-        @apply font-rubik text-2xl mt-4;
+        @apply font-rubik text-lg mt-4;
+
+        @screen tablet {
+            @apply text-2xl;
+        }
     }
 
     &--info-div {
-        @apply px-4;
+        @apply px-0;
+
+        @screen desktop {
+            @apply px-4;
+        }
     }
 
     &--button {
-        @apply bg-[#070606] font-rubik text-2xl p-4 rounded-full text-white mt-4 border border-[#070606];
+        @apply bg-[#070606] font-rubik text-lg p-3 rounded-full text-white mt-4 border border-[#070606];
+
+        @screen tablet {
+            @apply text-2xl p-4;
+        }
 
         &:hover{
             @apply text-black bg-white transition-all ease-in-out duration-700;
@@ -111,10 +134,10 @@
 }
 
 .skills-div {
-    @apply w-[95%] mx-auto mt-14;
+    @apply w-[95%] mx-auto;
 
     @screen desktop {
-        @apply max-w-[80rem] px-[3rem];
+        @apply max-w-[80rem] px-[3rem] mt-14;
     }
 }
 
@@ -150,7 +173,7 @@
     }
 
     &--details {
-        @apply absolute p-2 font-rubik bg-darkGray-500 text-white rounded top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2;
+        @apply absolute p-2 font-rubik bg-[#007AFF] text-white rounded top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2;
     }
 
     &--container {

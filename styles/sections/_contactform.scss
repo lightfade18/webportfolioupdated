@@ -1,5 +1,9 @@
 .contact-section {
-    @apply w-full h-auto bg-white py-14;
+    @apply w-full h-auto bg-white;
+
+    @screen tablet {
+        @apply py-14;
+    }
 }
 
 .contact-div {

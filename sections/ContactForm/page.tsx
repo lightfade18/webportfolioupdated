@@ -30,6 +30,7 @@ const ContactForm = () => {
   });
 
   const [emailSent, setEmailSent] = useState(false);
+  const [isDisabled, setIsDisabled] = useState(false);
 
   async function onSubmit(data: FormValues) {
     const dataValue = {
@@ -39,6 +40,7 @@ const ContactForm = () => {
     };
     
     try {
+      setIsDisabled(true);
       const response = await fetch("/api/nodemailer", {
         method: "POST",
         headers: {
@@ -51,10 +53,12 @@ const ContactForm = () => {
         setEmailSent(true);
         setTimeout(() => {
           setEmailSent(false);
+          setIsDisabled(false);
         }, 3000);
       }
     } catch (error) {
       console.log(error);
+      setIsDisabled(false);
     }
   }
 
@@ -112,8 +116,8 @@ const ContactForm = () => {
           <div className={cx['contact-div--button-div']}>
             <button
               type="submit"
-              disabled={emailSent}
-              className={clsx(cx['contact-div--button'], {[cx['contact-div--disabled-button']] : emailSent})}
+              disabled={isDisabled}
+              className={clsx(cx['contact-div--button'], {[cx['contact-div--disabled-button']] : isDisabled})}
             >
               <span className={cx['contact-div--button--span']}>Submit</span>
             </button>

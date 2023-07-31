@@ -4,7 +4,6 @@ import { useState } from 'react';
 import cx from '@styles/MainStyle.module.scss';
 import clsx from 'clsx';
 import Image from 'next/image';
-import profilepic from '@public/assests/images/profile-pic.jpg';
 import Animator from '@components/Animator/page';
 import animatorVariants from '@utils/animatorVariants';
 import { animatorChildren, leftchild, rightchild, middlechild } from '@utils/animators';
@@ -14,6 +13,7 @@ import { useMedia } from 'react-use';
 // Images
 import logo1 from '@public/assests/images/weblogo1.jpg';
 import logo2 from '@public/assests/images/weblogo2.jpg';
+import profilepic from '@public/assests/images/profile-pic.jpg';
 
 // Icons
 import IconNext from '@public/assests/icons/icon-nextjs.svg';
@@ -37,7 +37,7 @@ import IconTypescript from '@public/assests/icons/icon-typescript.svg';
 
 
 const name = 'Paul John Rodriguez';
-const details = 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis quod modi quia suscipit voluptatem similique ipsa porro quas saepe. Dolorem, repellat laborum eligendi animi eaque nam ab veniam eius repudiandae.';
+const details = 'An aspiring Software Engineer, a music lover, an anime enthusiast, a coke addict, and a certified gamer. I always crave garlic with rice right after I wake up, and my favorite dish is sinigang. I am competitive when it comes to sports, and always ready to play a game of basketball.';
 const frameworks = ['NextJS', 'ReactJS', 'Tailwind', 'Bootstrap', 'HTML', 'CSS', 'SASS', 'Framer', 'TypeScript'];
 const proglang = ['JavaScript', 'Python', 'PHP', 'Java', 'NodeJS'];
 const devtools = ['VSCode', 'Github', 'Jira', 'Prisma'];
