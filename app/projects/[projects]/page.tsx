@@ -156,7 +156,7 @@ const page: FC<pageProps> = ({params}) => {
                             }
                         })}
                     </Swiper>
-                    <div className="bg-white">
+                    <div className="bg-[#070606]">
                         <div className={cx['projects-section--details-div']}>
                             <h1 className={cx['projects-section--details-div--title']}>{newTitle}</h1>
                             <div className={cx['projects-section--button-div']}>

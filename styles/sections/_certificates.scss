@@ -1,8 +1,8 @@
 .cert-section {
-    @apply w-full h-auto bg-white pt-14;
+    @apply w-full h-auto bg-[#070606] pt-14;
 
     &--main-font {
-        @apply text-[2.5rem] text-center uppercase font-rubik;
+        @apply text-[2.5rem] text-center uppercase font-rubik text-white;
     }
 
     &--hr {
@@ -54,7 +54,7 @@
 
         button:not(:disabled) {
             svg {
-                @apply fill-black;
+                @apply fill-white;
             }
 
             svg:hover {

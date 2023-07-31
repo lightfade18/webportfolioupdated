@@ -1,5 +1,5 @@
 .about-section {
-    @apply bg-white relative w-full;
+    @apply bg-[#070606] relative w-full;
     @screen tablet {
         @apply  pt-14;
     }
@@ -12,8 +12,12 @@
         @apply max-w-[83rem] px-[3rem] py-0;
     }
 
+    &--about-main-font {
+        @apply text-[2.5rem] text-center uppercase font-rubik text-black;
+    }
+
     &--main-font {
-        @apply text-[2.5rem] text-center uppercase font-rubik;
+        @apply text-[2.5rem] text-center uppercase font-rubik text-white;
     }
 
     &--hr {
@@ -21,12 +25,12 @@
     }
 
     &--sub-font {
-        @apply text-[24px] text-center font-rubik mt-4;
+        @apply text-[24px] text-center font-rubik mt-4 text-white;
     }
 }
 
 .about-content {
-    @apply bg-white/20 backdrop-filter backdrop-blur-xl shadow-2xl p-6 rounded-3xl;
+    @apply bg-white/90 backdrop-filter backdrop-blur-xl shadow-2xl p-6 rounded-3xl;
 }
 
 .about-panel {
@@ -76,7 +80,7 @@
         }
 
         &--span {
-            @apply text-yellow-400;
+            @apply text-[#ffaa00];
         }
     }
 
@@ -149,11 +153,11 @@
     }
 
     &--tech-box {
-        @apply mx-auto bg-white rounded-lg shadow-xl;
+        @apply mx-auto bg-white rounded-lg;
     }
 
     &--title {
-        @apply text-center text-2xl font-rubik rounded-t-lg bg-[#070606] text-white py-4;
+        @apply text-center text-2xl font-rubik rounded-t-lg bg-[#007AFF] text-white py-4;
     }
 
     &--tech-list {

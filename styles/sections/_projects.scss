@@ -47,7 +47,7 @@
         }
 
         &--title {
-            @apply font-rubik text-[2rem] mb-4 font-bold;
+            @apply font-rubik text-[2rem] mb-4 font-bold text-white;
         }
     }
 
@@ -56,10 +56,10 @@
     }
 
     &--link-button {
-        @apply w-auto h-auto px-4 py-1.5 flex items-center justify-center gap-1 border border-black rounded-full cursor-pointer;
+        @apply w-auto h-auto px-4 py-1.5 flex items-center justify-center gap-1 border border-black rounded-full cursor-pointer bg-white;
 
         &:hover {
-            @apply bg-black text-white;
+            @apply bg-black text-white border-white;
         }
     }
 
@@ -71,7 +71,7 @@
         @apply flex items-center gap-2 flex-wrap mb-4;
 
         &--title {
-            @apply font-rubik text-lg;
+            @apply font-rubik text-lg text-white;
         }
 
         &--span {
@@ -84,7 +84,7 @@
     }
 
     &--hr {
-        @apply w-full border-black border-2 rounded-full mx-auto;
+        @apply w-full border-white border-2 rounded-full mx-auto;
     }
 
     &--desc-div {
@@ -95,7 +95,7 @@
         }
 
         &--desc {
-            @apply font-rubik text-lg;
+            @apply font-rubik text-lg text-white;
         }
 
         &--rolerep {
@@ -104,7 +104,7 @@
             }
 
             &--desc {
-                @apply font-rubik text-lg;
+                @apply font-rubik text-lg text-white;
             }
         }
     }

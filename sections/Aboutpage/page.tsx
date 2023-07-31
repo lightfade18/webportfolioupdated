@@ -78,38 +78,16 @@ const Aboutpage = () => {
     };
 
     const handlePrint = () => {
-        window.open('assests/files/cv.pdf');
+        window.open('assests/files/Rodriguez-PaulJohn-CV.pdf');
     };
 
     return (
         <section id='about' className={cx['about-section']}>
-            <div className={cx['logo-div']}>
-                <div className={cx['logo-div--logo-divider']}>
-                    <div className={cx['logo-div--logo-divider--logo']}>
-                        <Image
-                            width={isMobile ? 250 : 300}
-                            height={undefined}
-                            priority
-                            src={logo1}
-                            alt="logo 1"
-                        />
-                    </div>
-                    <div className={cx['logo-div--logo-divider--logo']}>
-                        <Image
-                            width={isMobile ? 250 : 300}
-                            height={undefined}
-                            priority
-                            src={logo2}
-                            alt="logo 2"
-                        />
-                    </div>
-                </div>
-            </div>
             <div className={cx['about-div']}>
                 <Animator variants={animatorVariants.motionDownToUpwChil()}>
                     <div className={cx['about-content']}>
                         <motion.div variants={animatorChildren}>
-                        <h1 className={cx['about-div--main-font']}>About Me</h1>
+                        <h1 className={cx['about-div--about-main-font']}>About Me</h1>
                         <hr className={cx['about-div--hr']}/>
                         </motion.div>
                         <motion.div variants={animatorChildren}>

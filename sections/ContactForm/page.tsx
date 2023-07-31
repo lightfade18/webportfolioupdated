@@ -12,12 +12,6 @@ export interface FormValues {
   message: string;
 }
 
-const defaultValues = {
-  name: '',
-  email: '',
-  message: '',
-};
-
 const ContactForm = () => {
   const {
     register,
@@ -114,15 +108,15 @@ const ContactForm = () => {
           </div>
           <p className={clsx(cx['contact-div--email-message'], {[cx['contact-div--email-message-shown']] : emailSent})}>Message sent successfully.</p>
           <div className={cx['contact-div--button-div']}>
-            <button
-              type="submit"
-              disabled={isDisabled}
-              className={clsx(cx['contact-div--contact-button'], {[cx['contact-div--disabled-button']] : isDisabled})}
-            >
-              <span className={cx['contact-div--contact-button--span']}>Submit</span>
-            </button>
+            <div className={clsx(cx['contact-div--contact-button'], {[cx['contact-div--disabled-button']] : isDisabled})}>
+              <button
+                type="submit"
+                disabled={isDisabled}
+              >
+                <span className={cx['contact-div--contact-button--span']}>Submit</span>
+              </button>
+            </div>
           </div>
-          
         </form>
       </div>
     </section>

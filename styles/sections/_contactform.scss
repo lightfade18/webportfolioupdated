@@ -1,5 +1,5 @@
 .contact-section {
-    @apply w-full h-auto bg-white;
+    @apply w-full h-auto bg-[#070606];
 
     @screen tablet {
         @apply py-14;
@@ -14,7 +14,7 @@
     }
 
     &--contact-button {
-        @apply py-4 px-6 rounded-full mx-auto bg-black text-white;
+        @apply py-4 px-6 rounded-full mx-auto bg-[#007AFF] text-white;
 
         &--span {
             @apply font-rubik text-lg;
@@ -26,7 +26,7 @@
     }
 
     &--email-message-shown {
-        @apply block mx-auto font-rubik text-lg;
+        @apply block mx-auto font-rubik text-lg text-white;
    }
 
     &--disabled-button {
