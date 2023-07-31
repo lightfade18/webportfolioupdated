@@ -117,9 +117,9 @@ const ContactForm = () => {
             <button
               type="submit"
               disabled={isDisabled}
-              className={clsx(cx['contact-div--button'], {[cx['contact-div--disabled-button']] : isDisabled})}
+              className={clsx(cx['contact-div--contact-button'], {[cx['contact-div--disabled-button']] : isDisabled})}
             >
-              <span className={cx['contact-div--button--span']}>Submit</span>
+              <span className={cx['contact-div--contact-button--span']}>Submit</span>
             </button>
           </div>
           
