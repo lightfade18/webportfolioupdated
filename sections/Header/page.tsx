@@ -22,7 +22,7 @@ const socialLinks = [
   ['facebook', 'pj.jumawanrodriguez'],
   ['twitter', 'Pj24987880'],
   ['instagram', 'pjrodriguez_18'],
-  ['linkedin', 'paul-john-rodriguez-854706277'],
+  ['linkedin', 'paul-john-rodriguez-57a927283'],
 ];
 
 const socialIcons = Object.create({
