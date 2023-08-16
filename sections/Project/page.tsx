@@ -1,5 +1,6 @@
 'use client';
 
+// imports
 import cx from '@styles/MainStyle.module.scss';
 import clsx from 'clsx';
 import Image from 'next/image';
@@ -60,6 +61,7 @@ const Project = () => {
                     <hr className={cx['proj-section--title-hr']}/>
                 </motion.div>
               </div>
+              <Link href={`projects/${url}`} prefetch={false}>
               <div 
                 key={title}
                 onMouseEnter={() => handleCardHover(index, true)}
@@ -70,17 +72,20 @@ const Project = () => {
                   { [cx['proj-section--card-hovered']]: cardHover[index] }
                 )}
               >
-                <Link href={`projects/${url}`}>
+                
                 <Image
-                  fill
                   key={index}
                   src={path}
                   alt="logo 1"
+                  sizes="(max-width: 768px) 187px,
+                        (max-width: 1200px) 217px,
+                        289px"
                   className={cx['proj-section--image']}
                 />
-                </Link>
+                
                 <IconExternalLink className={clsx(cx['proj-section--icon'], {[cx['proj-section--icon-hover']] : cardHover[index]})}/>,
               </div>
+              </Link>
             </div>
           ))}
         </div>

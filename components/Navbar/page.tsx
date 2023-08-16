@@ -1,5 +1,6 @@
 'use client';
 
+// imports
 import { FC } from "react";
 import { useState, useEffect } from 'react';
 import clsx from 'clsx';

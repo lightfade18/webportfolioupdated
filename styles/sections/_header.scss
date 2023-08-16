@@ -46,10 +46,10 @@
     }
 
     &--style-box {
-        @apply absolute top-0 right-0 w-[10px] h-[150px] border-r-2 border-[#007AFF];
+        @apply absolute bottom-4 right-0 w-[150px] h-[10px] border-b-2 border-[#007AFF];
 
         @screen desktop {
-            @apply mr-[3rem];
+            @apply top-0 right-0 w-[1px] h-[150px] border-r-2 mr-[3rem];
         }
     }
 }

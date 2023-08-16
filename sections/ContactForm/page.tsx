@@ -1,5 +1,6 @@
 'use client';
 
+// imports
 import { useForm } from 'react-hook-form';
 import Input from '@components/Input/page';
 import cx from '@styles/MainStyle.module.scss';
@@ -80,7 +81,7 @@ const ContactForm = () => {
               placeholder='Enter your name'
               label='Name'
               name='name'
-              error={errors.name} // Provide the correct error for the 'name' field
+              error={errors.name}
             />
             <Input
               reference={register('email', { 
@@ -94,7 +95,7 @@ const ContactForm = () => {
               placeholder='Enter your email'
               label='Email'
               name='email'
-              error={errors.email} // Provide the correct error for the 'name' field
+              error={errors.email}
             />
             <div className={cx['contact-div--textarea-div']}>
               <Input

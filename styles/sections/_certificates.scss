@@ -10,7 +10,7 @@
     }
 
     &--container {
-        @apply w-full mx-auto bg-[#070606] mt-4;
+        @apply w-full mx-auto bg-[#070606] mt-4 relative;
     }
 
     &--cert-slide {

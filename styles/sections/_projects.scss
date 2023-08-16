@@ -6,13 +6,14 @@
     }
 
     &--invalid-div {
-        @apply mx-auto w-full h-full;
+        @apply mx-auto w-full min-h-4/5 flex items-center justify-center;
 
         &--font {
             @apply text-white font-rubik text-[5rem] text-center;
         }
 
         &--link {
+            @apply w-[90px] mx-auto h-8 flex items-center justify-center bg-white rounded-lg text-black font-rubik text-[1.5rem];
             @screen desktop {
                 @apply w-[150px] mx-auto h-12 flex items-center justify-center bg-white rounded-lg text-black font-rubik text-[1.5rem];
             }

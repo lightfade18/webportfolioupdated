@@ -1,5 +1,6 @@
 'use client';
 
+// imports
 import { useState } from 'react';
 import cx from '@styles/MainStyle.module.scss';
 import Image from 'next/image';

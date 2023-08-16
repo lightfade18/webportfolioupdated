@@ -1,5 +1,8 @@
+// Uses dynamic routing
+
 'use client';
 
+// imports
 import { FC, useState, useRef } from "react";
 import cx from '@styles/MainStyle.module.scss';
 import clsx from "clsx";
@@ -108,13 +111,17 @@ const page: FC<pageProps> = ({params}) => {
             />
             <section className={cx['projects-section--content']}>
                 {!projectExists ? (
+                // div to be rendered if the project id is not valid
                 <div className={cx['projects-section--invalid-div']}>
-                    <h1 className={cx['projects-section--invalid-div--font']}>Invalid URL</h1>
-                    <Link href='../#' className={cx['projects-section--invalid-div--link']}>
-                        Home
-                    </Link>
+                    <div>
+                        <h1 className={cx['projects-section--invalid-div--font']}>Invalid Project URL</h1>
+                        <Link href='../#' className={cx['projects-section--invalid-div--link']}>
+                            Home
+                        </Link>
+                    </div>
                 </div>
                 ) : (
+                // div to be rendered if the project id is valid
                 <div className={cx['projects-section--proj-div']}>
                     <Swiper
                         effect={'coverflow'}
@@ -199,9 +206,9 @@ const page: FC<pageProps> = ({params}) => {
                             </div>
                             <motion.div
                                 ref={ref}
-                                initial={{ width: 0 }} // Set initial width to 0 to animate from left
-                                animate={isInView ? { width: "100%" } : { width: 0 }} // Set animate width to 100% to animate to right
-                                transition={{ duration: 1.5 }} // Animation duration in seconds
+                                initial={{ width: 0 }}
+                                animate={isInView ? { width: "100%" } : { width: 0 }}
+                                transition={{ duration: 1.5 }}
                             >
                                 <hr className={cx["projects-section--hr"]}/>
                             </motion.div>

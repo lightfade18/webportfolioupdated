@@ -1,3 +1,4 @@
+// imports
 import Footer from '@sections/Footer/page';
 import '@styles/globals.css';
 import cx from '@styles/MainStyle.module.scss';

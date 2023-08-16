@@ -1,5 +1,6 @@
 'use client';
 
+// imports
 import cx from '@styles/MainStyle.module.scss';
 import clsx from 'clsx';
 import Image from 'next/image';
@@ -33,12 +34,12 @@ const socialIcons = Object.create({
 });
 
 const Header = () => {
-  const isMobile = useMedia('screen and (max-width: 640px)', false);
+  const isTablet = useMedia('screen and (max-width: 1007px)', false);
 
   return (
     <section className={cx['header-div']}>
-      <div className={clsx(cx['socials-div'], {[cx['socials-div-mobile']] : isMobile})}>
-        <div className={clsx(cx['socials-div--grid'], {[cx['socials-div-mobile--grid']] : isMobile})}>
+      <div className={clsx(cx['socials-div'], {[cx['socials-div-mobile']] : isTablet})}>
+        <div className={clsx(cx['socials-div--grid'], {[cx['socials-div-mobile--grid']] : isTablet})}>
           {socialLinks.map(([key, link]) => (
             <a 
               key={key} 
@@ -69,7 +70,6 @@ const Header = () => {
             <div className={cx['wrapper']}>
               <h1 className={cx['dynamic-text']}><Typewriter sentences={fields}/></h1>
             </div>
-            
           </div>
         </div>
       </div>

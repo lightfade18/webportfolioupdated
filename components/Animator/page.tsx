@@ -1,5 +1,6 @@
 'use client';
 
+// imports
 import { useRef, useEffect } from 'react'
 import type { Variants } from 'framer-motion';
 import { motion, useAnimation, useInView } from 'framer-motion';

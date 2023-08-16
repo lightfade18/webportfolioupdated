@@ -1,5 +1,6 @@
 'use client';
 
+// imports
 import { useState } from 'react';
 import cx from '@styles/MainStyle.module.scss';
 import clsx from 'clsx';
@@ -11,8 +12,6 @@ import { motion } from 'framer-motion';
 import { useMedia } from 'react-use';
 
 // Images
-import logo1 from '@public/assests/images/weblogo1.jpg';
-import logo2 from '@public/assests/images/weblogo2.jpg';
 import profilepic from '@public/assests/images/profile-pic.jpg';
 
 // Icons
@@ -78,7 +77,7 @@ const Aboutpage = () => {
     };
 
     const handlePrint = () => {
-        window.open('assests/files/Rodriguez-PaulJohn-CV.pdf');
+        window.open('assests/files/CV-Rodriguez-PJ.pdf');
     };
 
     return (

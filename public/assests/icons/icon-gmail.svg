@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+    <path fill="#4285f4" style="fill: var(--color1, #4285f4)" d="M2.182 28.003h5.091v-12.364l-7.273-5.455v15.636c0 1.205 0.976 2.182 2.182 2.182z"></path>
+    <path fill="#34a853" style="fill: var(--color2, #34a853)" d="M24.727 28.003h5.091c1.205 0 2.182-0.976 2.182-2.182v-15.636l-7.273 5.455z"></path>
+    <path fill="#fbbc04" style="fill: var(--color3, #fbbc04)" d="M24.727 6.185v9.455l7.273-5.455v-2.909c0-2.696-3.078-4.236-5.236-2.618z"></path>
+    <path fill="#ea4335" style="fill: var(--color4, #ea4335)" d="M7.273 15.639v-9.455l8.727 6.545 8.727-6.545v9.455l-8.727 6.545z"></path>
+    <path fill="#c5221f" style="fill: var(--color5, #c5221f)" d="M0 7.276v2.909l7.273 5.455v-9.455l-2.036-1.527c-2.158-1.618-5.236-0.078-5.236 2.618z"></path>
+</svg>

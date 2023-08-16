@@ -24,6 +24,9 @@ module.exports = {
         rubikpaint: ['Rubik Spray Paint', ...defaultTheme.fontFamily.sans],
         rubik: ['Rubik', ...defaultTheme.fontFamily.sans],
       },
+      minHeight: {
+        '4/5': '80vh',
+      },
       colors: {
         lightGray: {
           DEFAULT: '#EFEFEF',

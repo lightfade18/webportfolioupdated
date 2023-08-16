@@ -1,5 +1,6 @@
 'use client'
 
+// imports
 import { useState, useEffect, FC } from 'react';
 import { motion } from 'framer-motion';
 
