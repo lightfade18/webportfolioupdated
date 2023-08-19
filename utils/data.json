@@ -1,0 +1,393 @@
+[
+    {
+        "name": "aboutpage-details",
+        "data": [
+            {
+                "name": "Paul John Rodriguez",
+                "details": "An aspiring Software Engineer, a music lover, an anime enthusiast, a coke addict, and a certified gamer. I always crave garlic with rice right after I wake up, and my favorite dish is sinigang. I am competitive when it comes to sports, and always ready to play a game of basketball.",
+                "profileImage": "/../public/assests/images/profile-image.jpg",
+                "cvPath": "assests/files/CV-Rodriguez-PJ.pdf",
+                "frontend": [
+                    {
+                        "value": "NextJS"
+                    },
+                    {
+                        "value": "ReactJS"
+                    },
+                    {
+                        "value": "Tailwind"
+                    },
+                    {
+                        "value": "Bootstrap"
+                    },
+                    {
+                        "value": "HTML"
+                    },
+                    {
+                        "value": "CSS"
+                    },
+                    {
+                        "value": "SASS"
+                    },
+                    {
+                        "value": "Framer"
+                    },
+                    {
+                        "value": "TypeScript"
+                    }
+                ],
+                "backend": [
+                    {
+                        "value": "JavaScript"
+                    },
+                    {
+                        "value": "Python"
+                    },
+                    {
+                        "value": "PHP"
+                    },
+                    {
+                        "value": "Java"
+                    },
+                    {
+                        "value": "NodeJS"
+                    }
+                ],
+                "devtools": [
+                    {
+                        "value": "VSCode"
+                    },
+                    {
+                        "value": "Github"
+                    },
+                    {
+                        "value": "Jira"
+                    },
+                    {
+                        "value": "Prisma"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "headerpage-details",
+        "intro": [
+            {
+                "value": "I'm PJ Rodriguez"
+            },
+            {
+                "value": "I'm a Software Engineer"
+            },
+            {
+                "value": "I'm Coding Right Now"
+            },
+            {
+                "value": "I'm Always Learing"
+            }
+        ],
+        "socials": [
+            {
+                "name": "facebook",
+                "url": "pj.jumawanrodriguez"
+            },
+            {
+                "name": "twitter",
+                "url": "Pj24987880"
+            },
+            {
+                "name": "instagram",
+                "url": "pjrodriguez_18"
+            },
+            {
+                "name": "linkedin",
+                "url": "paul-john-rodriguez-57a927283"
+            }
+        ]
+    },
+    {
+        "name": "certificatespage-details",
+        "images": [
+            {
+                "name": "python",
+                "imagePath": "/../public/assests/images/python-cert.jpg"
+            },
+            {
+                "name": "htmlcss",
+                "imagePath": "/../public/assests/images/htmlcss-cert.jpg"
+            }
+        ]
+    },
+    {
+        "name": "projectsection-details",
+        "projects": [
+            {
+                "id": "cllgsy4un000i2gvj1gro0tgc",
+                "title": "Real Listing Presentation Builder",
+                "key": "listing",
+                "imagePath": "/../public/assests/images/listing-presentation-builders.png",
+                "url": "suite.real.ph/",
+                "guthubUrl": "",
+                "description": "Dedicated for real estate agents, a powerful Listing Presentation Builder allows you to create stunning presentations that will help you secure more listings. \n\nInstead of presenting dull, printed presentations, you can create professional digital presentations that will bring your brand to life and propel you ahead of the competition.",
+                "role": "Software Engineer Intern",
+                "responsibilities": "Frontend Development, Backend Development, Data Handling",
+                "images": [
+                    {
+                        "projectImagePath": "/../public/assests/images/listing-1.png"
+                    },
+                    {
+                        "projectImagePath": "/../public/assests/images/listing-2.png"
+                    },
+                    {
+                        "projectImagePath": "/../public/assests/images/listing-3.png"
+                    },
+                    {
+                        "projectImagePath": "/../public/assests/images/listing-4.png"
+                    },
+                    {
+                        "projectImagePath": "/../public/assests/images/listing-5.png"
+                    },
+                    {
+                        "projectImagePath": "/../public/assests/images/listing-6.png"
+                    },
+                    {
+                        "projectImagePath": "/../public/assests/images/listing-7.png"
+                    },
+                    {
+                        "projectImagePath": "/../public/assests/images/listing-8.png"
+                    }
+                ],
+                "teckstack": [
+                    {
+                        "tech": "Next.js"
+                    },
+                    {
+                        "tech": "Typescript"
+                    },
+                    {
+                        "tech": "Prisma"
+                    },
+                    {
+                        "tech": "Redux"
+                    },
+                    {
+                        "tech": "Tailwind"
+                    },
+                    {
+                        "tech": "GraphQL"
+                    },
+                    {
+                        "tech": "PostgreSQL"
+                    }
+                ]
+            },
+            {
+                "id": "cllgsyhgi000k2gvj0w1n3lno",
+                "title": "Real Website Builder",
+                "key": "builder",
+                "imagePath": "/../public/assests/images/website-builder.png",
+                "url": "builder.real.ph/",
+                "guthubUrl": "",
+                "description": "For distinguished real estate agents, it’s high time that you have your own agent website. With this Website Builder, agenst can create a professional-looking website to showcase their properties and establish their brand online. \nChoose from a gallery of beautifully-designed templates to create your website in minutes. No coding or design skills required.",
+                "role": "Software Engineer Intern",
+                "responsibilities": "Frontend Development, Backend Development, Data Handling",
+                "images": [
+                    {
+                        "projectImagePath": "/../public/assests/images/builder-1.png"
+                    },
+                    {
+                        "projectImagePath": "/../public/assests/images/builder-2.png"
+                    },
+                    {
+                        "projectImagePath": "/../public/assests/images/builder-3.png"
+                    },
+                    {
+                        "projectImagePath": "/../public/assests/images/builder-4.png"
+                    },
+                    {
+                        "projectImagePath": "/../public/assests/images/builder-5.png"
+                    },
+                    {
+                        "projectImagePath": "/../public/assests/images/builder-6.png"
+                    },
+                    {
+                        "projectImagePath": "/../public/assests/images/builder-7.png"
+                    },
+                    {
+                        "projectImagePath": "/../public/assests/images/builder-8.png"
+                    }
+                ],
+                "teckstack": [
+                    {
+                        "tech": "Next.js"
+                    },
+                    {
+                        "tech": "Typescript"
+                    },
+                    {
+                        "tech": "Prisma"
+                    },
+                    {
+                        "tech": "Redux"
+                    },
+                    {
+                        "tech": "Tailwind"
+                    },
+                    {
+                        "tech": "GraphQL"
+                    },
+                    {
+                        "tech": "PostgreSQL"
+                    }
+                ]
+            },
+            {
+                "id": "cllgsyjdn000m2gvj8y3i6qd6",
+                "title": "Concepcion Dos BMIS",
+                "key": "bmis",
+                "imagePath": "/../public/assests/images/bmis-1.png",
+                "url": "barangayconcepciondos.com/",
+                "guthubUrl": "lightfade18/bmis-repo.git",
+                "description": "A Barangay Management and Information System that organized records of data of Barangay Concepcion Dos, Marikina City. The system provided a feasible and efficient medium to cater to and provide the needs of the residents and officials as well.",
+                "role": "Lead Developer",
+                "responsibilities": "Frontend Development, SQL, Prototype, Deployment, Testing",
+                "images": [
+                    {
+                        "projectImagePath": "/../public/assests/images/bmis-1.png"
+                    },
+                    {
+                        "projectImagePath": "/../public/assests/images/bmis-2.png"
+                    },
+                    {
+                        "projectImagePath": "/../public/assests/images/bmis-3.png"
+                    },
+                    {
+                        "projectImagePath": "/../public/assests/images/bmis-4.png"
+                    },
+                    {
+                        "projectImagePath": "/../public/assests/images/bmis-5.png"
+                    },
+                    {
+                        "projectImagePath": "/../public/assests/images/bmis-6.png"
+                    },
+                    {
+                        "projectImagePath": "/../public/assests/images/bmis-7.png"
+                    },
+                    {
+                        "projectImagePath": "/../public/assests/images/bmis-8.png"
+                    },
+                    {
+                        "projectImagePath": "/../public/assests/images/bmis-9.png"
+                    },
+                    {
+                        "projectImagePath": "/../public/assests/images/bmis-10.png"
+                    }
+                ],
+                "teckstack": [
+                    {
+                        "tech": "PHP"
+                    },
+                    {
+                        "tech": "HTML"
+                    },
+                    {
+                        "tech": "CSS"
+                    },
+                    {
+                        "tech": "Bootstrap"
+                    },
+                    {
+                        "tech": "JavaScript"
+                    },
+                    {
+                        "tech": "MySQL"
+                    }
+                ]
+            },
+            {
+                "id": "cllgsylgk000o2gvj30rc2nvx",
+                "title": "Photography Blog",
+                "key": "photoblog",
+                "imagePath": "/../public/assests/images/photoblog-1.png",
+                "url": "lightfade18.github.io/photography-blog-repo/",
+                "guthubUrl": "lightfade18/photography-blog-repo.git",
+                "description": "A simple full-frontend static blog website developed as a school project, it highlights the different aspects of photography. With a simple and dark-themed design, it emphasizes the uniqueness of the world of photography.",
+                "role": "Lead Developer",
+                "responsibilities": "Frontend Development, Deployment, Testing",
+                "images": [
+                    {
+                        "projectImagePath": "/../public/assests/images/photoblog-1.png"
+                    },
+                    {
+                        "projectImagePath": "/../public/assests/images/photoblog-2.png"
+                    },
+                    {
+                        "projectImagePath": "/../public/assests/images/photoblog-3.png"
+                    },
+                    {
+                        "projectImagePath": "/../public/assests/images/photoblog-4.png"
+                    },
+                    {
+                        "projectImagePath": "/../public/assests/images/photoblog-5.png"
+                    },
+                    {
+                        "projectImagePath": "/../public/assests/images/photoblog-6.png"
+                    },
+                    {
+                        "projectImagePath": "/../public/assests/images/photoblog-7.png"
+                    },
+                    {
+                        "projectImagePath": "/../public/assests/images/photoblog-8.png"
+                    }
+                ],
+                "teckstack": [
+                    {
+                        "tech": "HTML"
+                    },
+                    {
+                        "tech": "CSS"
+                    },
+                    {
+                        "tech": "Bootstrap"
+                    }
+                ]
+            },
+            {
+                "id": "cllgsyn1t000q2gvjg77v44pb",
+                "title": "Tell Me About Myself",
+                "key": "tmay",
+                "imagePath": "/../public/assests/images/tmay-1.png",
+                "url": "suite.real.ph/",
+                "guthubUrl": "",
+                "description": "",
+                "role": "Software Engineer Intern",
+                "responsibilities": "Frontend Development, Deployment, Testing",
+                "images": [
+                    {
+                        "projectImagePath": "/../public/assests/images/tmay-1.png"
+                    },
+                    {
+                        "projectImagePath": "/../public/assests/images/tmay-2.png"
+                    },
+                    {
+                        "projectImagePath": "/../public/assests/images/tmay-3.png"
+                    },
+                    {
+                        "projectImagePath": "/../public/assests/images/tmay-4.png"
+                    },
+                    {
+                        "projectImagePath": "/../public/assests/images/tmay-5.png"
+                    }
+                ],
+                "teckstack": [
+                    {
+                        "tech": "HTML"
+                    },
+                    {
+                        "tech": "CSS"
+                    }
+                ]
+            }
+        ]
+    }
+]

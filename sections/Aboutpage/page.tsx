@@ -10,9 +10,10 @@ import animatorVariants from '@utils/animatorVariants';
 import { animatorChildren, leftchild, rightchild, middlechild } from '@utils/animators';
 import { motion } from 'framer-motion';
 import { useMedia } from 'react-use';
+import { setCursorVariant } from '@utils/cursorState';
 
-// Images
-import profilepic from '@public/assests/images/profile-pic.jpg';
+// data
+import dataValue from '@utils/data.json';
 
 // Icons
 import IconNext from '@public/assests/icons/icon-nextjs.svg';
@@ -33,13 +34,6 @@ import IconSASS from '@public/assests/icons/icon-sass.svg';
 import IconFramer from '@public/assests/icons/icon-framer.svg';
 import IconPrisma from '@public/assests/icons/icon-prisma.svg';
 import IconTypescript from '@public/assests/icons/icon-typescript.svg';
-
-
-const name = 'Paul John Rodriguez';
-const details = 'An aspiring Software Engineer, a music lover, an anime enthusiast, a coke addict, and a certified gamer. I always crave garlic with rice right after I wake up, and my favorite dish is sinigang. I am competitive when it comes to sports, and always ready to play a game of basketball.';
-const frameworks = ['NextJS', 'ReactJS', 'Tailwind', 'Bootstrap', 'HTML', 'CSS', 'SASS', 'Framer', 'TypeScript'];
-const proglang = ['JavaScript', 'Python', 'PHP', 'Java', 'NodeJS'];
-const devtools = ['VSCode', 'Github', 'Jira', 'Prisma'];
 
 const icons = Object.create({
     NextJS: <IconNext className={cx['tech-div--icon']}/>,
@@ -69,6 +63,20 @@ const Aboutpage = () => {
 
     const isMobile = useMedia('screen and (max-width: 640px)', false);
 
+    const profilepic: string = (dataValue.find(item => item.name === 'aboutpage-details')?.data?.[0] as any)?.profileImage || '';
+
+    const name: string = (dataValue.find(item => item.name === 'aboutpage-details')?.data?.[0] as any)?.name || '';
+
+    const details: string = (dataValue.find(item => item.name === 'aboutpage-details')?.data?.[0] as any)?.details || '';
+
+    const cvPath: string = (dataValue.find(item => item.name === 'aboutpage-details')?.data?.[0] as any)?.cvPath || '';
+
+    const frontend: string[] = (dataValue.find(item => item.name === 'aboutpage-details')?.data?.[0] as any)?.frontend.map((v: any) => v.value) || [];
+
+    const backend: string[] = (dataValue.find(item => item.name === 'aboutpage-details')?.data?.[0] as any)?.backend.map((v: any) => v.value) || [];
+
+    const devtools: string[] = (dataValue.find(item => item.name === 'aboutpage-details')?.data?.[0] as any)?.devtools.map((v: any) => v.value) || [];
+
     const handleIconHover = (key: string, isIconHovered: boolean) => {
         setIconHoverStates((prevState) => ({
           ...prevState,
@@ -76,9 +84,14 @@ const Aboutpage = () => {
         }));
     };
 
+    const cursorEnter = () => setCursorVariant('enlarge');
+    const cursorLeave = () => setCursorVariant('default');
+
     const handlePrint = () => {
-        window.open('assests/files/CV-Rodriguez-PJ.pdf');
+        window.open(cvPath);
     };
+
+    
 
     return (
         <section id='about' className={cx['about-section']}>
@@ -103,6 +116,8 @@ const Aboutpage = () => {
                                         x: isHovered ? '1rem' : 0,
                                         y: isHovered ? '2rem' : 0
                                     }}
+                                    onMouseEnter={cursorEnter}
+                                    onMouseLeave={cursorLeave}
                                     className={cx['frame-1']}
                                 >
                                     <div className={clsx(cx['about-panel--sample-div--shadow-div'], {[cx['about-panel--sample-div--shadow-div--mobile']] : isMobile})}></div>
@@ -112,6 +127,8 @@ const Aboutpage = () => {
                                     scale: 1,
                                         x: isHovered ? '-2rem' : 0
                                     }}
+                                    onMouseEnter={cursorEnter}
+                                    onMouseLeave={cursorLeave}
                                     className={cx['frame-2']}
                                 >
                                     <div className={clsx(cx['about-panel--sample-div--pic-div'], {[cx['about-panel--sample-div--pic-div--mobile']] : isMobile})}>
@@ -119,8 +136,7 @@ const Aboutpage = () => {
                                             src={profilepic}
                                             alt='Page logo'
                                             width={isMobile ? 250 : 350}
-                                            height={undefined}
-                                            priority
+                                            height={isMobile ? 250 : 350}
                                             className={cx['profile-image']}
                                         />
                                     </div>
@@ -151,7 +167,7 @@ const Aboutpage = () => {
                     >
                         <h1 className={cx['tech-div--title']}>Frontend</h1>
                         <div className={cx['tech-div--tech-list']}>
-                        {frameworks.map((key) => (
+                        {frontend.map((key: any) => (
                             <motion.div 
                                 onMouseEnter={() => handleIconHover(key, true)}
                                 onMouseLeave={() => handleIconHover(key, false)}
@@ -176,7 +192,7 @@ const Aboutpage = () => {
                     >
                         <h1 className={cx['tech-div--title']}>Backend</h1>
                         <div className={cx['tech-div--tech-list']}>
-                        {proglang.map((key) => (
+                        {backend.map((key: any) => (
                             <motion.div 
                                 onMouseEnter={() => handleIconHover(key, true)}
                                 onMouseLeave={() => handleIconHover(key, false)}
@@ -201,7 +217,7 @@ const Aboutpage = () => {
                     >
                         <h1 className={cx['tech-div--title']}>Dev Tools</h1>
                         <div className={cx['tech-div--tech-list']}>
-                        {devtools.map((key) => (
+                        {devtools.map((key: any) => (
                             <motion.div 
                                 onMouseEnter={() => handleIconHover(key, true)}
                                 onMouseLeave={() => handleIconHover(key, false)}

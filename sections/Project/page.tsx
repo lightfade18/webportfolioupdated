@@ -9,26 +9,15 @@ import type { StaticImageData } from 'next/image';
 import Link from 'next/link';
 import { motion, useInView } from 'framer-motion';
 
-// Images
-import webbuilder from '@public/assests/images/website-builder.png';
-import listbuilder from '@public/assests/images/listing-presentation-builders.png';
-import bmis from '@public/assests/images/bmis-1.png';
-import photoblog from '@public/assests/images/photoblog-1.png';
-import tmay from '@public/assests/images/tmay-1.png';
+// data
+import dataValue from '@utils/data.json';
 
 // Icons
 import IconExternalLink from '@public/assests/icons/icon-external-link.svg';
 
-// project data [id, title, indicator, path]
-export const projects: [string, string, string, StaticImageData][] = [
-  ['clkh2w8y70000bcvjctn8eyk4', 'Real Listing Presentation Builder', 'listing', webbuilder],
-  ['clkh2whog0002bcvje4yu0ax1', 'Real Website Builder', 'builder', listbuilder],
-  ['clkh2wlg50004bcvjgl8qe0ge', 'Barangay Information Management System', 'bmis', bmis],
-  ['clkqd95h600007gvjfqmo30u5', 'Photography Blog', 'photoblog', photoblog],
-  ['clkqexq9900027gvjd5pl78ip', 'Tell Me About Myself', 'tmay', tmay],
-];
-
 const Project = () => {
+  const projects: [string, string, string, string][] = (dataValue.find(item => item.name === 'projectsection-details')?.projects?.map(v => [v.id, v.title, v.key, v.imagePath])) || [];
+
   const [cardHover, setCardHover] = useState<boolean[]>(projects.map(() => false));
 
   const handleCardHover = (index: number, isHovering: boolean) => {
@@ -74,6 +63,7 @@ const Project = () => {
               >
                 
                 <Image
+                  fill
                   key={index}
                   src={path}
                   alt="logo 1"

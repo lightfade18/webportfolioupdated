@@ -27,6 +27,9 @@ module.exports = {
       minHeight: {
         '4/5': '80vh',
       },
+      zIndex: {
+        '60': '60',
+      },
       colors: {
         lightGray: {
           DEFAULT: '#EFEFEF',

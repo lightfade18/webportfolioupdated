@@ -41,34 +41,30 @@
     }
 
     &--sample-div {
-        @apply w-[250px] h-[375px] mx-auto relative cursor-pointer mb-8;
+        @apply w-[250px] h-[250px] mx-auto relative mb-8 z-20;
 
         @screen tablet {
-            @apply min-w-[350px] min-h-[525px];
+            @apply min-w-[350px] min-h-[350px];
         }
 
         @screen desktop {
-            @apply min-w-[350px] min-h-[525px] mb-0;
+            @apply min-w-[350px] min-h-[350px] mb-0;
         }
 
         &--shadow-div {
-            @apply rounded-md min-w-[350px] min-h-[525px] bg-gray-900;
+            @apply rounded-md min-w-[350px] min-h-[350px] bg-gray-900 z-20;
 
             &--mobile {
-                @apply min-w-[250px] min-h-[375px];
+                @apply min-w-[250px] min-h-[250px] z-20;
             }
         }
 
         &--pic-div {
-            @apply min-w-[350px] min-h-[525px] absolute left-2;
+            @apply min-w-[350px] min-h-[350px] absolute left-2 z-20;
 
             &--mobile {
-                @apply min-w-[250px] min-h-[375px];
+                @apply min-w-[250px] min-h-[250px] z-20;
             }
-        }
-
-        &--if-mobile {
-            @apply w-[250px] h-[375px];
         }
     }
 
@@ -101,10 +97,10 @@
     }
 
     &--button {
-        @apply bg-[#070606] font-rubik text-lg p-3 rounded-full text-white mt-4 border border-[#070606];
+        @apply bg-[#070606] font-rubik text-lg p-3 rounded-full text-white mt-4 border border-[#070606] z-40;
 
         @screen tablet {
-            @apply text-2xl p-4;
+            @apply text-2xl p-4 z-40;
         }
 
         &:hover{
@@ -161,7 +157,7 @@
     }
 
     &--tech-list {
-        @apply flex flex-wrap;
+        @apply flex flex-wrap cursor-pointer;
     }
 
     &--list-item {

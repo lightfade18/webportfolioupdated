@@ -6,6 +6,10 @@ import clsx from 'clsx';
 import Image from 'next/image';
 import { createSocialLink } from '@utils/createSocialLink';
 import { useMedia } from 'react-use';
+import { setCursorVariant } from '@utils/cursorState';
+
+// data
+import dataValue from '@utils/data.json';
 
 // Images
 import profileimage from '@public/assests/images/profile-art.jpg';
@@ -17,15 +21,6 @@ import IconIG from '@public/assests/icons/icon-ig.svg';
 import IconLinkedIn from '@public/assests/icons/icon-linked-in.svg';
 import Typewriter from '@components/Typewriter/page';
 
-const fields = [`I'm PJ Rodriguez`, `I'm a Fullstack Developer`, `I'm a Web Developer`]
-
-const socialLinks = [
-  ['facebook', 'pj.jumawanrodriguez'],
-  ['twitter', 'Pj24987880'],
-  ['instagram', 'pjrodriguez_18'],
-  ['linkedin', 'paul-john-rodriguez-57a927283'],
-];
-
 const socialIcons = Object.create({
   facebook: <IconFB className={cx['socials-div--socials-icon']}/>,
   twitter: <IconTwitter className={cx['socials-div--socials-icon']}/>,
@@ -36,19 +31,29 @@ const socialIcons = Object.create({
 const Header = () => {
   const isTablet = useMedia('screen and (max-width: 1007px)', false);
 
+  const fields: string[] = (dataValue.find(item => item.name === 'headerpage-details')?.intro?.map(v => v.value)) ?? [];
+
+  const socialLinks = (dataValue.find(item => item.name === 'headerpage-details')?.socials) || [];
+
+  const cursorEnter = () => setCursorVariant('enlarge');
+  const cursorLeave = () => setCursorVariant('default');
+
   return (
     <section className={cx['header-div']}>
       <div className={clsx(cx['socials-div'], {[cx['socials-div-mobile']] : isTablet})}>
         <div className={clsx(cx['socials-div--grid'], {[cx['socials-div-mobile--grid']] : isTablet})}>
-          {socialLinks.map(([key, link]) => (
-            <a 
-              key={key} 
-              target="_blank" 
-              href={createSocialLink(key, link)}
-              rel="noopener noreferrer"
-            >
-              {socialIcons[key]}
-            </a>
+          {socialLinks.map(social => (
+              <a 
+                  key={social.name} 
+                  target="_blank" 
+                  href={createSocialLink(social.name, social.url)}
+                  rel="noopener noreferrer"
+                  className={cx['socials-div--links']}
+                  onMouseEnter={cursorEnter}
+                  onMouseLeave={cursorLeave}
+              >
+                  {socialIcons[social.name]}
+              </a>
           ))}
         </div>
       </div>

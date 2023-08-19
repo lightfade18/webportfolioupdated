@@ -83,7 +83,7 @@
     @apply absolute bottom-28 left-0;
 
     &--socials-icon {
-        @apply w-[1.5rem] h-[1.5rem] fill-[#007AFF];
+        @apply w-[1.5rem] h-[1.5rem] fill-white;
 
         &:hover {
             @apply transition-colors duration-500 fill-[#007AFF];
@@ -96,6 +96,10 @@
         @screen desktop {
             @apply ml-[3rem];
         }
+    }
+
+    &--links{
+        @apply z-20;
     }
 }
 

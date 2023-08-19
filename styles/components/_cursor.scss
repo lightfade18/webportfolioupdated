@@ -1,0 +1,23 @@
+.cursor{
+    @apply bg-[#007AFF] w-[20px] h-[20px] rounded-full fixed z-10 top-0 left-0 border border-black pointer-events-auto;
+
+    &--second{
+        @apply bg-[#007AFF] w-[14px] h-[14px] rounded-full fixed z-10 top-0 left-0 border border-black;
+
+        &--on-nav{
+            @apply bg-[#007AFF] w-[14px] h-[14px] rounded-full fixed z-60 top-0 left-0 border border-black;
+        }
+    }
+
+    &--third{
+        @apply bg-[#007AFF] w-[8px] h-[8px] rounded-full fixed z-10 top-0 left-0 border border-black;
+
+        &--on-nav{
+            @apply bg-[#007AFF] w-[8px] h-[8px] rounded-full fixed z-60 top-0 left-0 border border-black;
+        }
+    }
+
+    &--on-nav{
+        @apply bg-[#007AFF] w-[20px] h-[20px] rounded-full fixed z-60 top-0 left-0 border border-black;
+    }
+}

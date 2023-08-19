@@ -54,7 +54,7 @@
     }
 
     &--card {
-        @apply min-h-[15.625rem] relative rounded-lg z-10 shadow-xl overflow-hidden bg-white cursor-pointer;
+        @apply min-h-[15.625rem] relative rounded-lg z-10 shadow-xl overflow-hidden bg-white;
     }
 
     &--card-hovered .proj-section--image {

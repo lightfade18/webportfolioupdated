@@ -5,12 +5,11 @@ import { useState } from 'react';
 import cx from '@styles/MainStyle.module.scss';
 import Image from 'next/image';
 
+// data
+import dataValue from '@utils/data.json';
+
 // Icons
 import IconArrow from '@public/assests/icons/icon-arrow.svg';
-
-// Images
-import python from '@public/assests/images/python-cert.jpg';
-import htmlcss from '@public/assests/images/htmlcss-cert.jpg';
 
 // Swiper
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -22,15 +21,11 @@ import 'swiper/css/pagination';
 // Type Definitions
 import type SwiperProps from 'swiper/types/swiper-class';
 
-// Certificates data
-const certificates = [
-  python,
-  htmlcss,
-];
-
 const Certificates = () => {
   const [swiper, setSwiper] = useState<SwiperProps>();
   const [activeIndex, setActiveIndex] = useState(0);
+
+  const certificates = (dataValue.find(item => item.name === 'certificatespage-details')?.images) || [];
 
   return (
     <section className={cx['cert-section']}>
@@ -53,10 +48,10 @@ const Certificates = () => {
           }}
           onInit={(swiper) => setSwiper(swiper)}
         >
-          {certificates.map((path, index) => (
-            <SwiperSlide key={index} className={cx['cert-section--cert-slide']}>
+          {certificates.map(items => (
+            <SwiperSlide key={items.name} className={cx['cert-section--cert-slide']}>
               <Image
-                src={path}
+                src={items.imagePath}
                 alt='Certificate'
                 fill
                 sizes="(max-width: 768px) 187px,
