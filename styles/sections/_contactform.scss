@@ -1,5 +1,5 @@
 .contact-section {
-    @apply w-full h-auto bg-[#070606];
+    @apply w-full h-auto bg-transparent;
 
     @screen tablet {
         @apply py-14;
@@ -21,12 +21,18 @@
         }
     }
 
+    &--sub-font {
+        @apply text-[24px] text-center font-rubik mt-4;
+        color: var(--body_color);
+    }
+
     &--email-message {
          @apply hidden;
     }
 
     &--email-message-shown {
-        @apply block mx-auto font-rubik text-lg text-white;
+        @apply block mx-auto font-rubik text-lg;
+        color: var(--body_color);
    }
 
     &--disabled-button {

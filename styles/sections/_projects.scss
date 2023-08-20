@@ -1,5 +1,6 @@
 .projects-section {
-    @apply w-full h-auto bg-[#070606];
+    @apply w-full h-auto bg-transparent;
+    background-color: var(--body_background);
 
     &--content {
         @apply relative min-h-screen w-full;
@@ -48,7 +49,8 @@
         }
 
         &--title {
-            @apply font-rubik text-[2rem] mb-4 font-bold text-white;
+            @apply font-rubik text-[2rem] mb-4 font-bold;
+            color: var(--body_color);
         }
     }
 
@@ -72,7 +74,8 @@
         @apply flex items-center gap-2 flex-wrap mb-4;
 
         &--title {
-            @apply font-rubik text-lg text-white;
+            @apply font-rubik text-lg;
+            color: var(--body_color);
         }
 
         &--span {
@@ -96,7 +99,8 @@
         }
 
         &--desc {
-            @apply font-rubik text-lg text-white;
+            @apply font-rubik text-lg;
+            color: var(--body_color);
         }
 
         &--rolerep {
@@ -105,7 +109,8 @@
             }
 
             &--desc {
-                @apply font-rubik text-lg text-white;
+                @apply font-rubik text-lg;
+                color: var(--body_color);
             }
         }
     }

@@ -1,5 +1,6 @@
 .navbar {
-    @apply text-white text-lg bg-transparent sticky top-0 border-b-[1px] border-gray-400 border-opacity-20 z-[3];
+    @apply text-lg bg-transparent sticky top-0 border-b-[1px] border-gray-400 border-opacity-20 z-[3];
+    color: var(--body_color);
 
     &--scrolled {
         @apply bg-[#E7E7E7] border-black;
@@ -48,9 +49,22 @@
 }
 
 .display-menu {
-    @apply bg-[#E7E7E7] transition-all duration-300 ease-out w-full absolute border-b border-black;
+    @apply bg-[#E7E7E7] transition-all duration-300 ease-out w-full absolute border-b border-black min-h-screen;
 
     @screen desktop {
         @apply hidden;
     }
+}
+
+.icon-light {
+    @apply h-8 w-8 fill-black ml-[1rem] z-[3];
+}
+
+.icon-moon {
+    @apply h-8 w-8 fill-black ml-[1rem] z-[3];
+}
+
+.burger-icon {
+    @apply w-6 h-6 fill-white;
+    fill: var(--body_color);
 }

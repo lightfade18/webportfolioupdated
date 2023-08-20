@@ -66,7 +66,7 @@ const ContactForm = () => {
       <div className={cx['contact-div']}>
         <h1 className={cx['about-div--main-font']}>Contact Me</h1>
         <hr className={cx['about-div--hr']}/>
-        <h2 className={cx['about-div--sub-font']}>I am happy to become a part of your team.</h2>
+        <h2 className={cx['contact-div--sub-font']}>I am happy to become a part of your team.</h2>
         <form
           onSubmit={handleSubmit(onSubmit)}
         >

@@ -4,6 +4,7 @@
 import React from 'react';
 import cx from '@styles/MainStyle.module.scss';
 import clsx from 'clsx';
+import { useMedia } from 'react-use';
 import { getCursorVariant } from '@utils/cursorState';
 
 // framer-motion
@@ -33,6 +34,8 @@ const Cursor = () => {
         y: 0
     });
 
+    const isTablet = useMedia('screen and (max-width: 1007px)', false);
+
     React.useEffect(() => {
         const mouseMove = (e: any) => {
             setMousePosition({
@@ -54,10 +57,10 @@ const Cursor = () => {
           rotate: 45
         },
         focus: {
-            height: cursorVariant === 'focus' ? 26 : 13,
-            width: cursorVariant === 'focus' ? 26 : 13,
-            x: mousePosition.x - 13,
-            y: mousePosition.y - 13,
+            height: cursorVariant === 'focus' ? 32 : 13,
+            width: cursorVariant === 'focus' ? 32 : 13,
+            x: mousePosition.x - 16,
+            y: mousePosition.y - 16,
             backgroundColor: "white",
             mixBlendMode: "difference"
         },
@@ -70,10 +73,10 @@ const Cursor = () => {
           rotate: 45
         },
         focus: {
-            height: cursorVariant === 'focus' ? 18 : 9,
-            width: cursorVariant === 'focus' ? 18 : 9,
-            x: mousePosition.x - 9,
-            y: mousePosition.y - 9,
+            height: cursorVariant === 'focus' ? 24 : 9,
+            width: cursorVariant === 'focus' ? 24 : 9,
+            x: mousePosition.x - 12,
+            y: mousePosition.y - 12,
             backgroundColor: "white",
             mixBlendMode: "difference"
         },
@@ -86,10 +89,10 @@ const Cursor = () => {
           rotate: 45
         },
         focus: {
-            height: cursorVariant === 'focus' ? 10 : 5,
-            width: cursorVariant === 'focus' ? 10 : 5,
-            x: mousePosition.x - 5,
-            y: mousePosition.y - 5,
+            height: cursorVariant === 'focus' ? 16 : 5,
+            width: cursorVariant === 'focus' ? 16 : 5,
+            x: mousePosition.x - 8,
+            y: mousePosition.y - 8,
             backgroundColor: "white",
             mixBlendMode: "difference"
         },
@@ -97,24 +100,30 @@ const Cursor = () => {
 
     return (
         <>
+        {!isTablet && 
         <motion.div 
             variants={variant}
             animate={cursorVariant}
             transition={{ duration: 0, ease: "easeInOut" }}
             className={clsx(cx['cursor'], {[cx['cursor--focus']] : (cursorVariant === 'focus')})}
         />
+        }
+        {!isTablet &&
         <motion.div
             variants={secondvariant}
             animate={cursorVariant}
             transition={{ duration: 0.05, ease: "easeInOut" }}
             className={clsx(cx['cursor--second'], {[cx['cursor--second--focus']] : (cursorVariant === 'focus')})}
-        />
+        /> 
+        }
+        {!isTablet && 
         <motion.div
             variants={thirdvariant}
             animate={cursorVariant}
             transition={{ duration: 0.07, ease: "easeInOut" }}
             className={clsx(cx['cursor--third'], {[cx['cursor--third--focus']] : (cursorVariant === 'focus')})}
         />
+        }
         </>
     )
 }

@@ -2,9 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-/* *{
-    cursor: none;
-} */
+:root {
+    --body_background: white;
+    --body_color: black;
+}
+
+[data-theme="dark"] {
+    --body_background: #070606;
+    --body_color: white;
+}
 
 body {
     margin: 0;

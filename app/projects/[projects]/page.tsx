@@ -110,7 +110,7 @@ const page: FC<pageProps> = ({params}) => {
                             </SwiperSlide>
                         ))}          
                     </Swiper>
-                    <div className="bg-[#070606]">
+                    <div className="bg-transparent">
                         <div className={cx['projects-section--details-div']}>
                             <h1 className={cx['projects-section--details-div--title']}>{newTitle}</h1>
                             <div 

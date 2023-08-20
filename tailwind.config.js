@@ -30,6 +30,9 @@ module.exports = {
       zIndex: {
         '60': '60',
       },
+      boxShadow: {
+        '3xl': '0 35px 60px -15px rgba(0, 0, 0, 0.3)',
+      },
       colors: {
         lightGray: {
           DEFAULT: '#EFEFEF',

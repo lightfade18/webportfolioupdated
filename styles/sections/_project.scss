@@ -1,8 +1,9 @@
 .proj-section {
-    @apply w-full h-auto bg-[#070606] py-14 relative;
+    @apply w-full h-auto bg-transparent py-14 relative;
 
     &--main-font {
-        @apply text-[40px] text-center uppercase font-rubik text-white;
+        @apply text-[40px] text-center uppercase font-rubik;
+        color: var(--body_color);
     }
 
     &--title-div {
@@ -10,7 +11,8 @@
     }
 
     &--title {
-        @apply z-[2] font-rubik text-base min-w-fit text-white;
+        @apply z-[2] font-rubik text-base min-w-fit;
+        color: var(--body_color);
     }
 
     &--hr {
@@ -22,7 +24,8 @@
     }
 
     &--sub-font {
-        @apply text-[24px] text-center font-rubik mt-4 text-white;
+        @apply text-[24px] text-center font-rubik mt-4;
+        color: var(--body_color);
 
         @screen tablet {
             @apply text-[30px];
@@ -38,7 +41,7 @@
     }
 
     &--proj-div {
-        @apply w-full grid grid-cols-1 gap-2 mx-auto rounded-3xl mt-4 shadow-lg;
+        @apply w-full grid grid-cols-1 gap-2 mx-auto rounded-2xl mt-4 shadow-3xl p-2;
 
         @screen tablet {
             @apply grid-cols-2 gap-8;
@@ -54,7 +57,7 @@
     }
 
     &--card {
-        @apply min-h-[15.625rem] relative rounded-lg z-[1] shadow-xl overflow-hidden bg-white;
+        @apply min-h-[15.625rem] relative rounded-lg z-[1] shadow-2xl  overflow-hidden bg-white;
     }
 
     &--card-hovered .proj-section--image {

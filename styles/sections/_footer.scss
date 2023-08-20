@@ -1,5 +1,5 @@
 .footer-section {
-    @apply w-full h-auto bg-[#070606] relative py-8 border-t border-white text-white;
+    @apply w-full h-auto bg-[#E7E7E7] relative py-8 border-t border-black text-black;
 
     &--source-div{
         @apply w-[95%] mx-auto mb-2;
@@ -40,6 +40,6 @@
     }
 
     &--icon-phone {
-        @apply w-[1.2rem] h-[1.2rem] inline fill-white;
+        @apply w-[1.2rem] h-[1.2rem] inline fill-black;
     }
 }

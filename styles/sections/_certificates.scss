@@ -1,8 +1,9 @@
 .cert-section {
-    @apply w-full h-auto bg-[#070606] pt-14;
+    @apply w-full h-auto bg-transparent pt-14;
 
     &--main-font {
-        @apply text-[2.5rem] text-center uppercase font-rubik text-white;
+        @apply text-[2.5rem] text-center uppercase font-rubik;
+        color: var(--body_color);
     }
 
     &--hr {
@@ -10,7 +11,7 @@
     }
 
     &--container {
-        @apply w-full mx-auto bg-[#070606] mt-4 relative;
+        @apply w-full mx-auto bg-[#E7E7E7] mt-4 relative;
     }
 
     &--cert-slide {
@@ -54,7 +55,7 @@
 
         button:not(:disabled) {
             svg {
-                @apply fill-white;
+                fill: var(--body_color);
             }
 
             svg:hover {

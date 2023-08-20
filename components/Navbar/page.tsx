@@ -7,11 +7,16 @@ import clsx from 'clsx';
 import cx from '@styles/MainStyle.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
+
+// images
 import logo from '@public/assests/images/logo-pj.png';
+
+// svg
 import IconBurger from '@public/assests/icons/icon-burger.svg';
 import IconClose from '@public/assests/icons/icon-close.svg';
 import { Link as ScrollLink } from 'react-scroll';
 import { setCursorVariant } from '@utils/cursorState';
+import ThemeSwitcher from "@components/ThemeSwitcher/page";
 
 const sections = ['Home', 'About', 'Certificates', 'Projects', 'Contact'];
 
@@ -23,9 +28,6 @@ interface navbarProps {
 const Navbar: FC<navbarProps> = ({decider}) => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [displayMenu, setDisplayMenu] = useState(false);
-
-  // const onNavEnter = () => setOnNavVariant(true);
-  // const onNavLeave = () => setOnNavVariant(false);
 
   const cursorEnter = () => setCursorVariant('focus');
   const cursorLeave = () => setCursorVariant('default');
@@ -46,6 +48,7 @@ const Navbar: FC<navbarProps> = ({decider}) => {
   return (
     <section className={clsx(cx['navbar'], {[cx['navbar--scrolled']]: (scrollPosition > 0) || displayMenu})}>
       <div className={cx['nav-container']}>
+        
         {/* Desktop Nav */}
         <div className={clsx(cx['desktop-nav'], {[cx['desktop-nav--scrolled']]: (scrollPosition > 0) || displayMenu})}>
           <Image
@@ -56,7 +59,7 @@ const Navbar: FC<navbarProps> = ({decider}) => {
             priority
             className='object-cover'
           />
-          <ul className='flex'>
+          <ul className='flex items-center'>
             {sections.map((item, index) => (
                 <li 
                   key={index} 
@@ -83,6 +86,12 @@ const Navbar: FC<navbarProps> = ({decider}) => {
                   )}
                 </li>
             ))}
+            <li
+            onMouseEnter={cursorEnter}
+            onMouseLeave={cursorLeave}
+            >
+              <ThemeSwitcher decider={scrollPosition} subpage={displayMenu}/>
+            </li>
           </ul>
         </div>
         {/* Mobile Nav */}
@@ -95,20 +104,23 @@ const Navbar: FC<navbarProps> = ({decider}) => {
             priority
             className='object-cover'
           />
+          <div className="flex items-center gap-4">
+          <ThemeSwitcher decider={scrollPosition} subpage={displayMenu}/>
           <button
             type='button'
             onClick={() => setDisplayMenu(!displayMenu)}
           >
             {!displayMenu ? 
             <IconBurger
-              className={clsx('w-[2rem] h-[2rem] fill-white', {'!fill-black': (scrollPosition > 0) || displayMenu})}
+              className={clsx(cx['burger-icon'], {'!fill-black': (scrollPosition > 0) || displayMenu})}
             /> 
             :
             <IconClose
-              className={clsx('w-[2rem] h-[2rem] fill-black')}
+              className={clsx('w-6 h-6 fill-black')}
             />
             }
           </button>
+          </div>
         </div>
       </div>
       {/* Display Menu Panel */}

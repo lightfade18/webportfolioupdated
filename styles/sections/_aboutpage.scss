@@ -1,5 +1,5 @@
 .about-section {
-    @apply bg-[#070606] relative w-full;
+    @apply bg-transparent relative w-full;
     @screen tablet {
         @apply  pt-14;
     }
@@ -17,7 +17,8 @@
     }
 
     &--main-font {
-        @apply text-[2.5rem] text-center uppercase font-rubik text-white;
+        @apply text-[2.5rem] text-center uppercase font-rubik;
+        color: var(--body_color);
     }
 
     &--hr {
@@ -30,7 +31,7 @@
 }
 
 .about-content {
-    @apply bg-white/90 backdrop-filter backdrop-blur-xl shadow-2xl p-6 rounded-3xl;
+    @apply bg-[#E7E7E7] backdrop-filter backdrop-blur-xl shadow-3xl p-6 rounded-3xl;
 }
 
 .about-panel {
@@ -149,7 +150,7 @@
     }
 
     &--tech-box {
-        @apply mx-auto bg-white rounded-lg;
+        @apply mx-auto bg-[#E7E7E7] shadow-md rounded-lg;
     }
 
     &--title {

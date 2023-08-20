@@ -2,7 +2,8 @@
     @apply w-full mx-auto;
 
     &--label {
-        @apply font-rubik text-[24px] text-white;
+        @apply font-rubik text-[24px];
+        color: var(--body_color);
     }
 
     &--textarea {

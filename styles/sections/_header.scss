@@ -10,7 +10,8 @@
     }
 
     &--medium-font {
-        @apply text-white text-[1.5rem] capitalize font-rubik;
+        @apply text-[1.5rem] capitalize font-rubik;
+        color: var(--body_color);
 
         @screen desktop {
             @apply text-[2rem];
@@ -55,7 +56,8 @@
 }
 
 .wrapper {
-    @apply relative text-white text-[2rem] py-0 my-0;
+    @apply relative text-[2rem] py-0 my-0;
+    color: var(--body_color);
 
     @screen desktop {
         @apply text-[3rem];
@@ -83,7 +85,8 @@
     @apply absolute bottom-28 left-0;
 
     &--socials-icon {
-        @apply w-[1.5rem] h-[1.5rem] fill-white;
+        @apply w-[1.5rem] h-[1.5rem];
+        fill: var(--body_color);
 
         &:hover {
             @apply transition-colors duration-500 fill-[#007AFF];
