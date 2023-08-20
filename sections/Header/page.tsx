@@ -35,7 +35,7 @@ const Header = () => {
 
   const socialLinks = (dataValue.find(item => item.name === 'headerpage-details')?.socials) || [];
 
-  const cursorEnter = () => setCursorVariant('enlarge');
+  const cursorEnter = () => setCursorVariant('focus');
   const cursorLeave = () => setCursorVariant('default');
 
   return (

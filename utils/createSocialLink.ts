@@ -4,6 +4,8 @@ export const socialLinks = {
     twitter: 'https://www.twitter.com/',
     linkedin: 'https://www.linkedin.com/in/',
     instagram: 'https://www.instagram.com/',
+    github: 'https://github.com/',
+    normal: 'https://',
 };
 
 export const createSocialLink = (

@@ -1,16 +1,16 @@
 .navbar {
-    @apply text-white text-lg bg-transparent sticky top-0 z-50 border-b-[1px] border-gray-400 border-opacity-20;
+    @apply text-white text-lg bg-transparent sticky top-0 border-b-[1px] border-gray-400 border-opacity-20 z-[3];
 
     &--scrolled {
-        @apply bg-[#E7E7E7] border-black z-50;
+        @apply bg-[#E7E7E7] border-black;
     }
 }
 
 .nav-container {
-    @apply mx-auto max-w-[95%] z-50;
+    @apply mx-auto max-w-[95%];
 
     @screen desktop{
-        @apply max-w-[83rem] px-[3rem] z-50;
+        @apply max-w-[83rem] px-[3rem];
     }
 }
 
@@ -26,24 +26,24 @@
     @apply hidden;
 
     @screen desktop {
-        @apply flex items-center justify-between z-50 h-[5rem] transition-all duration-300 ease-out;
+        @apply flex items-center justify-between h-[5rem] transition-all duration-300 ease-out;
     }
 
     &--scrolled {
-        @apply h-[4rem] text-black z-50;
+        @apply h-[4rem] text-black;
     }
 }
 
 
 .mobile-nav {
-    @apply flex items-center justify-between z-50 h-[5rem] transition-all duration-300 ease-out;
+    @apply flex items-center justify-between h-[5rem] transition-all duration-300 ease-out;
 
     @screen desktop {
         @apply hidden;
     }
 
     &--scrolled {
-        @apply h-[4rem] z-50 text-black;
+        @apply h-[4rem] text-black;
     }
 }
 

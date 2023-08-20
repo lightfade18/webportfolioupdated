@@ -1,23 +1,21 @@
 .cursor{
-    @apply bg-[#007AFF] w-[20px] h-[20px] rounded-full fixed z-10 top-0 left-0 border border-black pointer-events-auto;
+    @apply bg-[#d40000] w-[13px] h-[13px] rounded-none fixed z-[4] top-0 left-0 pointer-events-none;
+
+    &--focus{
+        @apply bg-[#d40000] w-[13px] h-[13px] fixed z-[4] top-0 left-0 pointer-events-none rounded-full;
+    }
 
     &--second{
-        @apply bg-[#007AFF] w-[14px] h-[14px] rounded-full fixed z-10 top-0 left-0 border border-black;
-
-        &--on-nav{
-            @apply bg-[#007AFF] w-[14px] h-[14px] rounded-full fixed z-60 top-0 left-0 border border-black;
+        @apply bg-[#d40000] w-[9px] h-[9px] rounded-none fixed z-[4] top-0 left-0 pointer-events-none;
+        &--focus{
+            @apply bg-[#d40000] w-[9px] h-[9px] fixed z-[4] top-0 left-0 pointer-events-none rounded-full;
         }
     }
 
     &--third{
-        @apply bg-[#007AFF] w-[8px] h-[8px] rounded-full fixed z-10 top-0 left-0 border border-black;
-
-        &--on-nav{
-            @apply bg-[#007AFF] w-[8px] h-[8px] rounded-full fixed z-60 top-0 left-0 border border-black;
+        @apply bg-[#d40000] w-[5px] h-[5px] rounded-none fixed z-[4] top-0 left-0 pointer-events-none;
+        &--focus{
+            @apply bg-[#d40000] w-[5px] h-[5px] fixed z-[4] top-0 left-0 pointer-events-none rounded-full;
         }
-    }
-
-    &--on-nav{
-        @apply bg-[#007AFF] w-[20px] h-[20px] rounded-full fixed z-60 top-0 left-0 border border-black;
     }
 }

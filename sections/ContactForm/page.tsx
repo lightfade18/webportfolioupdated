@@ -6,6 +6,7 @@ import Input from '@components/Input/page';
 import cx from '@styles/MainStyle.module.scss';
 import clsx from 'clsx';
 import { useState } from 'react';
+import { setCursorVariant } from '@utils/cursorState';
 
 export interface FormValues {
   name: string;
@@ -57,7 +58,8 @@ const ContactForm = () => {
     }
   }
 
-  
+  const cursorEnter = () => setCursorVariant('focus');
+  const cursorLeave = () => setCursorVariant('default');
 
   return (
     <section className={cx['contact-section']}>
@@ -68,7 +70,9 @@ const ContactForm = () => {
         <form
           onSubmit={handleSubmit(onSubmit)}
         >
-          <div className={cx['contact-div--first-layer']}>
+          <div 
+            className={cx['contact-div--first-layer']}
+          >
             <Input
               reference={register('name', { 
                 required: 'Name is required.',
@@ -109,7 +113,11 @@ const ContactForm = () => {
           </div>
           <p className={clsx(cx['contact-div--email-message'], {[cx['contact-div--email-message-shown']] : emailSent})}>Message sent successfully.</p>
           <div className={cx['contact-div--button-div']}>
-            <div className={clsx(cx['contact-div--contact-button'], {[cx['contact-div--disabled-button']] : isDisabled})}>
+            <div 
+              onMouseEnter={cursorEnter}
+              onMouseLeave={cursorLeave}
+              className={clsx(cx['contact-div--contact-button'], {[cx['contact-div--disabled-button']] : isDisabled})}
+            >
               <button
                 type="submit"
                 disabled={isDisabled}

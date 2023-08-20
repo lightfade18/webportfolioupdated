@@ -10,7 +10,7 @@
     }
 
     &--title {
-        @apply z-20 font-rubik text-base min-w-fit text-white;
+        @apply z-[2] font-rubik text-base min-w-fit text-white;
     }
 
     &--hr {
@@ -54,7 +54,7 @@
     }
 
     &--card {
-        @apply min-h-[15.625rem] relative rounded-lg z-10 shadow-xl overflow-hidden bg-white;
+        @apply min-h-[15.625rem] relative rounded-lg z-[1] shadow-xl overflow-hidden bg-white;
     }
 
     &--card-hovered .proj-section--image {

@@ -84,14 +84,12 @@ const Aboutpage = () => {
         }));
     };
 
-    const cursorEnter = () => setCursorVariant('enlarge');
+    const cursorEnter = () => setCursorVariant('focus');
     const cursorLeave = () => setCursorVariant('default');
 
     const handlePrint = () => {
         window.open(cvPath);
     };
-
-    
 
     return (
         <section id='about' className={cx['about-section']}>
@@ -147,6 +145,8 @@ const Aboutpage = () => {
                                 <p className={cx['about-panel--about-details']}>{details}</p>
                                 <button 
                                     onClick={handlePrint}
+                                    onMouseEnter={cursorEnter}
+                                    onMouseLeave={cursorLeave}
                                     className={cx['about-panel--button']}
                                 >
                                     Download my CV
@@ -169,14 +169,16 @@ const Aboutpage = () => {
                         <div className={cx['tech-div--tech-list']}>
                         {frontend.map((key: any) => (
                             <motion.div 
-                                onMouseEnter={() => handleIconHover(key, true)}
-                                onMouseLeave={() => handleIconHover(key, false)}
+                                onMouseEnter={() => {handleIconHover(key, true); cursorEnter;}}
+                                onMouseLeave={() => {handleIconHover(key, false); cursorLeave;}}
                                 onClick={() => handleIconHover(key, !isIconHovered)}
                                 key={key}
                                 variants={leftchild}
                                 className={cx['tech-div--list-item']}
                             >
                                 <div
+                                    onMouseEnter={cursorEnter}
+                                    onMouseLeave={cursorLeave}
                                     className={cx['tech-div--container']}
                                 >
                                     {icons[key]}
@@ -194,14 +196,16 @@ const Aboutpage = () => {
                         <div className={cx['tech-div--tech-list']}>
                         {backend.map((key: any) => (
                             <motion.div 
-                                onMouseEnter={() => handleIconHover(key, true)}
-                                onMouseLeave={() => handleIconHover(key, false)}
+                                onMouseEnter={() => {handleIconHover(key, true); cursorEnter;}}
+                                onMouseLeave={() => {handleIconHover(key, false); cursorLeave;}}
                                 onClick={() => handleIconHover(key, !isIconHovered)}
                                 key={key}
                                 variants={middlechild}
                                 className={cx['tech-div--list-item']}
                             >
                                 <div
+                                    onMouseEnter={cursorEnter}
+                                    onMouseLeave={cursorLeave}
                                     className={cx['tech-div--container']}
                                 >
                                     {icons[key]}
@@ -219,14 +223,16 @@ const Aboutpage = () => {
                         <div className={cx['tech-div--tech-list']}>
                         {devtools.map((key: any) => (
                             <motion.div 
-                                onMouseEnter={() => handleIconHover(key, true)}
-                                onMouseLeave={() => handleIconHover(key, false)}
+                                onMouseEnter={() => {handleIconHover(key, true); cursorEnter;}}
+                                onMouseLeave={() => {handleIconHover(key, false); cursorLeave;}}
                                 onClick={() => handleIconHover(key, !isIconHovered)}
                                 key={key}
                                 variants={rightchild}
                                 className={cx['tech-div--list-item']}
                             >
                                 <div
+                                    onMouseEnter={cursorEnter}
+                                    onMouseLeave={cursorLeave}
                                     className={cx['tech-div--container']}
                                 >
                                     {icons[key]}

@@ -4,6 +4,7 @@
 import { useState } from 'react';
 import cx from '@styles/MainStyle.module.scss';
 import Image from 'next/image';
+import { setCursorVariant } from '@utils/cursorState';
 
 // data
 import dataValue from '@utils/data.json';
@@ -26,6 +27,9 @@ const Certificates = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const certificates = (dataValue.find(item => item.name === 'certificatespage-details')?.images) || [];
+
+  const cursorEnter = () => setCursorVariant('focus');
+  const cursorLeave = () => setCursorVariant('default');
 
   return (
     <section className={cx['cert-section']}>
@@ -71,10 +75,16 @@ const Certificates = () => {
           <IconArrow className={cx['cert-section--slide-arrow']} />
         </button>
         <div className={cx['cert-section--pagination-div']}>
-          <div className={'pagination-div'}></div>
+          <div 
+            className={'pagination-div'}
+            onMouseEnter={cursorEnter}
+            onMouseLeave={cursorLeave}
+          ></div>
         </div>
         <button
           disabled={activeIndex === certificates.length - 1}
+          onMouseEnter={cursorEnter}
+          onMouseLeave={cursorLeave}
           onClick={() => swiper?.slideNext()}
         >
           <IconArrow className={cx['cert-section--rev-slide-arrow']} />

@@ -27,7 +27,7 @@ const Navbar: FC<navbarProps> = ({decider}) => {
   // const onNavEnter = () => setOnNavVariant(true);
   // const onNavLeave = () => setOnNavVariant(false);
 
-  const cursorEnter = () => setCursorVariant('enlarge');
+  const cursorEnter = () => setCursorVariant('focus');
   const cursorLeave = () => setCursorVariant('default');
 
   useEffect(() => {

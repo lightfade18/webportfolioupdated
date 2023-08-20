@@ -5,6 +5,7 @@ import React, { useState, forwardRef, useId } from 'react';
 import type { FieldError } from 'react-hook-form';
 import cx from '@styles/MainStyle.module.scss';
 import clsx from 'clsx';
+import { setCursorVariant } from '@utils/cursorState';
 
 // Icons
 import IconDangerInfo from '@public/assests/icons/icon-danger-info.svg';
@@ -22,6 +23,9 @@ export interface Props<Name = string> {
   requiredMarkVariant?: 'red' | 'green';
   onInput?: (e: string) => void;
 }
+
+const cursorEnter = () => setCursorVariant('focus');
+const cursorLeave = () => setCursorVariant('default');
 
 const Input = forwardRef<HTMLInputElement & HTMLTextAreaElement, Props>(
   function Input({
@@ -93,7 +97,10 @@ const Input = forwardRef<HTMLInputElement & HTMLTextAreaElement, Props>(
             <span className={clsx(cx['input-wrapper--asterisk'], {[cx['input-wrapper--asterisk-valid']] : !error})}>{` *`}</span>
           )}
         </label>
-        <div>
+        <div
+          onMouseEnter={cursorEnter}
+          onMouseLeave={cursorLeave}
+        >
           {fields()}
         </div>
       </div>

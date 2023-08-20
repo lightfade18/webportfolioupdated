@@ -80,7 +80,7 @@
                 "value": "I'm a Software Engineer"
             },
             {
-                "value": "I'm Coding Right Now"
+                "value": "I'm Either Coding, Eating or Sleeping"
             },
             {
                 "value": "I'm Always Learing"
@@ -387,6 +387,16 @@
                         "tech": "CSS"
                     }
                 ]
+            }
+        ]
+    },
+    {
+        "name": "footerpage-details",
+        "data":[
+            {
+                "sourcePath": "lightfade18/portfolio-repo",
+                "contact": "09497636479",
+                "email": "pauljohnrdrgz@gmail.com"
             }
         ]
     }

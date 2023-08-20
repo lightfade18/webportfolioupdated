@@ -5,9 +5,9 @@ import cx from '@styles/MainStyle.module.scss';
 import clsx from 'clsx';
 import Image from 'next/image';
 import { useState, useRef } from 'react';
-import type { StaticImageData } from 'next/image';
 import Link from 'next/link';
 import { motion, useInView } from 'framer-motion';
+import { setCursorVariant } from '@utils/cursorState';
 
 // data
 import dataValue from '@utils/data.json';
@@ -30,6 +30,9 @@ const Project = () => {
   const refs = Array.from({ length: projects.length }).map(() => useRef(null));
   const isInView = refs.map((ref) => useInView(ref));
 
+  const cursorEnter = () => setCursorVariant('focus');
+  const cursorLeave = () => setCursorVariant('default');
+
   return (
     <section className={cx['proj-section']}>
       <div className={cx['proj-section--main-div']}>
@@ -50,11 +53,16 @@ const Project = () => {
                     <hr className={cx['proj-section--title-hr']}/>
                 </motion.div>
               </div>
-              <Link href={`projects/${url}`} prefetch={false}>
+              <Link 
+                href={`projects/${url}`} 
+                prefetch={false} 
+                onMouseEnter={cursorEnter}
+                onMouseLeave={cursorLeave}
+              >
               <div 
                 key={title}
-                onMouseEnter={() => handleCardHover(index, true)}
-                onMouseLeave={() => handleCardHover(index, false)}
+                onMouseEnter={() => {handleCardHover(index, true); cursorEnter}}
+                onMouseLeave={() => {handleCardHover(index, false); cursorLeave}}
                 onClick={() => handleCardHover(index, !cardHover[index])}
                 className={clsx(
                   cx['proj-section--card'],
@@ -72,7 +80,6 @@ const Project = () => {
                         289px"
                   className={cx['proj-section--image']}
                 />
-                
                 <IconExternalLink className={clsx(cx['proj-section--icon'], {[cx['proj-section--icon-hover']] : cardHover[index]})}/>,
               </div>
               </Link>

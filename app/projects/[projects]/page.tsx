@@ -9,6 +9,8 @@ import Navbar from "@components/Navbar/page";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, useInView } from 'framer-motion';
+import { setCursorVariant } from '@utils/cursorState';
+import { createSocialLink } from "@utils/createSocialLink";
 
 // data
 import dataValue from '@utils/data.json';
@@ -49,6 +51,9 @@ const page: FC<pageProps> = ({params}) => {
     const techstack: { tech: string; }[] | undefined = (dataValue.find(item => item.name === 'projectsection-details')?.projects?.find(v => v.id === params.projects)?.teckstack);
     const images: { projectImagePath: string }[] | undefined = (dataValue.find(item => item.name === 'projectsection-details')?.projects?.find(v => v.id === params.projects)?.images);
 
+    const cursorEnter = () => setCursorVariant('focus');
+    const cursorLeave = () => setCursorVariant('default');
+
     return (
         <div className={cx['projects-section']}>
             <Navbar
@@ -59,7 +64,11 @@ const page: FC<pageProps> = ({params}) => {
                 <div className={cx['projects-section--invalid-div']}>
                     <div>
                         <h1 className={cx['projects-section--invalid-div--font']}>Invalid Project URL</h1>
-                        <Link href='../#' className={cx['projects-section--invalid-div--link']}>
+                        <Link 
+                            onMouseEnter={cursorEnter}
+                            onMouseLeave={cursorLeave}
+                            href='../#' className={cx['projects-section--invalid-div--link']}
+                        >
                             Home
                         </Link>
                     </div>
@@ -104,9 +113,13 @@ const page: FC<pageProps> = ({params}) => {
                     <div className="bg-[#070606]">
                         <div className={cx['projects-section--details-div']}>
                             <h1 className={cx['projects-section--details-div--title']}>{newTitle}</h1>
-                            <div className={cx['projects-section--button-div']}>
+                            <div 
+                                onMouseEnter={cursorEnter}
+                                onMouseLeave={cursorLeave}
+                                className={cx['projects-section--button-div']}
+                            >
                                 <a 
-                                    href={url}
+                                    href={createSocialLink('normal', url)}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className={cx['projects-section--link-button']}
@@ -118,7 +131,7 @@ const page: FC<pageProps> = ({params}) => {
                                 </a>
                                 {githubUrl && (
                                     <a 
-                                        href={githubUrl}
+                                        href={createSocialLink('github', githubUrl)}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className={cx['projects-section--link-button']}
@@ -136,6 +149,8 @@ const page: FC<pageProps> = ({params}) => {
                                     <motion.span 
                                         key={index} 
                                         whileHover={{ y: -10 }}
+                                        onMouseEnter={cursorEnter}
+                                        onMouseLeave={cursorLeave}
                                         className={cx['projects-section--tech-div--span']
                                     }>
                                         {items.tech}
