@@ -61,7 +61,7 @@ const Cursor = () => {
             width: cursorVariant === 'focus' ? 32 : 13,
             x: mousePosition.x - 16,
             y: mousePosition.y - 16,
-            backgroundColor: "white",
+            backgroundColor: "rgb(212, 0, 0)",
             mixBlendMode: "difference"
         },
     };
@@ -77,7 +77,7 @@ const Cursor = () => {
             width: cursorVariant === 'focus' ? 24 : 9,
             x: mousePosition.x - 12,
             y: mousePosition.y - 12,
-            backgroundColor: "white",
+            backgroundColor: "rgb(212, 0, 0)",
             mixBlendMode: "difference"
         },
     };
@@ -93,7 +93,7 @@ const Cursor = () => {
             width: cursorVariant === 'focus' ? 16 : 5,
             x: mousePosition.x - 8,
             y: mousePosition.y - 8,
-            backgroundColor: "white",
+            backgroundColor: "rgb(212, 0, 0)",
             mixBlendMode: "difference"
         },
     };

@@ -50,16 +50,17 @@
         }
   
         svg {
-          @apply fill-darkGray-400 transition-all duration-300 ease-out;
+          @apply fill-darkGray-200 opacity-30 transition-all duration-300 ease-out;
         }
 
         button:not(:disabled) {
             svg {
+                @apply opacity-100;
                 fill: var(--body_color);
             }
 
             svg:hover {
-              @apply fill-[#007AFF];
+                @apply fill-[#007AFF] opacity-100;
             }
         }
     }
