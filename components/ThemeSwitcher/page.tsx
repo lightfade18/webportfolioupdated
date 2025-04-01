@@ -15,16 +15,14 @@ interface themeSwitcherProps {
 }
 
 const ThemeSwitcher: React.FC<themeSwitcherProps> = ({ decider, subpage }) => {
-  // Initialize state based on the user's system preference
   const [isLight, setIsLight] = React.useState<boolean>(() => {
     if (typeof window !== "undefined") {
-      // Check the user's system preference for dark mode
       const prefersDarkMode = window.matchMedia(
         "(prefers-color-scheme: dark)"
       ).matches;
-      return !prefersDarkMode; // If system prefers dark mode, set light mode to false
+      return !prefersDarkMode;
     }
-    return true; // Default to light mode if no information is available
+    return true;
   });
 
   const setDarkMode = () => {
@@ -47,13 +45,12 @@ const ThemeSwitcher: React.FC<themeSwitcherProps> = ({ decider, subpage }) => {
   };
 
   React.useEffect(() => {
-    // Apply the current theme on component mount based on the state
     if (isLight) {
       setLightMode();
     } else {
       setDarkMode();
     }
-  }, [isLight]); // This ensures that theme is set whenever the state changes
+  }, [isLight]);
 
   return (
     <div onClick={toggleTheme}>

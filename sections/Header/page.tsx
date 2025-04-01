@@ -57,9 +57,9 @@ const Header = () => {
         >
           {socialLinks.map((social) => (
             <motion.div
-              key={social.name} // Adding the key here
-              whileHover={{ y: -8 }} // Move upwards by 4px on hover
-              transition={{ type: "spring", stiffness: 300, damping: 15 }} // Smooth transition effect
+              key={social.name}
+              whileHover={{ y: -8 }}
+              transition={{ type: "spring", stiffness: 300, damping: 15 }}
             >
               <a
                 target="_blank"

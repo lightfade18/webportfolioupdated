@@ -44,7 +44,7 @@ const Project = () => {
   const cursorLeave = () => setCursorVariant("default");
 
   const [isModalOpen, setModalOpen] = useState<boolean>(false);
-  const [selectedProject, setSelectedProject] = useState<any>(null); // State to hold the selected project
+  const [selectedProject, setSelectedProject] = useState<any>(null);
 
   const handleOpenModal = (project: any) => {
     setSelectedProject(project);
@@ -53,19 +53,15 @@ const Project = () => {
 
   const handleCloseModal = () => setModalOpen(false);
 
-  // Lock and unlock scroll when modal opens or closes
   useEffect(() => {
     if (isModalOpen) {
-      // Disable scrolling when the modal is open
       document.body.style.overflow = "hidden";
     } else {
-      // Enable scrolling when the modal is closed
       document.body.style.overflow = "auto";
     }
 
-    // Cleanup the effect
     return () => {
-      document.body.style.overflow = "auto"; // Reset scroll when component unmounts
+      document.body.style.overflow = "auto";
     };
   }, [isModalOpen]);
 
@@ -138,7 +134,7 @@ const Project = () => {
                       <Image
                         fill
                         key={index}
-                        src={imagePath || "/path/to/default-image.jpg"} // Fallback to a default image if path is undefined
+                        src={imagePath || "/path/to/default-image.jpg"}
                         alt={title}
                         sizes="(max-width: 768px) 187px, (max-width: 1200px) 217px, 289px"
                         className={cx["proj-section--image"]}
@@ -159,11 +155,9 @@ const Project = () => {
         title={selectedProject?.title}
       >
         <div className={cx["modal-content"]}>
-          {/* <h2>Role: {selectedProject?.role}</h2> */}
           <h1 className={cx["cert-slides-containers--third-font"]}>
             <b>Role:</b> {selectedProject?.role}
           </h1>
-          {/* <p>Responsibilities: {selectedProject?.responsibilities}</p> */}
           <h1 className={cx["cert-slides-containers--third-font"]}>
             <b>Responsibilities:</b> {selectedProject?.responsibilities}
           </h1>

@@ -32,7 +32,6 @@ interface navbarProps {
   decider: boolean;
 }
 
-// needs parameter to use whether it will use ScrollLink or Link - {decider prop}
 const Navbar: FC<navbarProps> = ({ decider }) => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [displayMenu, setDisplayMenu] = useState(false);
@@ -52,16 +51,15 @@ const Navbar: FC<navbarProps> = ({ decider }) => {
     };
   }, []);
 
-  // Disable scrolling when the mobile menu is active
   useEffect(() => {
     if (displayMenu) {
-      document.body.style.overflow = "hidden"; // Disable scroll
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = "auto"; // Re-enable scroll when menu is closed
+      document.body.style.overflow = "auto";
     }
 
     return () => {
-      document.body.style.overflow = "auto"; // Ensure scroll is re-enabled when component unmounts
+      document.body.style.overflow = "auto";
     };
   }, [displayMenu]);
 
@@ -89,12 +87,12 @@ const Navbar: FC<navbarProps> = ({ decider }) => {
           <ul className="flex items-center">
             {sections.map((item, index) => (
               <motion.div
-                key={item} // Using the section name as a unique key
-                whileHover={{ y: -4 }} // Move upwards by 4px on hover
-                transition={{ type: "spring", stiffness: 300, damping: 15 }} // Smooth transition effect
+                key={item}
+                whileHover={{ y: -4 }}
+                transition={{ type: "spring", stiffness: 300, damping: 15 }}
               >
                 <li
-                  key={index} // This is redundant, as we already use the item as the key above
+                  key={index}
                   className="ml-[1rem]"
                   onMouseEnter={cursorEnter}
                   onMouseLeave={cursorLeave}
@@ -157,7 +155,6 @@ const Navbar: FC<navbarProps> = ({ decider }) => {
             {sections.map((item, index) => (
               <li key={index} className="ml-[1rem] my-2">
                 {decider ? (
-                  // using react-scroll for smoother transition
                   <ScrollLink
                     to={item.toLowerCase()}
                     smooth={true}
@@ -168,7 +165,6 @@ const Navbar: FC<navbarProps> = ({ decider }) => {
                     {item}
                   </ScrollLink>
                 ) : (
-                  // using routing to go targeted div id from another page
                   <Link
                     href={`../#${item.toLowerCase()}`}
                     className={cx["nav-links"]}

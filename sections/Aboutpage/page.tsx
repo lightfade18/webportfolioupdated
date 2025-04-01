@@ -8,7 +8,7 @@ import Image from "next/image";
 import Animator from "@components/Animator/page";
 import animatorVariants from "@utils/animatorVariants";
 import { animatorChildren } from "@utils/animators";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import { useMedia } from "react-use";
 import { setCursorVariant } from "@utils/cursorState";
 
@@ -126,12 +126,6 @@ const Aboutpage = () => {
                   </motion.div>
                 </div>
                 <div className={cx["about-panel--info-div"]}>
-                  {/* <h1 className={cx["about-panel--about-title"]}>
-                    I am{" "}
-                    <span className={cx["about-panel--about-title--span"]}>
-                      {name}
-                    </span>
-                  </h1> */}
                   <p className={cx["about-panel--about-details"]}>{details1}</p>
                   <p className={cx["about-panel--about-details"]}>{details2}</p>
                   <p className={cx["about-panel--about-details"]}>{details3}</p>

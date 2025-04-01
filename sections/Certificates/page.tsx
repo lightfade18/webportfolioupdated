@@ -62,11 +62,11 @@ const Certificates = () => {
       <hr className={cx["about-div--hr"]} />
       <Swiper
         className={cx["swiper-div"]}
-        slidesPerView={isMobile ? "auto" : 2} // Show 2 slides per view
-        spaceBetween={isMobile ? 120 : 20} // Set space between slides (adjust as necessary)
+        slidesPerView={isMobile ? "auto" : 2}
+        spaceBetween={isMobile ? 120 : 20}
         centeredSlides={isMobile ? true : false}
-        modules={[Pagination]} // Include Pagination module
-        pagination={{ clickable: true, el: ".cert-pagination-div" }} // Make pagination clickable
+        modules={[Pagination]}
+        pagination={{ clickable: true, el: ".cert-pagination-div" }}
         onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
         style={{ display: "flex", justifyContent: "center" }}
       >

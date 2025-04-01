@@ -29,7 +29,7 @@ interface ExperienceItem {
 
 interface DataValue {
   name: string;
-  data?: ExperienceItem[]; // Only the "experience-details" has the "data" field
+  data?: ExperienceItem[];
 }
 
 // Type for the full data
@@ -41,7 +41,6 @@ const Experience = () => {
   const cursorEnter = () => setCursorVariant("focus");
   const cursorLeave = () => setCursorVariant("default");
 
-  // Fetching experience data from the JSON file
   const experienceDetails =
     (dataValue as Data).find((data) => data.name === "experience-details")
       ?.data || [];
@@ -56,7 +55,7 @@ const Experience = () => {
         centeredSlides={true}
         spaceBetween={80}
         modules={[Pagination]} // Include Pagination module
-        pagination={{ clickable: true, el: ".exp-pagination-div" }} // Make pagination clickable
+        pagination={{ clickable: true, el: ".exp-pagination-div" }}
         onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
         style={{ display: "flex", justifyContent: "center" }}
       >

@@ -3,14 +3,12 @@
 // imports
 import cx from "@styles/MainStyle.module.scss";
 import { setCursorVariant } from "@utils/cursorState";
-import { createSocialLink } from "@utils/createSocialLink";
 import { useState, useEffect } from "react";
 
 // data
 import dataValue from "@utils/data.json";
 
 // Icons
-import IconGithub from "@public/assests/icons/icon-github.svg";
 import IconGmail from "@public/assests/icons/icon-gmail.svg";
 import IconPhone from "@public/assests/icons/icon-phone.svg";
 
@@ -40,24 +38,11 @@ const Footer = () => {
 
   useEffect(() => {
     const currentTheme = document.documentElement.getAttribute("data-theme");
-    setTheme(currentTheme || "light"); // Default to 'light' if no theme is set
+    setTheme(currentTheme || "light");
   }, []);
 
   return (
     <footer className={cx["footer-section"]}>
-      {/* <div className={cx["footer-section--source-div"]}>
-        <p className={cx["footer-section--text"]}>View Source Code</p>
-        <a
-          href={createSocialLink("github", sourceCode)}
-          onMouseEnter={cursorEnter}
-          onMouseLeave={cursorLeave}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={cx["footer-section--a-tag"]}
-        >
-          <IconGithub className={cx["footer-section--icon"]} />
-        </a>
-      </div> */}
       <div className={cx["footer-section--footer-div"]}>
         <p className={cx["footer-section--text"]}>
           COPYRIGHT © PAUL JOHN E. RODRIGUEZ 2025

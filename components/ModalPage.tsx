@@ -12,7 +12,6 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children }) => {
   const modalRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    // Close modal when clicking outside of it
     const handleOutsideClick = (e: MouseEvent) => {
       if (modalRef.current && !modalRef.current.contains(e.target as Node)) {
         onClose();
@@ -25,13 +24,12 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children }) => {
       document.removeEventListener("mousedown", handleOutsideClick);
     }
 
-    // Clean up the event listener on component unmount
     return () => {
       document.removeEventListener("mousedown", handleOutsideClick);
     };
   }, [isOpen, onClose]);
 
-  if (!isOpen) return null; // Don't render anything if the modal is not open
+  if (!isOpen) return null;
 
   return (
     <div className="fixed inset-0 flex justify-center items-center bg-gray-500 bg-opacity-50 z-50 mx-2">
