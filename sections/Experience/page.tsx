@@ -68,7 +68,13 @@ const Experience = () => {
                 y: -8,
                 backgroundColor: "var(--sub_body_background)",
               }}
-              transition={{ type: "tween", stiffness: 300, damping: 15 }}
+              transition={{
+                type: "tween",
+                tween: {
+                  stiffness: 300,
+                  damping: 15,
+                },
+              }}
             >
               <h1 className={cx["exp-section--exp-first-font"]}>
                 {experience.title}

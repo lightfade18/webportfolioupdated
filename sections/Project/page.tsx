@@ -94,7 +94,13 @@ const Project = () => {
                   y: -8,
                   backgroundColor: "var(--sub_body_background)",
                 }}
-                transition={{ type: "tween", stiffness: 300, damping: 15 }}
+                transition={{
+                  type: "tween",
+                  tween: {
+                    stiffness: 300,
+                    damping: 15,
+                  },
+                }}
               >
                 <div className={cx["proj-card-div"]}>
                   <div className={cx["proj-section--title-div"]}>

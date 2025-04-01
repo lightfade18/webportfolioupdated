@@ -79,7 +79,13 @@ const Certificates = () => {
                 y: -8,
                 backgroundColor: "var(--sub_body_background)",
               }}
-              transition={{ type: "tween", stiffness: 300, damping: 15 }}
+              transition={{
+                type: "tween",
+                tween: {
+                  stiffness: 300,
+                  damping: 15,
+                },
+              }}
             >
               <div className={cx["cert-slides-containers"]}>
                 <h1 className={cx["cert-slides-containers--second-font"]}>
