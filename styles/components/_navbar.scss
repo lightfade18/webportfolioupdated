@@ -1,5 +1,5 @@
 .navbar {
-  @apply text-lg bg-transparent sticky top-0 border-b-[1px] z-[3] text-[#F5C300];
+  @apply text-lg bg-transparent sticky top-0 border-b-[1px] z-30 text-[#F5C300];
   border-color: transparent;
 
   &--scrolled {
@@ -17,10 +17,10 @@
 }
 
 .nav-links {
-  @apply font-karla capitalize;
+  @apply font-karla capitalize text-[#F5C300];
 
   &:hover {
-    @apply text-[#F5C300] first-line:transition-all ease-in-out duration-300 cursor-pointer;
+    @apply first-line:transition-all ease-in-out duration-300 cursor-pointer;
   }
 }
 
@@ -51,7 +51,8 @@
 }
 
 .display-menu {
-  @apply bg-[#E7E7E7] transition-all duration-300 ease-out w-full absolute border-b border-black min-h-screen;
+  @apply transition-all duration-300 ease-out w-full absolute border-b border-black min-h-screen;
+  background-color: var(--body_background);
 
   @screen desktop {
     @apply hidden;
@@ -67,11 +68,9 @@
 }
 
 .burger-icon {
-  @apply w-6 h-6;
-  fill: var(--body_color);
+  @apply w-6 h-6 fill-[#F5C300];
 }
 
 .close-icon {
-  @apply w-6 h-6;
-  fill: var(--body_color);
+  @apply w-6 h-6 fill-[#F5C300];
 }
