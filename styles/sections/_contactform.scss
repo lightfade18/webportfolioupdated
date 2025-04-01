@@ -1,74 +1,73 @@
 .contact-section {
-    @apply w-full h-auto bg-transparent;
+  @apply w-full h-auto bg-transparent;
 
-    @screen tablet {
-        @apply py-14;
-    }
+  @screen tablet {
+    @apply py-14;
+  }
 }
 
 .contact-div {
-    @apply w-[95%] mx-auto py-10;
+  @apply w-[95%] mx-auto py-10;
 
-    @screen desktop{
-        @apply max-w-[83rem] px-[3rem] py-0;
+  @screen desktop {
+    @apply max-w-[83rem] px-[3rem] py-0;
+  }
+
+  &--contact-button {
+    @apply py-4 px-6 rounded-full mx-auto bg-[#F5C300] text-white;
+
+    &--span {
+      @apply font-karla text-lg;
     }
+  }
 
-    &--contact-button {
-        @apply py-4 px-6 rounded-full mx-auto bg-[#007AFF] text-white;
+  &--sub-font {
+    @apply text-[24px] text-center font-karla mt-4;
+    color: var(--body_color);
+  }
 
-        &--span {
-            @apply font-rubik text-lg;
-        }
+  &--email-message {
+    @apply hidden;
+  }
+
+  &--email-message-shown {
+    @apply block mx-auto font-karla text-lg;
+    color: var(--body_color);
+  }
+
+  &--disabled-button {
+    @apply py-4 px-6 rounded-full mx-auto bg-darkGray-500 text-white;
+
+    &--span {
+      @apply font-karla text-lg;
     }
+  }
 
-    &--sub-font {
-        @apply text-[24px] text-center font-rubik mt-4;
-        color: var(--body_color);
+  &--first-layer {
+    @apply w-full grid grid-cols-1 gap-2 mt-4;
+
+    @screen tablet {
+      @apply grid-cols-2;
     }
+  }
 
-    &--email-message {
-         @apply hidden;
+  &--first-layer {
+    @apply w-full grid grid-cols-1 gap-2 mx-auto mt-4;
+
+    @screen tablet {
+      @apply grid-cols-2 gap-4;
     }
+  }
 
-    &--email-message-shown {
-        @apply block mx-auto font-rubik text-lg;
-        color: var(--body_color);
-   }
+  &--button-div {
+    @apply flex justify-center mt-4;
+  }
 
-    &--disabled-button {
-        @apply py-4 px-6 rounded-full mx-auto bg-darkGray-500 text-white;
+  &--textarea-div {
+    @apply col-span-1;
 
-        &--span {
-            @apply font-rubik text-lg;
-        }
+    @screen tablet {
+      @apply col-span-2;
     }
-
-    &--first-layer {
-        @apply w-full grid grid-cols-1 gap-2 mt-4;
-
-        @screen tablet {
-            @apply grid-cols-2;
-        }
-    }
-
-    &--first-layer {
-        @apply w-full grid grid-cols-1 gap-2 mx-auto mt-4;
-
-        @screen tablet {
-            @apply grid-cols-2 gap-4;
-        }
-    }
-
-
-    &--button-div {
-        @apply flex justify-center mt-4;
-    }
-
-    &--textarea-div {
-        @apply col-span-1;
-
-        @screen tablet {
-            @apply col-span-2;
-        }
-    }
+  }
 }

@@ -1,86 +1,115 @@
 .proj-section {
-    @apply w-full h-auto bg-transparent py-14 relative;
+  @apply w-full h-auto bg-transparent pt-14 relative;
 
-    &--main-font {
-        @apply text-[40px] text-center uppercase font-rubik;
-        color: var(--body_color);
+  &--main-font {
+    @apply text-[40px] text-center uppercase font-prompt;
+    color: var(--body_color);
+  }
+
+  &--title-div {
+    @apply flex justify-center items-center gap-1 mb-2;
+  }
+
+  &--title {
+    @apply z-[2] font-karla text-base min-w-fit;
+    color: var(--body_color);
+  }
+
+  &--hr {
+    @apply w-[6.25rem] border-[#F5C300] border-2 rounded-full mx-auto;
+  }
+
+  &--title-hr {
+    @apply w-full border-[#F5C300];
+  }
+
+  &--sub-font {
+    @apply text-[24px] text-center font-karla mt-4;
+    color: var(--body_color);
+
+    @screen tablet {
+      @apply text-[30px];
+    }
+  }
+
+  &--main-div {
+    @apply w-[95%] mx-auto;
+
+    @screen desktop {
+      @apply max-w-[83rem] px-[3rem];
+    }
+  }
+
+  &--proj-div {
+    @apply w-full grid grid-cols-1 gap-2 mx-auto rounded-md mt-4 p-2;
+    // background-color: var(--sub_body_background);
+
+    @screen tablet {
+      @apply grid-cols-2 gap-8;
     }
 
-    &--title-div {
-        @apply flex justify-center items-center gap-1 mb-2;
+    @screen desktop {
+      @apply grid-cols-3 gap-12;
     }
+  }
 
-    &--title {
-        @apply z-[2] font-rubik text-base min-w-fit;
-        color: var(--body_color);
+  &--image {
+    @apply object-cover;
+  }
+
+  &--card {
+    @apply min-h-[15.625rem] relative rounded-md z-[1]  overflow-hidden bg-white;
+  }
+
+  &--card-hovered .proj-section--image {
+    @apply scale-125 transition-all ease-in-out duration-300;
+  }
+
+  &--card-button-hidden {
+    @apply hidden;
+  }
+
+  &--card-button {
+    @apply absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 w-[9.375rem] h-[3.125rem] bg-[#070606] rounded-md border border-[#070606] flex justify-center items-center text-white;
+
+    &:hover {
+      @apply bg-white text-black;
     }
+  }
 
-    &--hr {
-        @apply w-[6.25rem] border-[#007AFF] border-2 rounded-full mx-auto;
-    }
+  &--icon {
+    @apply w-[30px] h-[30px] absolute top-2 right-2;
+  }
 
-    &--title-hr {
-        @apply w-full border-[#007AFF];
-    }
+  &--icon-hover {
+    @apply w-[30px] h-[30px] absolute top-2 right-2 fill-[#F5C300];
+  }
+}
 
-    &--sub-font {
-        @apply text-[24px] text-center font-rubik mt-4;
-        color: var(--body_color);
+.proj-card-div {
+  @apply rounded-md;
+}
 
-        @screen tablet {
-            @apply text-[30px];
-        }
-    }
+.proj-button {
+  @apply w-[10rem] p-[0.25rem] rounded-sm bg-[#F5C300] flex justify-center items-center mt-6;
 
-    &--main-div {
-        @apply w-[95%] mx-auto;
-        
-        @screen desktop {
-            @apply max-w-[83rem] px-[3rem];
-        }
-    }
+  &:hover {
+    @apply transition-all ease-in-out duration-700;
+    background-color: var(--reverse_body_bg);
+    color: var(--reverse_body_color);
+  }
+}
 
-    &--proj-div {
-        @apply w-full grid grid-cols-1 gap-2 mx-auto rounded-2xl mt-4 shadow-3xl p-2;
+.modal-tab {
+  @apply p-6 rounded-md w-96;
+  background-color: var(--sub_body_background);
+  color: var(--body_color);
 
-        @screen tablet {
-            @apply grid-cols-2 gap-8;
-        }
-        
-        @screen desktop {
-            @apply grid-cols-3 gap-12;
-        }
-    }
+  @screen tablet {
+    @apply w-[38rem];
+  }
 
-    &--image {
-        @apply object-cover;
-    }
-
-    &--card {
-        @apply min-h-[15.625rem] relative rounded-lg z-[1] shadow-2xl  overflow-hidden bg-white;
-    }
-
-    &--card-hovered .proj-section--image {
-        @apply scale-125 transition-all ease-in-out duration-300;
-    }
-
-    &--card-button-hidden {
-        @apply hidden;
-    }
-
-    &--card-button {
-        @apply absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 w-[9.375rem] h-[3.125rem] bg-[#070606] rounded-md border border-[#070606] flex justify-center items-center text-white;
-
-        &:hover {
-            @apply bg-white text-black;
-        }
-    }
-
-    &--icon {
-        @apply w-[30px] h-[30px] absolute top-2 right-2;
-    }
-
-    &--icon-hover {
-        @apply w-[30px] h-[30px] absolute top-2 right-2 fill-[#007AFF];
-    }
+  @screen desktop {
+    @apply w-[52rem];
+  }
 }

@@ -1,17 +1,35 @@
 @font-face {
-    font-family: 'Rubik';
-    src: url('Rubik-Regular.woff2') format('woff2'),
-        url('Rubik-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Rubik";
+  src: url("Rubik-Regular.woff2") format("woff2"),
+    url("Rubik-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Rubik Spray Paint';
-    src: url('RubikSprayPaint-Regular.woff2') format('woff2'),
-        url('RubikSprayPaint-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Rubik Spray Paint";
+  src: url("RubikSprayPaint-Regular.woff2") format("woff2"),
+    url("RubikSprayPaint-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "KarlaRegular";
+  src: url("Karla-Regular.woff2") format("woff2"),
+    url("Karla-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PromptRegular";
+  src: url("Prompt-Regular.woff2") format("woff2"),
+    url("Prompt-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }

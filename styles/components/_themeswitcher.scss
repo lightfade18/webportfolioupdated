@@ -1,11 +1,15 @@
 .icon-light {
-    @apply h-6 w-6 fill-white ml-[1rem] z-[3];
+  @apply h-6 w-6 fill-[#F5C300] ml-[1rem] z-[3];
 
-    &--scrolled {
-        @apply h-6 w-6 fill-black ml-[1rem] z-[3];
-    }
+  &--scrolled {
+    @apply h-6 w-6 fill-[#F5C300] ml-[1rem] z-[3];
+  }
 }
 
 .icon-moon {
-    @apply h-6 w-6 fill-black ml-[1rem] z-[3];
+  @apply h-6 w-6 fill-[#F5C300] ml-[1rem] z-[3];
+
+  &--scrolled {
+    @apply h-6 w-6 fill-[#F5C300] ml-[1rem] z-[3];
+  }
 }

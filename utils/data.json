@@ -1,319 +1,269 @@
 [
-    {
-        "name": "aboutpage-details",
-        "data": [
-            {
-                "name": "Paul John Rodriguez",
-                "details": "An aspiring Software Engineer, a music lover, an anime enthusiast, a coke addict, and a certified gamer. I always crave garlic with rice right after I wake up, and my favorite dish is sinigang. I am competitive when it comes to sports, and always ready to play a game of basketball.",
-                "profileImage": "/assests/images/profile-image.jpg",
-                "cvPath": "assests/files/CV-Rodriguez-PJ.pdf",
-                "frontend": [
-                    {
-                        "value": "NextJS"
-                    },
-                    {
-                        "value": "ReactJS"
-                    },
-                    {
-                        "value": "Tailwind"
-                    },
-                    {
-                        "value": "Bootstrap"
-                    },
-                    {
-                        "value": "HTML"
-                    },
-                    {
-                        "value": "CSS"
-                    },
-                    {
-                        "value": "SASS"
-                    },
-                    {
-                        "value": "Framer"
-                    },
-                    {
-                        "value": "TypeScript"
-                    }
-                ],
-                "backend": [
-                    {
-                        "value": "JavaScript"
-                    },
-                    {
-                        "value": "Python"
-                    },
-                    {
-                        "value": "PHP"
-                    },
-                    {
-                        "value": "Java"
-                    },
-                    {
-                        "value": "NodeJS"
-                    }
-                ],
-                "devtools": [
-                    {
-                        "value": "VSCode"
-                    },
-                    {
-                        "value": "Github"
-                    },
-                    {
-                        "value": "Jira"
-                    },
-                    {
-                        "value": "Prisma"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "name": "headerpage-details",
-        "intro": [
-            {
-                "value": "I'm PJ Rodriguez"
-            },
-            {
-                "value": "I'm a Software Engineer"
-            },
-            {
-                "value": "I'm Either Coding, Eating or Sleeping"
-            },
-            {
-                "value": "I'm Always Learing"
-            }
+  {
+    "name": "aboutpage-details",
+    "data": [
+      {
+        "name": "Paul John Rodriguez",
+        "details1": "Hello! I'm PJ Rodriguez. I graduated from University of the East - Manila, last July 2023. I am now working as an Associate Software Engineer at Accenture Philippines under Navitaire New Skies project.",
+        "details2": "A brief summary of my character. I am an outgoing individual. I love facing challenges, especially when tackling new tech stacks and when it comes to programming. I enjoy playing online games and basketball, and honing my web programming abilites by making personal projects using Next.js.",
+        "details3": "If you were interested to get in touch with me, you are free to email me at pauljohnerodriguez@gmail.com. I Hope we can get along and have a good day!",
+        "profileImage": "/assests/images/profile-image.jpg",
+        "cvPath": "assests/files/PaulJohn-Rodriguez-Resume.pdf",
+        "frontend": [
+          {
+            "value": "NextJS"
+          },
+          {
+            "value": "ReactJS"
+          },
+          {
+            "value": "Tailwind"
+          },
+          {
+            "value": "Bootstrap"
+          },
+          {
+            "value": "HTML"
+          },
+          {
+            "value": "CSS"
+          },
+          {
+            "value": "SASS"
+          },
+          {
+            "value": "Framer"
+          },
+          {
+            "value": "TypeScript"
+          }
         ],
-        "socials": [
-            {
-                "name": "facebook",
-                "url": "pj.jumawanrodriguez"
-            },
-            {
-                "name": "twitter",
-                "url": "Pj24987880"
-            },
-            {
-                "name": "instagram",
-                "url": "pjrdrgz_official"
-            },
-            {
-                "name": "linkedin",
-                "url": "paul-john-rodriguez-57a927283"
-            }
+        "backend": [
+          {
+            "value": "JavaScript"
+          },
+          {
+            "value": "Python"
+          },
+          {
+            "value": "PHP"
+          },
+          {
+            "value": "Java"
+          },
+          {
+            "value": "NodeJS"
+          }
+        ],
+        "devtools": [
+          {
+            "value": "VSCode"
+          },
+          {
+            "value": "Github"
+          },
+          {
+            "value": "Jira"
+          },
+          {
+            "value": "Prisma"
+          }
         ]
-    },
-    {
-        "name": "certificatespage-details",
-        "images": [
-            {
-                "name": "python",
-                "imagePath": "/assests/images/python-cert.jpg"
-            },
-            {
-                "name": "htmlcss",
-                "imagePath": "/assests/images/htmlcss-cert.jpg"
-            }
+      }
+    ]
+  },
+  {
+    "name": "headerpage-details",
+    "intro": [
+      {
+        "value": "I'm PJ Rodriguez"
+      },
+      {
+        "value": "I'm a Software Engineer"
+      },
+      {
+        "value": "I'm Either Coding, Eating or Sleeping"
+      },
+      {
+        "value": "I'm Always Learing"
+      }
+    ],
+    "socials": [
+      {
+        "name": "facebook",
+        "url": "pj.jumawanrodriguez"
+      },
+      {
+        "name": "twitter",
+        "url": "Pj24987880"
+      },
+      {
+        "name": "instagram",
+        "url": "pjrdrgz_official"
+      },
+      {
+        "name": "linkedin",
+        "url": "paul-john-rodriguez-57a927283"
+      }
+    ]
+  },
+  {
+    "name": "certificates-details",
+    "data": [
+      {
+        "title": "Information Technology Sepecialist in Python",
+        "issuer": "Certiport - A Pearson VUE Business",
+        "date": "January 2023",
+        "badge": "https://www.credly.com/badges/767cd084-b192-41cf-9eea-350342402e8a/public_url"
+      },
+      {
+        "title": "Information Technology Sepecialist in HTM and CSS",
+        "issuer": "Certiport - A Pearson VUE Business",
+        "date": "November 2022",
+        "badge": "https://www.credly.com/badges/adda24ac-334c-4533-9887-0f6447b57404/public_url"
+      }
+    ]
+  },
+  {
+    "name": "projectsection-details",
+    "projects": [
+      {
+        "title": "Real Listing Presentation Builder",
+        "imagePath": "/assests/images/listing-presentation-builders.png",
+        "url": "access.com/real-estate-presentation-builder/",
+        "githubUrl": "",
+        "role": "Web Developer",
+        "responsibilities": "Frontend Development, Backend Development, Data Handling",
+        "techstack": [
+          {
+            "tech": "Next.js"
+          },
+          {
+            "tech": "Typescript"
+          },
+          {
+            "tech": "Prisma"
+          },
+          {
+            "tech": "Tailwind"
+          },
+          {
+            "tech": "GraphQL"
+          },
+          {
+            "tech": "PostgreSQL"
+          }
         ]
-    },
-    {
-        "name": "projectsection-details",
-        "projects": [
-            {
-                "id": "cllgsy4un000i2gvj1gro0tgc",
-                "title": "Real Listing Presentation Builder",
-                "key": "listing",
-                "imagePath": "/assests/images/listing-presentation-builders.png",
-                "url": "suite.real.ph/",
-                "guthubUrl": "",
-                "description": "Dedicated for real estate agents, a powerful Listing Presentation Builder allows you to create stunning presentations that will help you secure more listings. \n\nInstead of presenting dull, printed presentations, you can create professional digital presentations that will bring your brand to life and propel you ahead of the competition.",
-                "role": "Software Engineer Intern",
-                "responsibilities": "Frontend Development, Backend Development, Data Handling",
-                "images": [
-                    {
-                        "projectImagePath": "/assests/images/listing-1.png"
-                    },
-                    {
-                        "projectImagePath": "/assests/images/listing-2.png"
-                    },
-                    {
-                        "projectImagePath": "/assests/images/listing-3.png"
-                    },
-                    {
-                        "projectImagePath": "/assests/images/listing-4.png"
-                    },
-                    {
-                        "projectImagePath": "/assests/images/listing-5.png"
-                    },
-                    {
-                        "projectImagePath": "/assests/images/listing-6.png"
-                    },
-                    {
-                        "projectImagePath": "/assests/images/listing-7.png"
-                    },
-                    {
-                        "projectImagePath": "/assests/images/listing-8.png"
-                    }
-                ],
-                "teckstack": [
-                    {
-                        "tech": "Next.js"
-                    },
-                    {
-                        "tech": "Typescript"
-                    },
-                    {
-                        "tech": "Prisma"
-                    },
-                    {
-                        "tech": "Redux"
-                    },
-                    {
-                        "tech": "Tailwind"
-                    },
-                    {
-                        "tech": "GraphQL"
-                    },
-                    {
-                        "tech": "PostgreSQL"
-                    }
-                ]
-            },
-            {
-                "id": "cllgsyhgi000k2gvj0w1n3lno",
-                "title": "Real Website Builder",
-                "key": "builder",
-                "imagePath": "/assests/images/website-builder.png",
-                "url": "builder.real.ph/",
-                "guthubUrl": "",
-                "description": "For distinguished real estate agents, it’s high time that you have your own agent website. With this Website Builder, agenst can create a professional-looking website to showcase their properties and establish their brand online. \nChoose from a gallery of beautifully-designed templates to create your website in minutes. No coding or design skills required.",
-                "role": "Software Engineer Intern",
-                "responsibilities": "Frontend Development, Backend Development, Data Handling",
-                "images": [
-                    {
-                        "projectImagePath": "/assests/images/builder-1.png"
-                    },
-                    {
-                        "projectImagePath": "/assests/images/builder-2.png"
-                    },
-                    {
-                        "projectImagePath": "/assests/images/builder-3.png"
-                    },
-                    {
-                        "projectImagePath": "/assests/images/builder-4.png"
-                    },
-                    {
-                        "projectImagePath": "/assests/images/builder-5.png"
-                    },
-                    {
-                        "projectImagePath": "/assests/images/builder-6.png"
-                    },
-                    {
-                        "projectImagePath": "/assests/images/builder-7.png"
-                    },
-                    {
-                        "projectImagePath": "/assests/images/builder-8.png"
-                    }
-                ],
-                "teckstack": [
-                    {
-                        "tech": "Next.js"
-                    },
-                    {
-                        "tech": "Typescript"
-                    },
-                    {
-                        "tech": "Prisma"
-                    },
-                    {
-                        "tech": "Redux"
-                    },
-                    {
-                        "tech": "Tailwind"
-                    },
-                    {
-                        "tech": "GraphQL"
-                    },
-                    {
-                        "tech": "PostgreSQL"
-                    }
-                ]
-            },
-            {
-                "id": "cllgsyjdn000m2gvj8y3i6qd6",
-                "title": "Concepcion Dos BMIS",
-                "key": "bmis",
-                "imagePath": "/assests/images/bmis-1.png",
-                "url": "bmisprod.000webhostapp.com/",
-                "guthubUrl": "lightfade18/bmis-repo.git",
-                "description": "A Barangay Management and Information System that organized records of data of Barangay Concepcion Dos, Marikina City. The system provided a feasible and efficient medium to cater to and provide the needs of the residents and officials as well.",
-                "role": "Lead Developer",
-                "responsibilities": "Frontend Development, SQL, Prototype, Deployment, Testing",
-                "images": [
-                    {
-                        "projectImagePath": "/assests/images/bmis-1.png"
-                    },
-                    {
-                        "projectImagePath": "/assests/images/bmis-2.png"
-                    },
-                    {
-                        "projectImagePath": "/assests/images/bmis-3.png"
-                    },
-                    {
-                        "projectImagePath": "/assests/images/bmis-4.png"
-                    },
-                    {
-                        "projectImagePath": "/assests/images/bmis-5.png"
-                    },
-                    {
-                        "projectImagePath": "/assests/images/bmis-6.png"
-                    },
-                    {
-                        "projectImagePath": "/assests/images/bmis-7.png"
-                    },
-                    {
-                        "projectImagePath": "/assests/images/bmis-8.png"
-                    },
-                    {
-                        "projectImagePath": "/assests/images/bmis-9.png"
-                    },
-                    {
-                        "projectImagePath": "/assests/images/bmis-10.png"
-                    }
-                ],
-                "teckstack": [
-                    {
-                        "tech": "PHP"
-                    },
-                    {
-                        "tech": "HTML"
-                    },
-                    {
-                        "tech": "CSS"
-                    },
-                    {
-                        "tech": "Bootstrap"
-                    },
-                    {
-                        "tech": "JavaScript"
-                    },
-                    {
-                        "tech": "MySQL"
-                    }
-                ]
-            }
+      },
+      {
+        "title": "Real Website Builder",
+        "imagePath": "/assests/images/website-builder.png",
+        "url": "access.com/real-estate-website-builder/",
+        "githubUrl": "",
+        "role": "Web Developer",
+        "responsibilities": "Frontend Development, Backend Development, Data Handling",
+        "techstack": [
+          {
+            "tech": "Next.js"
+          },
+          {
+            "tech": "Typescript"
+          },
+          {
+            "tech": "Prisma"
+          },
+          {
+            "tech": "Tailwind"
+          },
+          {
+            "tech": "GraphQL"
+          },
+          {
+            "tech": "PostgreSQL"
+          }
         ]
-    },
-    {
-        "name": "footerpage-details",
-        "data":[
-            {
-                "sourcePath": "lightfade18/portfolio-repo",
-                "contact": "09497636479",
-                "email": "pauljohnrdrgz@gmail.com"
-            }
+      },
+      {
+        "title": "Concepcion Dos BMIS",
+        "imagePath": "/assests/images/bmis-1.png",
+        "url": "",
+        "githubUrl": "lightfade18/bmis-repo.git",
+        "role": "Developer",
+        "responsibilities": "Full Stack Development, Database, Testing, Prototyping, Deployment",
+        "techstack": [
+          {
+            "tech": "PHP"
+          },
+          {
+            "tech": "HTML"
+          },
+          {
+            "tech": "CSS"
+          },
+          {
+            "tech": "Bootstrap"
+          },
+          {
+            "tech": "JavaScript"
+          },
+          {
+            "tech": "MySQL"
+          }
         ]
-    }
+      }
+    ]
+  },
+  {
+    "name": "footerpage-details",
+    "data": [
+      {
+        "sourcePath": "lightfade18/portfolio-repo",
+        "contact": "09159293502",
+        "email": "pauljohnerodriguez@gmail.com"
+      }
+    ]
+  },
+  {
+    "name": "experience-details",
+    "data": [
+      {
+        "title": "Web Developer Intern",
+        "company": "August 99 Inc.",
+        "date": "February 2023 - May 2023",
+        "contents": [
+          {
+            "data": "Converting UI/UX Design into a web page."
+          },
+          {
+            "data": "Constructing API routes and backend services."
+          },
+          {
+            "data": "Collaborate with Product Manegers, Quality Assurance, Designers, and co-developers."
+          },
+          {
+            "data": "Attending Scrum sessions, Sprint Planning, and Retrospective."
+          }
+        ]
+      },
+      {
+        "title": "Associate Software Engineer",
+        "company": "Accenture",
+        "date": "January 2024 - Present",
+        "contents": [
+          {
+            "data": "24x7x365 Hotline, Monitoring & Support for multi-technology, multi-sourced private & hybrid cloud solutions."
+          },
+          {
+            "data": "First Response & Resolution based on documented Standard Operating Procedures & Rapid Restore Playbooks Incident Triage & Troubleshooting Urgent & Cataloged Service Request."
+          },
+          {
+            "data": "Fulfilment Escalation for critical support incidents Queue Masters with focus on delivery to SLAs."
+          },
+          {
+            "data": "Owning critical issues to resolution& Emergency Change Requests."
+          }
+        ]
+      }
+    ]
+  }
 ]

@@ -1,0 +1,12 @@
+.email-button {
+  @apply fixed bottom-0 right-0 z-50 mr-[1rem] mb-[4rem] p-[2px] rounded-md shadow-md;
+  background-color: var(--sub_body_background);
+
+  @screen tablet {
+    @apply mr-[2rem];
+  }
+
+  @screen desktop {
+    @apply mr-[4rem];
+  }
+}

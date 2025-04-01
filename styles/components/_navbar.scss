@@ -1,70 +1,77 @@
 .navbar {
-    @apply text-lg bg-transparent sticky top-0 border-b-[1px] border-gray-400 border-opacity-20 z-[3];
-    color: var(--body_color);
+  @apply text-lg bg-transparent sticky top-0 border-b-[1px] z-[3] text-[#F5C300];
+  border-color: transparent;
 
-    &--scrolled {
-        @apply bg-[#E7E7E7] border-black;
-    }
+  &--scrolled {
+    @apply border-transparent;
+    background-color: var(--sub_body_background);
+  }
 }
 
 .nav-container {
-    @apply mx-auto max-w-[95%];
+  @apply mx-auto max-w-[95%];
 
-    @screen desktop{
-        @apply max-w-[83rem] px-[3rem];
-    }
+  @screen desktop {
+    @apply max-w-[83rem] px-[3rem];
+  }
 }
 
 .nav-links {
-    @apply font-rubik capitalize;
-    
-    &:hover{
-        @apply text-[#007AFF] transition-all ease-in-out duration-300 cursor-pointer;
-    }
+  @apply font-karla capitalize;
+
+  &:hover {
+    @apply text-[#F5C300] first-line:transition-all ease-in-out duration-300 cursor-pointer;
+  }
 }
 
 .desktop-nav {
-    @apply hidden;
+  @apply hidden;
 
-    @screen desktop {
-        @apply flex items-center justify-between h-[5rem] transition-all duration-300 ease-out;
-    }
+  @screen desktop {
+    @apply flex items-center justify-between h-[5rem] transition-all duration-300 ease-out;
+  }
 
-    &--scrolled {
-        @apply h-[4rem] text-black;
-    }
+  &--scrolled {
+    @apply h-[4rem];
+    // color: var(--body_color);
+  }
 }
 
-
 .mobile-nav {
-    @apply flex items-center justify-between h-[5rem] transition-all duration-300 ease-out;
+  @apply flex items-center justify-between h-[5rem] transition-all duration-300 ease-out;
 
-    @screen desktop {
-        @apply hidden;
-    }
+  @screen desktop {
+    @apply hidden;
+  }
 
-    &--scrolled {
-        @apply h-[4rem] text-black;
-    }
+  &--scrolled {
+    @apply h-[4rem];
+    color: var(--body_color);
+  }
 }
 
 .display-menu {
-    @apply bg-[#E7E7E7] transition-all duration-300 ease-out w-full absolute border-b border-black min-h-screen;
+  @apply bg-[#E7E7E7] transition-all duration-300 ease-out w-full absolute border-b border-black min-h-screen;
 
-    @screen desktop {
-        @apply hidden;
-    }
+  @screen desktop {
+    @apply hidden;
+  }
 }
 
 .icon-light {
-    @apply h-8 w-8 fill-black ml-[1rem] z-[3];
+  @apply h-8 w-8 fill-black ml-[1rem] z-[3];
 }
 
 .icon-moon {
-    @apply h-8 w-8 fill-black ml-[1rem] z-[3];
+  @apply h-8 w-8 fill-black ml-[1rem] z-[3];
 }
 
 .burger-icon {
-    @apply w-6 h-6 fill-white;
-    fill: var(--body_color);
+  @apply w-6 h-6;
+  fill: var(--body_color);
+}
+
+.close-icon {
+  @apply w-6 h-6;
+  fill: var(--body_color);
 }

@@ -1,123 +1,120 @@
 .header-div {
-    @apply w-[95%] pb-[5rem] mx-auto  bg-transparent min-h-screen relative pt-24;
+  @apply w-[95%] pb-[5rem] mx-auto  bg-transparent min-h-screen relative pt-24;
+
+  @screen tablet {
+    @apply flex items-center pt-6;
+  }
+
+  @screen desktop {
+    @apply max-w-[83rem] px-[3rem];
+  }
+
+  &--medium-font {
+    @apply text-[1.5rem] capitalize font-karla text-[#F5C300];
+
+    @screen desktop {
+      @apply text-[2rem];
+    }
+  }
+
+  &--content {
+    @apply w-full grid grid-cols-1 gap-4;
 
     @screen tablet {
-        @apply flex items-center pt-6;
+      @apply grid-cols-2 gap-0;
+    }
+  }
+
+  &--image-div {
+    @apply flex justify-center items-center;
+
+    @screen tablet {
+      @apply justify-end order-2;
     }
 
-    @screen desktop{
-        @apply max-w-[83rem] px-[3rem];
+    &--image {
+      @apply object-cover rounded-full;
     }
+  }
 
-    &--medium-font {
-        @apply text-[1.5rem] capitalize font-rubik;
-        color: var(--body_color);
+  &--info-div {
+    @apply flex justify-start items-center;
 
-        @screen desktop {
-            @apply text-[2rem];
-        }
+    @screen tablet {
+      @apply order-1;
     }
+  }
 
-    &--content {
-        @apply w-full grid grid-cols-1 gap-4;
+  &--style-box {
+    @apply absolute bottom-4 right-0 w-[150px] h-[10px] border-b-2 border-[#F5C300];
 
-        @screen tablet {
-            @apply grid-cols-2 gap-0;
-        }
+    @screen desktop {
+      @apply top-0 right-0 w-[1px] h-[150px] border-r-2 mr-[3rem];
     }
-
-    &--image-div {
-        @apply flex justify-center items-center;
-
-        @screen tablet {
-            @apply justify-end order-2;
-        }
-
-        &--image {
-            @apply object-cover rounded-full;
-        }
-    }
-
-    &--info-div {
-        @apply flex justify-start items-center;
-
-        @screen tablet {
-            @apply order-1;
-        }
-    }
-
-    &--style-box {
-        @apply absolute bottom-4 right-0 w-[150px] h-[10px] border-b-2 border-[#007AFF];
-
-        @screen desktop {
-            @apply top-0 right-0 w-[1px] h-[150px] border-r-2 mr-[3rem];
-        }
-    }
+  }
 }
 
 .wrapper {
-    @apply relative text-[2rem] py-0 my-0;
-    color: var(--body_color);
+  @apply relative text-[2rem] py-0 my-0;
+  color: var(--body_color);
 
-    @screen desktop {
-        @apply text-[3rem];
-    }
+  @screen desktop {
+    @apply text-[3rem];
+  }
 }
 
 .dynamic-text {
-    @apply font-rubikpaint leading-[60px];
+  @apply font-prompt leading-[60px];
 
-    @screen desktop {
-        @apply font-rubikpaint leading-[75px];
-    }
+  @screen desktop {
+    @apply font-prompt leading-[75px];
+  }
 }
 
-.lists-text{
-    @apply list-none relative top-0;
+.lists-text {
+  @apply list-none relative top-0;
 }
 
 .span-text {
-    @apply mr-4;
+  @apply mr-4;
 }
 
-
 .socials-div {
-    @apply absolute bottom-28 left-0;
+  @apply absolute bottom-28 left-0;
 
-    &--socials-icon {
-        @apply w-[1.5rem] h-[1.5rem];
-        fill: var(--body_color);
+  &--socials-icon {
+    @apply w-[1.5rem] h-[1.5rem] fill-[#F5C300];
 
-        &:hover {
-            @apply transition-colors duration-500 fill-[#007AFF];
-        }
+    &:hover {
+      @apply transition-colors duration-500 fill-[#F5C300];
     }
+  }
 
-    &--grid {
-        @apply grid grid-cols-1 gap-4;
+  &--grid {
+    @apply grid grid-cols-1 gap-4;
 
-        @screen desktop {
-            @apply ml-[3rem];
-        }
+    @screen desktop {
+      @apply ml-[3rem];
     }
+  }
 
-    &--links{
-        @apply z-[2];
-    }
+  &--links {
+    @apply z-[2];
+  }
 }
 
 .socials-div-mobile {
-    @apply absolute top-4 left-0;
+  @apply absolute top-4 left-0;
 
-    &--socials-icon {
-        @apply w-[1.5rem] h-[1.5rem] fill-white;
+  &--socials-icon {
+    @apply w-[1.5rem] h-[1.5rem] fill-white;
 
-        &:hover {
-            @apply transition-colors duration-500 fill-[#007AFF];
-        }
+    &:hover {
+      @apply transition-colors duration-500 fill-[#F5C300];
     }
+  }
 
-    &--grid {
-        @apply grid grid-cols-4 gap-2;
-    }
+  &--grid {
+    @apply grid grid-cols-4 gap-2;
+  }
 }

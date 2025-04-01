@@ -1,37 +1,36 @@
 .input-wrapper {
-    @apply w-full mx-auto;
+  @apply w-full mx-auto;
 
-    &--label {
-        @apply font-rubik text-[24px];
-        color: var(--body_color);
-    }
+  &--label {
+    @apply font-karla text-[24px];
+    color: var(--body_color);
+  }
 
-    &--textarea {
-        @apply w-full font-rubik text-[24px] p-2 border border-darkGray-500 rounded-md;
-    }
+  &--textarea {
+    @apply w-full font-karla text-[24px] p-2 border border-darkGray-500 rounded-md;
+  }
 
-    &--input {
-        @apply w-full font-rubik text-[24px] p-2 border border-darkGray-500 rounded-md;
-    }
+  &--input {
+    @apply w-full font-karla text-[24px] p-2 border border-darkGray-500 rounded-md;
+  }
 
-    &--asterisk {
-        @apply text-red-600;
-    }
+  &--asterisk {
+    @apply text-red-600;
+  }
 
-    &--asterisk-valid {
-        @apply text-green-600;
-    }
+  &--asterisk-valid {
+    @apply text-green-600;
+  }
 
+  &--error-div {
+    @apply w-full transition-all duration-200 flex items-center gap-2;
+  }
 
-    &--error-div {
-        @apply w-full transition-all duration-200 flex items-center gap-2;
-    }
+  &--error-message {
+    @apply font-karla text-red-600 text-lg;
+  }
 
-    &--error-message {
-        @apply font-rubik text-red-600 text-lg;
-    }
-
-    &--error-icon {
-        @apply w-[16px] h-[16px];
-    }
+  &--error-icon {
+    @apply w-[16px] h-[16px];
+  }
 }
