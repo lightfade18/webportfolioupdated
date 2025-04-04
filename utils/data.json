@@ -227,25 +227,6 @@
     "name": "experience-details",
     "data": [
       {
-        "title": "Web Developer Intern",
-        "company": "August 99 Inc.",
-        "date": "February 2023 - May 2023",
-        "contents": [
-          {
-            "data": "Converting UI/UX Design into a web page."
-          },
-          {
-            "data": "Constructing API routes and backend services."
-          },
-          {
-            "data": "Collaborate with Product Manegers, Quality Assurance, Designers, and co-developers."
-          },
-          {
-            "data": "Attending Scrum sessions, Sprint Planning, and Retrospective."
-          }
-        ]
-      },
-      {
         "title": "Associate Software Engineer",
         "company": "Accenture",
         "date": "January 2024 - Present",
@@ -261,6 +242,25 @@
           },
           {
             "data": "Owning critical issues to resolution& Emergency Change Requests."
+          }
+        ]
+      },
+      {
+        "title": "Web Developer Intern",
+        "company": "August 99 Inc.",
+        "date": "February 2023 - May 2023",
+        "contents": [
+          {
+            "data": "Converting UI/UX Design into a web page."
+          },
+          {
+            "data": "Constructing API routes and backend services."
+          },
+          {
+            "data": "Collaborate with Product Manegers, Quality Assurance, Designers, and co-developers."
+          },
+          {
+            "data": "Attending Scrum sessions, Sprint Planning, and Retrospective."
           }
         ]
       }

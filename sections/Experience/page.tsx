@@ -36,7 +36,7 @@ interface DataValue {
 type Data = DataValue[];
 
 const Experience = () => {
-  const [swiper, setSwiper] = useState<SwiperProps>();
+  const [swiper, setSwiper] = useState<SwiperProps | null>(null); // Type as null initially
   const [activeIndex, setActiveIndex] = useState(0);
   const cursorEnter = () => setCursorVariant("focus");
   const cursorLeave = () => setCursorVariant("default");
@@ -44,6 +44,21 @@ const Experience = () => {
   const experienceDetails =
     (dataValue as Data).find((data) => data.name === "experience-details")
       ?.data || [];
+
+  const handleSlideChange = (swiperInstance: SwiperProps) => {
+    setActiveIndex(swiperInstance.activeIndex); // Update active index on slide change
+  };
+
+  const handleContentClick = (direction: "next" | "prev") => {
+    // Move to the next or previous slide based on the clicked direction
+    if (swiper) {
+      if (direction === "next") {
+        swiper.slideNext();
+      } else {
+        swiper.slidePrev();
+      }
+    }
+  };
 
   return (
     <section className={cx["exp-section"]}>
@@ -56,7 +71,8 @@ const Experience = () => {
         spaceBetween={80}
         modules={[Pagination]} // Include Pagination module
         pagination={{ clickable: true, el: ".exp-pagination-div" }}
-        onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+        onSlideChange={handleSlideChange} // Keep updating active index
+        onSwiper={setSwiper} // Save the swiper instance
         style={{ display: "flex", justifyContent: "center" }}
       >
         {/* Map through experience details and create slides dynamically */}
@@ -75,6 +91,13 @@ const Experience = () => {
                   damping: 15,
                 },
               }}
+              onClick={
+                () =>
+                  // Determine direction to move to next or previous slide
+                  index > activeIndex
+                    ? handleContentClick("next") // Move forward if clicked slide is next
+                    : handleContentClick("prev") // Move backward if clicked slide is before
+              }
             >
               <h1 className={cx["exp-section--exp-first-font"]}>
                 {experience.title}

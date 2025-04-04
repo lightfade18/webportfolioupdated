@@ -43,7 +43,7 @@ type DataValue = CertificatesDataValue | OtherDataValue;
 
 const Certificates = () => {
   const isMobile = useMedia("screen and (max-width: 640px)", false);
-  const [swiper, setSwiper] = useState<SwiperProps>();
+  const [swiper, setSwiper] = useState<SwiperProps | null>(null); // Type as null initially
   const [activeIndex, setActiveIndex] = useState(0);
   const cursorEnter = () => setCursorVariant("focus");
   const cursorLeave = () => setCursorVariant("default");
@@ -56,6 +56,22 @@ const Certificates = () => {
       ) as CertificatesDataValue
     )?.data || [];
 
+  // Handler to update the active index when the slide changes
+  const handleSlideChange = (swiperInstance: SwiperProps) => {
+    setActiveIndex(swiperInstance.activeIndex);
+  };
+
+  // Handle click to go to the next or previous slide
+  const handleContentClick = (direction: "next" | "prev") => {
+    if (swiper) {
+      if (direction === "next") {
+        swiper.slideNext();
+      } else {
+        swiper.slidePrev();
+      }
+    }
+  };
+
   return (
     <section className={cx["cert-section"]}>
       <h1 className={cx["cert-section--main-font"]}>My Certificates</h1>
@@ -67,7 +83,8 @@ const Certificates = () => {
         centeredSlides={isMobile ? true : false}
         modules={[Pagination]}
         pagination={{ clickable: true, el: ".cert-pagination-div" }}
-        onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+        onSlideChange={handleSlideChange} // Keep updating active index
+        onSwiper={setSwiper} // Store the swiper instance
         style={{ display: "flex", justifyContent: "center" }}
       >
         {/* Map through certificate details and create slides dynamically */}
@@ -86,6 +103,13 @@ const Certificates = () => {
                   damping: 15,
                 },
               }}
+              onClick={
+                () =>
+                  // Determine direction to move to next or previous slide
+                  index > activeIndex
+                    ? handleContentClick("next") // Move forward if clicked slide is next
+                    : handleContentClick("prev") // Move backward if clicked slide is before
+              }
             >
               <div className={cx["cert-slides-containers"]}>
                 <h1 className={cx["cert-slides-containers--second-font"]}>
